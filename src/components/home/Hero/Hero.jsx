@@ -6,17 +6,17 @@ export default function Hero() {
   return (
     <section className="home-hero">
 
-      {/* BACKGROUND IMAGE */}
-
+      {/* HERO IMAGE */}
       <img
-  src={`${import.meta.env.BASE_URL}images/home-hero-cat.png`}
-  alt="AZIZ FELINES CATTERY logo"
-/>
+        className="hero-bg-image"
+        src={`${import.meta.env.BASE_URL}images/home-hero-cat.png`}
+        alt="AZIZ FELINES CATTERY"
+      />
 
       {/* SOFT OVERLAY */}
-      <div className="hero-shade"></div>
+      <div className="hero-shade" aria-hidden="true"></div>
 
-      {/* ONLY BUTTON */}
+      {/* HERO CONTENT */}
       <div className="container hero-content">
         <div className="hero-copy">
           <Link to="/services" className="btn hero-btn">

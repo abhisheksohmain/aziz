@@ -1,23 +1,45 @@
-/* ========================================
+/* =========================================================
+   AZIZ FELINES CATTERY
    HOME HERO
-======================================== */
+========================================================= */
 
 .home-hero {
   position: relative;
+
   width: 100%;
+
+  /*
+    IMPORTANT:
+    This is the exact ratio of:
+    1983 x 793 hero image
+  */
   aspect-ratio: 1983 / 793;
-  min-height: 500px;
+
+  min-height: 0;
+  height: auto;
+
   overflow: hidden;
+
   background: #fff7e7;
+
+  isolation: isolate;
+
+  /*
+    Header is fixed.
+    This space moves the hero below the
+    actual visible header area.
+  */
+  margin-top: 90px;
 }
 
 
-/* ========================================
+/* =========================================================
    HERO BACKGROUND IMAGE
-======================================== */
+========================================================= */
 
 .hero-bg-image {
   position: absolute;
+
   top: 0;
   left: 0;
 
@@ -26,330 +48,569 @@
 
   display: block;
 
+  /*
+    IMPORTANT:
+    The image has the same aspect ratio as the
+    hero container, so there is no unnecessary crop.
+  */
   object-fit: cover;
+
   object-position: center center;
 
-  transform: scale(1.02);
-  transform-origin: center center;
+  transform: none;
 
   z-index: 1;
 }
 
 
-/* ========================================
-   HERO CONTENT
-======================================== */
+/* =========================================================
+   HERO SHADE
+========================================================= */
 
-.hero-content {
-  position: relative;
-  z-index: 5;
+.hero-shade {
+  position: absolute;
+
+  inset: 0;
 
   width: 100%;
   height: 100%;
-  min-height: 500px;
 
-  display: flex;
-  align-items: flex-end;
+  z-index: 2;
 
-  padding-top: 0;
-  padding-bottom: 100px;
+  pointer-events: none;
+
+  background: linear-gradient(
+    90deg,
+    rgba(255, 247, 231, 0.08) 0%,
+    rgba(255, 247, 231, 0.02) 50%,
+    rgba(255, 247, 231, 0) 100%
+  );
 }
 
 
-/* ========================================
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-content {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 5;
+
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: flex-start;
+
+  padding-top: 0;
+
+  padding-bottom: clamp(28px, 5vw, 70px);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
    HERO COPY
-======================================== */
+========================================================= */
 
 .hero-copy {
   position: relative;
 
-  width: 58%;
+  width: 100%;
   max-width: 700px;
 
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
 
-  padding-left: 130px !important;
-  padding-top: 0;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  padding-left: clamp(20px, 7vw, 130px);
+
+  pointer-events: none;
 }
 
 
-/* ========================================
+/* =========================================================
    HERO BUTTON
-======================================== */
+========================================================= */
 
 .hero-btn {
+  position: relative;
+
+  z-index: 10;
+
   display: inline-flex;
+
   align-items: center;
   justify-content: center;
 
   gap: 8px;
 
-  text-decoration: none;
-  white-space: nowrap;
-
-  font-family: "Outfit", sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 1;
+  width: fit-content;
 
   padding: 15px 30px;
 
   border-radius: 999px;
 
-  position: relative;
-  z-index: 10;
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  font-family: "Outfit", sans-serif;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  line-height: 1;
+
+  pointer-events: auto;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 
-/* ========================================
-   BUTTON ARROW
-======================================== */
+/* =========================================================
+   BUTTON ICON
+========================================================= */
 
 .hero-btn svg {
+  flex-shrink: 0;
+
   transition: transform 0.25s ease;
 }
+
+
+.hero-btn:hover {
+  transform: translateY(-2px);
+}
+
 
 .hero-btn:hover svg {
   transform: translateX(4px);
 }
 
 
-/* ========================================
+/* =========================================================
    LARGE DESKTOP
-======================================== */
+   1400px+
+========================================================= */
 
 @media (min-width: 1400px) {
 
+  /*
+    Header actual height is affected by:
+    115px logo + 20px margin-top.
+  */
   .home-hero {
-    min-height: 540px;
+    margin-top: 135px;
   }
 
-  .hero-bg-image {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-    object-position: center center;
-
-    transform: scale(1.02);
-  }
 
   .hero-content {
-    min-height: 540px;
-
-    padding-top: 0;
-    padding-bottom: 105px;
+    padding-bottom: clamp(45px, 5vw, 75px);
   }
 
+
   .hero-copy {
-    width: 58%;
-    padding-left: 50px;
-    padding-top: 0;
+    padding-left: clamp(70px, 7vw, 140px);
+  }
+
+
+  .hero-btn {
+    font-size: 15px;
+
+    padding: 16px 32px;
   }
 }
 
 
-/* ========================================
+/* =========================================================
+   DESKTOP
+   1201px - 1399px
+========================================================= */
+
+@media (min-width: 1201px) and (max-width: 1399px) {
+
+  .home-hero {
+    /*
+      110px logo + margin-top area
+    */
+    margin-top: 130px;
+  }
+
+
+  .hero-content {
+    padding-bottom: 55px;
+  }
+
+
+  .hero-copy {
+    padding-left: clamp(50px, 6vw, 100px);
+  }
+}
+
+
+/* =========================================================
    LAPTOP
-======================================== */
+   981px - 1200px
+========================================================= */
 
-@media (max-width: 1200px) {
-
-  .home-hero {
-    min-height: 520px;
-  }
-
-  .hero-bg-image {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-    object-position: center center;
-
-    transform: scale(1.02);
-  }
-
-  .hero-content {
-    min-height: 520px;
-
-    padding-top: 0;
-    padding-bottom: 100px;
-  }
-
-  .hero-copy {
-    width: 62%;
-    padding-left: 40px;
-    padding-top: 0;
-  }
-}
-
-
-/* ========================================
-   TABLET
-======================================== */
-
-@media (max-width: 980px) {
+@media (min-width: 981px) and (max-width: 1200px) {
 
   .home-hero {
-    min-height: 500px;
+    /*
+      Header logo:
+      100px + 18px margin
+    */
+    margin-top: 118px;
   }
 
-  .hero-bg-image {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-    object-position: center center;
-
-    transform: scale(1.02);
-  }
 
   .hero-content {
-    min-height: 500px;
-
-    padding-top: 0;
-    padding-bottom: 90px;
+    padding-bottom: 45px;
   }
+
 
   .hero-copy {
-    width: 65%;
-    padding-left: 30px;
-    padding-top: 0;
-  }
-}
-
-
-/* ========================================
-   MOBILE
-======================================== */
-
-@media (max-width: 700px) {
-
-  .home-hero {
-    width: 100%;
-    height: 650px;
-    min-height: 650px;
-
-    aspect-ratio: auto;
-
-    overflow: hidden;
+    padding-left: clamp(35px, 5vw, 65px);
   }
 
-  .hero-bg-image {
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-    object-position: center center;
-
-    transform: scale(1.01);
-    transform-origin: center center;
-  }
-
-  .hero-content {
-    width: 100%;
-    height: 650px;
-    min-height: 650px;
-
-    display: flex;
-    align-items: flex-end;
-
-    padding-top: 0;
-    padding-bottom: 70px;
-  }
-
-  .hero-copy {
-    width: 100%;
-    max-width: 100%;
-
-    padding: 0 0 0 30px;
-  }
 
   .hero-btn {
     font-size: 13px;
-    padding: 11px 16px;
+
+    padding: 13px 25px;
   }
 }
 
 
-/* ========================================
-   SMALL MOBILE
-======================================== */
+/* =========================================================
+   TABLET
+   768px - 980px
+========================================================= */
 
-@media (max-width: 520px) {
+@media (min-width: 768px) and (max-width: 980px) {
 
   .home-hero {
-    width: 100%;
-    height: 620px;
-    min-height: 620px;
+    /*
+      82px logo + 17px margin
+    */
+    margin-top: 99px;
   }
+
 
   .hero-bg-image {
-    width: 100%;
-    height: 100%;
-
     object-fit: cover;
     object-position: center center;
-
-    transform: scale(1.01);
   }
+
 
   .hero-content {
-    width: 100%;
-    height: 620px;
-    min-height: 620px;
-
-    padding-top: 0;
-    padding-bottom: 58px;
+    padding-bottom: 30px;
   }
 
+
   .hero-copy {
-    width: 100%;
-    padding: 0 0 0 25px;
+    padding-left: clamp(24px, 4vw, 45px);
+  }
+
+
+  .hero-btn {
+    font-size: 12px;
+
+    padding: 11px 20px;
+
+    gap: 7px;
+  }
+
+
+  .hero-btn svg {
+    width: 16px;
+    height: 16px;
   }
 }
 
 
-/* ========================================
+/* =========================================================
+   MOBILE
+   601px - 767px
+========================================================= */
+
+@media (min-width: 601px) and (max-width: 767px) {
+
+  .home-hero {
+    /*
+      82px logo + 17px margin
+      Header visual area
+    */
+    margin-top: 99px;
+
+    aspect-ratio: 1983 / 793;
+  }
+
+
+  .hero-bg-image {
+    object-fit: cover;
+    object-position: center center;
+  }
+
+
+  .hero-content {
+    padding-bottom: 22px;
+  }
+
+
+  .hero-copy {
+    padding-left: 22px;
+    padding-right: 15px;
+  }
+
+
+  .hero-btn {
+    font-size: 11px;
+
+    padding: 9px 16px;
+
+    gap: 6px;
+  }
+
+
+  .hero-btn svg {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   481px - 600px
+========================================================= */
+
+@media (min-width: 481px) and (max-width: 600px) {
+
+  .home-hero {
+    /*
+      72px logo + 14px margin
+      = approximately 86px header visual height
+    */
+    margin-top: 86px;
+
+    aspect-ratio: 1983 / 793;
+
+    min-height: 0;
+    height: auto;
+  }
+
+
+  .hero-bg-image {
+    object-fit: cover;
+
+    object-position: center center;
+
+    transform: none;
+  }
+
+
+  .hero-content {
+    padding-bottom: 15px;
+  }
+
+
+  .hero-copy {
+    padding-left: 16px;
+    padding-right: 12px;
+  }
+
+
+  .hero-btn {
+    font-size: 10px;
+
+    padding: 8px 13px;
+
+    gap: 5px;
+  }
+
+
+  .hero-btn svg {
+    width: 13px;
+    height: 13px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   381px - 480px
+========================================================= */
+
+@media (min-width: 381px) and (max-width: 480px) {
+
+  .home-hero {
+    /*
+      72px logo + 14px margin
+    */
+    margin-top: 86px;
+
+    aspect-ratio: 1983 / 793;
+
+    min-height: 0;
+    height: auto;
+  }
+
+
+  .hero-bg-image {
+    object-fit: cover;
+
+    object-position: center center;
+
+    transform: none;
+  }
+
+
+  .hero-content {
+    padding-bottom: 13px;
+  }
+
+
+  .hero-copy {
+    padding-left: 15px;
+    padding-right: 10px;
+  }
+
+
+  .hero-btn {
+    font-size: 10px;
+
+    padding: 8px 13px;
+
+    gap: 5px;
+  }
+
+
+  .hero-btn svg {
+    width: 13px;
+    height: 13px;
+  }
+}
+
+
+/* =========================================================
    VERY SMALL MOBILE
-======================================== */
+   320px - 380px
+========================================================= */
 
 @media (max-width: 380px) {
 
   .home-hero {
-    width: 100%;
-    height: 600px;
-    min-height: 600px;
+    /*
+      66px logo + 12px margin
+    */
+    margin-top: 78px;
+
+    aspect-ratio: 1983 / 793;
+
+    min-height: 0;
+    height: auto;
   }
+
 
   .hero-bg-image {
-    width: 100%;
-    height: 100%;
-
     object-fit: cover;
+
     object-position: center center;
 
-    transform: scale(1.01);
+    transform: none;
   }
+
 
   .hero-content {
-    width: 100%;
-    height: 600px;
-    min-height: 600px;
-
-    padding-top: 0;
-    padding-bottom: 50px;
+    padding-bottom: 10px;
   }
 
+
   .hero-copy {
-    width: 100%;
-    padding: 0 0 0 22px;
+    padding-left: 12px;
+    padding-right: 8px;
+  }
+
+
+  .hero-btn {
+    font-size: 9px;
+
+    padding: 7px 11px;
+
+    gap: 4px;
+  }
+
+
+  .hero-btn svg {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+
+/* =========================================================
+   EXTRA SMALL
+   BELOW 320px
+========================================================= */
+
+@media (max-width: 319px) {
+
+  .home-hero {
+    margin-top: 78px;
+
+    aspect-ratio: 1983 / 793;
+
+    min-height: 0;
+    height: auto;
+  }
+
+
+  .hero-content {
+    padding-bottom: 8px;
+  }
+
+
+  .hero-copy {
+    padding-left: 10px;
+    padding-right: 7px;
+  }
+
+
+  .hero-btn {
+    font-size: 8px;
+
+    padding: 6px 9px;
+
+    gap: 3px;
+  }
+
+
+  .hero-btn svg {
+    width: 11px;
+    height: 11px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .hero-btn,
+  .hero-btn svg {
+    transition: none;
   }
 }

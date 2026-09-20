@@ -1,111 +1,103 @@
-import {
-  ArrowRight,
-  Heart,
-  PawPrint,
-  ShieldCheck,
-  UserRoundCheck,
-  Clock3
-} from "lucide-react";
-import { Link } from "react-router-dom";
+import { ArrowRight, Heart, ShieldCheck, Users } from "lucide-react";
 import "./AboutPreview.css";
 
-export default function AboutPreview() {
+const About = () => {
   return (
-    <section className="about-preview section">
+    <section className="about-section" id="about">
+      <div className="about-container">
 
-      <div className="container about-content">
+        {/* Image */}
+        <div className="about-image-wrapper">
+          <div className="about-image-card">
+            <img
+              src="https://images.unsplash.com/photo-1511044568932-338cba0ad803?auto=format&fit=crop&w=1000&q=85"
+              alt="Cat relaxing in a comfortable environment"
+              className="about-image"
+            />
 
-        {/* ========================================
-            ABOUT HEADER
-        ======================================== */}
+            <div className="about-image-badge">
+              <Heart size={20} strokeWidth={2.2} />
+              <div>
+                <strong>Happy Cats</strong>
+                <span>Happy Homes</span>
+              </div>
+            </div>
+          </div>
+        </div>
 
-        <div className="about-heading">
+        {/* Content */}
+        <div className="about-content">
 
-          <div className="eyebrow">
-            <PawPrint />
-            About Us
+          <div className="about-label">
+            <span className="about-label-icon">🐾</span>
+            <span>About Us</span>
           </div>
 
-          <h2 className="section-title">
-            About AZIZ FELINES CATTERY
+          <h2>
+            Caring for Cats,
+            <span> Like Family</span>
           </h2>
 
-        </div>
-
-
-        {/* ========================================
-            ABOUT CONTENT
-        ======================================== */}
-
-        <div className="about-copy">
-
-          <p>
-            At AZIZ FELINES CATTERY, we are passionate about cats and dedicated
-            to providing the best care for them. Our facility is designed to
-            offer a safe, clean, and comfortable environment where every cat
-            feels at home.
+          <p className="about-intro">
+            At AZIZ FELINES CATTERY, we believe every cat deserves a safe,
+            clean and loving environment. Our goal is to provide comfortable
+            care where your feline friend feels relaxed, secure and happy.
           </p>
 
-          <p>
-            We understand that cats are more than just pets — they are family.
-            That's why we focus on their health, happiness and well-being, with
-            professional care, a loving atmosphere and personalized attention.
+          <p className="about-description">
+            From comfortable boarding to personalized attention, we focus on
+            the health, happiness and well-being of every cat entrusted to us.
+            Every little detail is handled with care because we know your cat
+            is an important part of your family.
           </p>
 
-          <Link className="btn" to="/about">
+          {/* Features */}
+          <div className="about-features">
+
+            <div className="about-feature">
+              <div className="about-feature-icon">
+                <ShieldCheck size={23} />
+              </div>
+
+              <div>
+                <h3>Safe & Hygienic</h3>
+                <p>Clean, secure and comfortable surroundings.</p>
+              </div>
+            </div>
+
+            <div className="about-feature">
+              <div className="about-feature-icon">
+                <Users size={23} />
+              </div>
+
+              <div>
+                <h3>Caring Team</h3>
+                <p>Experienced people who genuinely care for cats.</p>
+              </div>
+            </div>
+
+            <div className="about-feature">
+              <div className="about-feature-icon">
+                <Heart size={23} />
+              </div>
+
+              <div>
+                <h3>Personalized Care</h3>
+                <p>Attention based on every cat's individual needs.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <a href="/about" className="about-button">
             Know More About Us
-            <ArrowRight size={17} />
-          </Link>
+            <ArrowRight size={18} />
+          </a>
 
         </div>
-
-
-        {/* ========================================
-            BENEFITS
-        ======================================== */}
-
-        <div className="about-benefits">
-
-          <div className="about-benefit">
-            <ShieldCheck />
-            <span>
-              Safe & Hygienic
-              <br />
-              Environment
-            </span>
-          </div>
-
-          <div className="about-benefit">
-            <UserRoundCheck />
-            <span>
-              Experienced &
-              <br />
-              Caring Staff
-            </span>
-          </div>
-
-          <div className="about-benefit">
-            <Clock3 />
-            <span>
-              24/7
-              <br />
-              Support
-            </span>
-          </div>
-
-          <div className="about-benefit">
-            <Heart />
-            <span>
-              Trusted by
-              <br />
-              Cat Parents
-            </span>
-          </div>
-
-        </div>
-
       </div>
-
     </section>
   );
-}
+};
+
+export default About;

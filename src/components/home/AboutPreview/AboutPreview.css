@@ -1,321 +1,447 @@
-/* ========================================
-   ABOUT PREVIEW
-======================================== */
+/* ================================
+   ABOUT SECTION
+================================ */
 
-.about-preview {
-  background: #fff;
-  position: relative;
+.about-section {
+  width: 100%;
+  padding: 90px 20px;
+  background: #ffffff;
   overflow: hidden;
 }
 
+.about-container {
+  width: min(1180px, 100%);
+  margin: 0 auto;
 
-/* ========================================
-   MAIN CONTAINER
-======================================== */
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: center;
+  gap: 75px;
+}
 
-.about-content {
+
+/* ================================
+   IMAGE
+================================ */
+
+.about-image-wrapper {
+  position: relative;
+  padding: 14px;
+}
+
+.about-image-wrapper::before {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  left: -30px;
+  bottom: -30px;
+
+  background: #fff6d8;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.about-image-card {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  height: 500px;
+
+  overflow: hidden;
+  border-radius: 28px;
+
+  background: #e9f7f3;
+
+  box-shadow:
+    0 20px 45px rgba(0, 91, 87, 0.13);
+}
+
+.about-image {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.7s ease,
+    filter 0.7s ease;
+}
+
+.about-image-card:hover .about-image {
+  transform: scale(1.06);
+  filter: brightness(1.03);
+}
+
+
+/* ================================
+   IMAGE BADGE
+================================ */
+
+.about-image-badge {
+  position: absolute;
+  left: 22px;
+  bottom: 22px;
+
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  padding: 13px 19px;
+
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(0, 105, 99, 0.08);
+
+  border-radius: 14px;
+
+  color: #006b66;
+
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1);
+
+  backdrop-filter: blur(8px);
+}
+
+.about-image-badge svg {
+  flex-shrink: 0;
+}
+
+.about-image-badge div {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-
-  width: 100%;
+  gap: 2px;
 }
 
-
-/* ========================================
-   ABOUT HEADING
-======================================== */
-
-.about-heading {
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-
-/* ========================================
-   EYEBROW
-======================================== */
-
-.about-heading .eyebrow {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  gap: 7px;
-
-  font-family: "Kalam", cursive;
-  font-size: 25px;
-  font-weight: 700;
-
-  color: #075c55;
-
-  margin-bottom: 4px;
-}
-
-.about-heading .eyebrow svg {
-  width: 22px;
-  height: 22px;
-}
-
-
-/* ========================================
-   SECTION TITLE
-======================================== */
-
-.about-heading .section-title {
-  font-size: 35px;
-  line-height: 1.15;
-
-  margin: 4px 0 18px;
-
-  color: #075c55;
-}
-
-
-/* ========================================
-   ABOUT COPY
-======================================== */
-
-.about-copy {
-  width: 100%;
-  max-width: 950px;
-
-  margin: 0 auto;
-}
-
-
-.about-copy p {
+.about-image-badge strong {
   font-size: 14px;
-  line-height: 1.8;
+  font-weight: 700;
+  color: #075a63;
+}
 
-  color: #315764;
-
-  margin: 7px 0;
+.about-image-badge span {
+  font-size: 12px;
+  color: #557477;
 }
 
 
-/* ========================================
-   ABOUT BUTTON
-======================================== */
+/* ================================
+   CONTENT
+================================ */
 
-.about-copy .btn {
+.about-content {
+  max-width: 620px;
+}
+
+.about-label {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-
   gap: 8px;
 
-  margin-top: 18px;
+  margin-bottom: 13px;
+
+  color: #00736d;
+
+  font-family: "Kalam", "Segoe Print", cursive;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.about-label-icon {
+  font-size: 18px;
+}
+
+
+/* ================================
+   HEADING
+================================ */
+
+.about-content h2 {
+  margin: 0 0 20px;
+
+  color: #075269;
+
+  font-family: "Kalam", "Segoe Print", cursive;
+  font-size: clamp(36px, 4vw, 50px);
+  line-height: 1.12;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.about-content h2 span {
+  display: block;
+  color: #008f7e;
+}
+
+
+/* ================================
+   TEXT
+================================ */
+
+.about-intro {
+  margin: 0 0 13px;
+
+  color: #365e66;
+
+  font-size: 16px;
+  line-height: 1.75;
+  font-weight: 500;
+}
+
+.about-description {
+  margin: 0 0 25px;
+
+  color: #61777b;
+
+  font-size: 14.5px;
+  line-height: 1.75;
+}
+
+
+/* ================================
+   FEATURES
+================================ */
+
+.about-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 14px;
+
+  margin-bottom: 28px;
+}
+
+.about-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  padding: 14px;
+
+  background: #f5fbf9;
+
+  border: 1px solid #dceeea;
+  border-radius: 14px;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+.about-feature:hover {
+  transform: translateY(-4px);
+
+  background: #ffffff;
+
+  border-color: #a8dcd4;
+
+  box-shadow:
+    0 10px 25px rgba(0, 105, 99, 0.1);
+}
+
+.about-feature-icon {
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #00756e;
+  background: #e3f6f1;
+
+  border-radius: 11px;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.about-feature:hover .about-feature-icon {
+  color: #ffffff;
+  background: #00756e;
+}
+
+.about-feature h3 {
+  margin: 1px 0 4px;
+
+  color: #075269;
+
+  font-size: 13.5px;
+  font-weight: 700;
+}
+
+.about-feature p {
+  margin: 0;
+
+  color: #668083;
+
+  font-size: 11.5px;
+  line-height: 1.45;
+}
+
+
+/* ================================
+   BUTTON
+================================ */
+
+.about-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  min-height: 48px;
+
+  padding: 0 23px;
+
+  color: #ffffff;
+  background: #006b65;
+
+  border: 2px solid #006b65;
+  border-radius: 28px;
+
+  font-size: 13.5px;
+  font-weight: 700;
 
   text-decoration: none;
+
+  box-shadow:
+    0 8px 20px rgba(0, 107, 101, 0.18);
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
-
-/* Button Arrow */
-
-.about-copy .btn svg {
-  transition: transform 0.25s ease;
+.about-button svg {
+  transition: transform 0.3s ease;
 }
 
-.about-copy .btn:hover svg {
+.about-button:hover {
+  color: #006b65;
+  background: #ffffff;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 25px rgba(0, 107, 101, 0.22);
+}
+
+.about-button:hover svg {
   transform: translateX(4px);
 }
 
 
-/* ========================================
-   BENEFITS
-======================================== */
-
-.about-benefits {
-  width: 100%;
-  max-width: 1000px;
-
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-
-  gap: 18px;
-
-  margin: 35px auto 0;
-
-  padding-top: 25px;
-
-  border-top: 1px solid rgba(7, 92, 85, 0.12);
-}
-
-
-/* ========================================
-   BENEFIT ITEM
-======================================== */
-
-.about-benefits div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  gap: 10px;
-
-  color: #075c55;
-
-  font-weight: 800;
-  font-size: 13px;
-
-  line-height: 1.35;
-
-  text-align: left;
-}
-
-
-/* ========================================
-   BENEFIT ICON
-======================================== */
-
-.about-benefits svg {
-  width: 34px;
-  height: 34px;
-
-  flex: none;
-
-  color: #075c55;
-}
-
-
-/* ========================================
+/* ================================
    TABLET
-======================================== */
+================================ */
 
-@media (max-width: 950px) {
+@media (max-width: 900px) {
+  .about-section {
+    padding: 70px 20px;
+  }
+
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .about-image-wrapper {
+    max-width: 650px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .about-image-card {
+    height: 430px;
+  }
 
   .about-content {
-    width: 100%;
-  }
-
-  .about-heading {
-    max-width: 800px;
-  }
-
-  .about-heading .section-title {
-    font-size: 32px;
-  }
-
-  .about-copy {
-    max-width: 850px;
-  }
-
-  .about-benefits {
-    grid-template-columns: repeat(2, 1fr);
-
     max-width: 700px;
-
-    gap: 22px 35px;
-
-    margin-top: 30px;
-  }
-
-  .about-benefits div {
-    justify-content: flex-start;
+    margin: 0 auto;
   }
 }
 
 
-/* ========================================
+/* ================================
    MOBILE
-======================================== */
+================================ */
 
-@media (max-width: 650px) {
-
-  .about-content {
-    width: 100%;
+@media (max-width: 600px) {
+  .about-section {
+    padding: 55px 16px;
   }
 
-  .about-heading {
-    max-width: 100%;
+  .about-container {
+    gap: 32px;
   }
 
-  .about-heading .eyebrow {
-    font-size: 22px;
+  .about-image-wrapper {
+    padding: 8px;
   }
 
-  .about-heading .eyebrow svg {
-    width: 20px;
-    height: 20px;
+  .about-image-card {
+    height: 350px;
+    border-radius: 22px;
   }
 
-  .about-heading .section-title {
-    font-size: 28px;
-    line-height: 1.2;
+  .about-image-wrapper::before {
+    width: 120px;
+    height: 120px;
 
-    margin-bottom: 15px;
+    left: -15px;
+    bottom: -15px;
   }
 
-  .about-copy {
-    max-width: 100%;
+  .about-image-badge {
+    left: 15px;
+    bottom: 15px;
+
+    padding: 10px 13px;
   }
 
-  .about-copy p {
-    font-size: 13px;
-    line-height: 1.75;
-
-    margin: 8px 0;
-  }
-
-  .about-copy .btn {
-    margin-top: 16px;
-  }
-
-  .about-benefits {
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 20px 15px;
-
-    margin-top: 28px;
-    padding-top: 22px;
-  }
-
-  .about-benefits div {
-    justify-content: flex-start;
-
-    gap: 8px;
-
+  .about-image-badge strong {
     font-size: 12px;
   }
 
-  .about-benefits svg {
-    width: 30px;
-    height: 30px;
-  }
-}
-
-
-/* ========================================
-   SMALL MOBILE
-======================================== */
-
-@media (max-width: 420px) {
-
-  .about-heading .eyebrow {
-    font-size: 20px;
+  .about-image-badge span {
+    font-size: 10px;
   }
 
-  .about-heading .section-title {
-    font-size: 25px;
+  .about-label {
+    font-size: 18px;
   }
 
-  .about-copy p {
-    font-size: 12.5px;
+  .about-content h2 {
+    font-size: 34px;
   }
 
-  .about-benefits {
-    gap: 18px 10px;
+  .about-intro {
+    font-size: 14px;
+    line-height: 1.7;
   }
 
-  .about-benefits div {
-    font-size: 11.5px;
+  .about-description {
+    font-size: 13px;
   }
 
-  .about-benefits svg {
-    width: 27px;
-    height: 27px;
+  .about-features {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .about-feature {
+    padding: 12px;
+  }
+
+  .about-button {
+    width: 100%;
   }
 }
