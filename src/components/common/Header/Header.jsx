@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { ChevronDown, Menu, X } from "lucide-react";
@@ -35,7 +36,7 @@ export default function Header() {
           onClick={closeMenu}
         >
           <img
-            src="/images/logo.png"
+            src={`${import.meta.env.BASE_URL}images/logo.png`}
             alt="AZIZ FELINES CATTERY logo"
           />
 
