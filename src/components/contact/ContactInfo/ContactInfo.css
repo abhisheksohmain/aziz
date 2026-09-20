@@ -1,7 +1,740 @@
+/* =========================================================
+   CONTACT INFO
+========================================================= */
 
-.contact-heading{display:flex;align-items:center;gap:10px;color:#075c55}.contact-heading>svg{width:42px;height:42px;fill:var(--teal)}.contact-heading h2{font-size:28px;margin:0}.contact-heading p{margin:0;font-size:13px;font-weight:700}
-.contact-cards{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:18px 0}.contact-card{border-radius:18px;padding:20px;display:flex;gap:15px;align-items:flex-start;border:1px solid}.contact-card>svg{width:58px;height:58px;flex:none;padding:12px;border-radius:50%;background:#fff}.contact-card h3{margin:0;font-size:21px}.contact-card p{font-size:12px;margin:5px 0 9px}.contact-card strong{display:block;border-radius:999px;padding:9px 13px;width:max-content}.contact-card small{display:block;margin-top:7px;font-weight:800}.whatsapp{background:#eefbf3;border-color:#bdebd0}.whatsapp>svg{color:#12a75d}.whatsapp strong{background:#11a35c;color:#fff}.email{background:#fff9e8;border-color:#f0dd9d}.email>svg{color:#f0a61a}.email strong{background:#ffe49c;color:#34515c}
-.contact-trust{display:grid;grid-template-columns:repeat(4,1fr);margin:10px 0 25px}.contact-trust span{display:flex;align-items:center;justify-content:center;gap:8px;text-align:center;border-right:1px solid #b8d3cc;color:#075c55;font-size:12px;font-weight:900}.contact-trust span:last-child{border:0}.contact-trust svg{width:30px}
-.location-card{display:grid;grid-template-columns:1fr 1fr;gap:16px}.fake-map{min-height:230px;border:1px solid #d6e6df;border-radius:16px;background:linear-gradient(135deg,#dcead6 0 10%,#eef1dd 10% 23%,#d5e8ef 23% 38%,#f2efd7 38% 55%,#dcebdc 55% 72%,#eef1df 72%);position:relative;display:grid;place-items:center;overflow:hidden}.fake-map:before,.fake-map:after{content:"";position:absolute;width:120%;height:3px;background:#fff;transform:rotate(28deg);opacity:.8}.fake-map:after{transform:rotate(-20deg);top:70%}.fake-map svg{width:48px;height:48px;color:#e92337;fill:#e92337;z-index:2}.fake-map b{position:absolute;top:75px;background:#075c55;color:#fff;padding:7px 12px;border-radius:20px;font-size:12px}.fake-map span{position:absolute;bottom:15px;left:18px;font-family:"Kalam";font-size:22px;color:#075c55;transform:rotate(-5deg)}
-.location-card>div:last-child{background:#eef9f5;border-radius:16px;padding:20px}.location-card h3{margin:0;color:#075c55;font-size:24px}.location-card p{font-size:13px;line-height:1.6}
-@media(max-width:700px){.contact-cards,.location-card{grid-template-columns:1fr}.contact-trust{grid-template-columns:repeat(2,1fr);gap:15px}.contact-trust span:nth-child(2){border:0}}
+.contact-info {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 0;
+}
+
+
+/* =========================================================
+   CONTACT HEADING
+========================================================= */
+
+.contact-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #075c55;
+
+  flex: 0 0 auto;
+}
+
+.contact-heading > svg {
+  width: 42px;
+  height: 42px;
+
+  flex: none;
+
+  fill: var(--teal);
+}
+
+.contact-heading h2 {
+  margin: 0;
+
+  font-size: 28px;
+  line-height: 1.1;
+}
+
+.contact-heading p {
+  margin: 0;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   CONTACT CARDS
+========================================================= */
+
+.contact-cards {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 18px;
+
+  margin: 18px 0;
+
+  flex: 0 0 auto;
+}
+
+.contact-card {
+  min-width: 0;
+
+  border-radius: 18px;
+
+  padding: 20px;
+
+  display: flex;
+
+  gap: 15px;
+
+  align-items: flex-start;
+
+  border: 1px solid;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 22px rgba(7, 92, 85, 0.08);
+}
+
+.contact-card > svg {
+  width: 58px;
+  height: 58px;
+
+  flex: none;
+
+  padding: 12px;
+
+  border-radius: 50%;
+
+  background: #fff;
+}
+
+.contact-card h3 {
+  margin: 0;
+
+  font-size: 21px;
+  line-height: 1.15;
+}
+
+.contact-card p {
+  font-size: 12px;
+
+  margin: 5px 0 9px;
+
+  line-height: 1.35;
+}
+
+.contact-card strong {
+  display: block;
+
+  width: max-content;
+
+  max-width: 100%;
+
+  border-radius: 999px;
+
+  padding: 9px 13px;
+
+  font-size: 12px;
+
+  line-height: 1.2;
+}
+
+.contact-card small {
+  display: block;
+
+  margin-top: 7px;
+
+  font-size: 10px;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   WHATSAPP
+========================================================= */
+
+.whatsapp {
+  background: #eefbf3;
+
+  border-color: #bdebd0;
+}
+
+.whatsapp > svg {
+  color: #12a75d;
+}
+
+.whatsapp strong {
+  background: #11a35c;
+
+  color: #fff;
+}
+
+
+/* =========================================================
+   EMAIL
+========================================================= */
+
+.email {
+  background: #fff9e8;
+
+  border-color: #f0dd9d;
+}
+
+.email > svg {
+  color: #f0a61a;
+}
+
+.email strong {
+  background: #ffe49c;
+
+  color: #34515c;
+}
+
+
+/* =========================================================
+   TRUST FEATURES
+========================================================= */
+
+.contact-trust {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  margin: 10px 0 25px;
+
+  flex: 0 0 auto;
+}
+
+.contact-trust span {
+  min-width: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  text-align: center;
+
+  border-right: 1px solid #b8d3cc;
+
+  color: #075c55;
+
+  font-size: 12px;
+
+  line-height: 1.2;
+
+  font-weight: 900;
+}
+
+.contact-trust span:last-child {
+  border-right: 0;
+}
+
+.contact-trust svg {
+  width: 30px;
+  height: 30px;
+
+  flex: none;
+}
+
+
+/* =========================================================
+   REAL GOOGLE MAP
+========================================================= */
+
+/*
+   IMPORTANT:
+   flex: 1 makes the map consume all remaining height.
+   If the parent Contact section stretches to the
+   Enquiry Form height, the map bottom will align
+   exactly with the form bottom.
+*/
+
+.location-map {
+  position: relative;
+
+  width: 100%;
+
+  flex: 1 1 0;
+
+  min-height: 0;
+
+  display: flex;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   MAP FRAME
+========================================================= */
+
+.location-map-frame {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  min-height: 250px;
+
+  overflow: hidden;
+
+  border: 1px solid #d6e6df;
+
+  border-radius: 16px;
+
+  background: #e7eee9;
+
+  box-shadow:
+    0 5px 18px rgba(7, 92, 85, 0.06);
+}
+
+
+/* =========================================================
+   GOOGLE MAP IFRAME
+========================================================= */
+
+.location-map-frame iframe {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  border: 0;
+
+  margin: 0;
+}
+
+
+/* =========================================================
+   MAP INFORMATION CARD
+========================================================= */
+
+.map-info {
+  position: absolute;
+
+  left: 14px;
+  top: 14px;
+
+  z-index: 5;
+
+  max-width: 285px;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 10px;
+
+  padding: 11px 14px;
+
+  border-radius: 13px;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  backdrop-filter: blur(7px);
+
+  -webkit-backdrop-filter: blur(7px);
+
+  box-shadow:
+    0 5px 18px rgba(0, 0, 0, 0.13);
+}
+
+
+/* Icon */
+
+.map-info-icon {
+  width: 32px;
+  height: 32px;
+
+  flex: none;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #075c55;
+}
+
+.map-info-icon svg {
+  width: 17px;
+  height: 17px;
+
+  color: #fff;
+
+  fill: #fff;
+}
+
+
+/* Content */
+
+.map-info-content {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.map-info-content strong {
+  color: #075c55;
+
+  font-size: 12px;
+
+  line-height: 1.2;
+}
+
+.map-info-content span {
+  color: #526864;
+
+  font-size: 9px;
+
+  line-height: 1.35;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   GET DIRECTIONS BUTTON
+========================================================= */
+
+.map-directions-btn {
+  position: absolute;
+
+  left: 15px;
+  bottom: 15px;
+
+  z-index: 10;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  padding: 10px 16px;
+
+  border-radius: 999px;
+
+  background: #075c55;
+
+  color: #fff;
+
+  text-decoration: none;
+
+  font-size: 11px;
+
+  line-height: 1;
+
+  font-weight: 800;
+
+  box-shadow:
+    0 5px 16px rgba(7, 92, 85, 0.28);
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.map-directions-btn:hover {
+  transform: translateY(-2px);
+
+  background: #064b45;
+}
+
+.map-directions-btn svg {
+  width: 15px;
+  height: 15px;
+}
+
+
+/* =========================================================
+   DESKTOP
+========================================================= */
+
+@media (min-width: 1001px) {
+
+  .location-map-frame {
+    min-height: 280px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .contact-cards {
+    gap: 12px;
+  }
+
+  .contact-card {
+    padding: 16px;
+  }
+
+  .contact-card > svg {
+    width: 50px;
+    height: 50px;
+
+    padding: 10px;
+  }
+
+  .contact-card h3 {
+    font-size: 18px;
+  }
+
+  .contact-card p {
+    font-size: 11px;
+  }
+
+  .contact-card strong {
+    font-size: 10px;
+  }
+
+  .contact-trust span {
+    font-size: 10px;
+  }
+
+  .map-info {
+    max-width: 245px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .contact-info {
+    height: auto;
+
+    min-height: 0;
+  }
+
+
+  /* Heading */
+
+  .contact-heading {
+    gap: 8px;
+  }
+
+  .contact-heading > svg {
+    width: 35px;
+    height: 35px;
+  }
+
+  .contact-heading h2 {
+    font-size: 24px;
+  }
+
+  .contact-heading p {
+    font-size: 11px;
+  }
+
+
+  /* Cards */
+
+  .contact-cards {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+
+    margin: 15px 0;
+  }
+
+  .contact-card {
+    padding: 15px;
+
+    border-radius: 15px;
+  }
+
+
+  /* Trust */
+
+  .contact-trust {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 14px;
+
+    margin: 10px 0 20px;
+  }
+
+  .contact-trust span {
+    border-right: 0;
+
+    font-size: 10px;
+  }
+
+  .contact-trust span:nth-child(odd) {
+    border-right: 1px solid #b8d3cc;
+  }
+
+  .contact-trust svg {
+    width: 24px;
+    height: 24px;
+  }
+
+
+  /* Map */
+
+  .location-map {
+    flex: none;
+
+    width: 100%;
+
+    height: 300px;
+
+    min-height: 300px;
+  }
+
+  .location-map-frame {
+    width: 100%;
+    height: 300px;
+
+    min-height: 300px;
+
+    border-radius: 15px;
+  }
+
+
+  /* Map info */
+
+  .map-info {
+    left: 10px;
+    top: 10px;
+
+    max-width: calc(100% - 20px);
+
+    padding: 9px 11px;
+  }
+
+  .map-info-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .map-info-icon svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .map-info-content strong {
+    font-size: 10px;
+  }
+
+  .map-info-content span {
+    font-size: 8px;
+  }
+
+
+  /* Directions */
+
+  .map-directions-btn {
+    left: 10px;
+    bottom: 10px;
+
+    padding: 9px 13px;
+
+    font-size: 10px;
+  }
+
+  .map-directions-btn svg {
+    width: 14px;
+    height: 14px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .contact-card {
+    gap: 11px;
+  }
+
+  .contact-card > svg {
+    width: 45px;
+    height: 45px;
+
+    padding: 9px;
+  }
+
+  .contact-card h3 {
+    font-size: 16px;
+  }
+
+  .contact-card p {
+    font-size: 10px;
+  }
+
+  .contact-card strong {
+    font-size: 9px;
+
+    padding: 8px 10px;
+  }
+
+  .contact-card small {
+    font-size: 9px;
+  }
+
+
+  .contact-trust {
+    gap: 10px;
+  }
+
+  .contact-trust span {
+    font-size: 9px;
+  }
+
+
+  /* Smaller map */
+
+  .location-map {
+    height: 260px;
+
+    min-height: 260px;
+  }
+
+  .location-map-frame {
+    height: 260px;
+
+    min-height: 260px;
+  }
+
+
+  .map-info {
+    max-width: calc(100% - 20px);
+  }
+
+  .map-info-content span {
+    display: none;
+  }
+
+  .map-info-content strong {
+    font-size: 9px;
+  }
+
+}

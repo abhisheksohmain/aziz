@@ -1,3 +1,4 @@
+import React from "react";
 import {
   PawPrint,
   Home,
@@ -22,12 +23,20 @@ import {
 import "./AboutPreview.css";
 
 /* =========================================================
-   DUMMY IMAGE
-   Replace this URL later with your actual cat image.
+   CAT IMAGE
+   IMPORTANT:
+   Put your image inside:
+
+   public/images/
+
+   Example:
+   public/images/cat-home.jpg
+
+   Then use:
+   /images/cat-home.jpg
 ========================================================= */
 
-const CAT_IMAGE =
-  "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?auto=format&fit=crop&w=900&q=85";
+const CAT_IMAGE = "images/cat-home.png";
 
 
 /* =========================================================
@@ -126,9 +135,9 @@ export default function CatCareSection() {
 
         <div className="cat-care-left">
 
-          {/* =========================
+          {/* ===================================================
               SPECIALISATION CARD
-          ========================= */}
+          =================================================== */}
 
           <article className="specialisation-card">
 
@@ -151,6 +160,10 @@ export default function CatCareSection() {
             </div>
 
 
+            {/* =================================================
+                INTRO
+            ================================================= */}
+
             <div className="specialisation-intro">
 
               <div className="specialisation-copy">
@@ -170,6 +183,10 @@ export default function CatCareSection() {
               </div>
 
 
+              {/* =================================================
+                  CAT IMAGE
+              ================================================= */}
+
               <div className="specialisation-image-wrap">
 
                 <img
@@ -178,18 +195,26 @@ export default function CatCareSection() {
                   className="specialisation-image"
                   loading="lazy"
                   decoding="async"
+                  onError={(event) => {
+                    event.currentTarget.style.display = "none";
+                  }}
                 />
 
-                <span className="image-heart">♡</span>
+                <span
+                  className="image-heart"
+                  aria-hidden="true"
+                >
+                  ♡
+                </span>
 
               </div>
 
             </div>
 
 
-            {/* =========================
+            {/* =================================================
                 SPECIALISATION SERVICES
-            ========================= */}
+            ================================================= */}
 
             <div className="specialisation-services">
 
@@ -221,9 +246,9 @@ export default function CatCareSection() {
           </article>
 
 
-          {/* =========================
+          {/* ===================================================
               MISSION CARD
-          ========================= */}
+          =================================================== */}
 
           <article className="mission-card">
 
@@ -266,7 +291,10 @@ export default function CatCareSection() {
               </div>
 
 
-              <div className="mission-doodle">
+              <div
+                className="mission-doodle"
+                aria-hidden="true"
+              >
 
                 <span>
                   “ Happy Cats
@@ -291,7 +319,7 @@ export default function CatCareSection() {
 
 
         {/* =====================================================
-            CENTER COLUMN
+            CENTER COLUMN - WHY CHOOSE US
         ===================================================== */}
 
         <article className="why-card">
@@ -306,11 +334,13 @@ export default function CatCareSection() {
             />
 
             <div>
+
               <h2>Why Choose Us?</h2>
 
               <p>
                 Your Cat's Happiness is Our Priority.
               </p>
+
             </div>
 
           </div>
@@ -326,12 +356,15 @@ export default function CatCareSection() {
                 >
 
                   <div className="why-icon">
+
                     <Icon
                       size={20}
                       strokeWidth={2.3}
                       aria-hidden="true"
                     />
+
                   </div>
+
 
                   <div className="why-item-content">
 
@@ -348,7 +381,10 @@ export default function CatCareSection() {
           </div>
 
 
-          <div className="why-doodle">
+          <div
+            className="why-doodle"
+            aria-hidden="true"
+          >
 
             <span>
               Happy Cats
@@ -397,6 +433,10 @@ export default function CatCareSection() {
           </div>
 
 
+          {/* =================================================
+              FORM
+          ================================================= */}
+
           <form
             className="enquiry-form"
             onSubmit={(event) => {
@@ -413,13 +453,17 @@ export default function CatCareSection() {
             <label className="form-field">
 
               <span className="field-icon">
-                <User size={17} />
+                <User
+                  size={17}
+                  aria-hidden="true"
+                />
               </span>
 
               <input
                 type="text"
                 name="name"
                 placeholder="Name *"
+                autoComplete="name"
                 required
               />
 
@@ -431,13 +475,18 @@ export default function CatCareSection() {
             <label className="form-field">
 
               <span className="field-icon">
-                <MessageCircle size={17} />
+                <MessageCircle
+                  size={17}
+                  aria-hidden="true"
+                />
               </span>
 
               <input
                 type="tel"
                 name="whatsapp"
                 placeholder="WhatsApp No. *"
+                autoComplete="tel"
+                inputMode="tel"
                 required
               />
 
@@ -449,13 +498,17 @@ export default function CatCareSection() {
             <label className="form-field">
 
               <span className="field-icon">
-                <Mail size={17} />
+                <Mail
+                  size={17}
+                  aria-hidden="true"
+                />
               </span>
 
               <input
                 type="email"
                 name="email"
                 placeholder="Email *"
+                autoComplete="email"
                 required
               />
 
@@ -467,13 +520,17 @@ export default function CatCareSection() {
             <label className="form-field">
 
               <span className="field-icon">
-                <MapPin size={17} />
+                <MapPin
+                  size={17}
+                  aria-hidden="true"
+                />
               </span>
 
               <input
                 type="text"
                 name="location"
                 placeholder="City & Location *"
+                autoComplete="address-level2"
                 required
               />
 
@@ -485,7 +542,10 @@ export default function CatCareSection() {
             <label className="form-field select-field">
 
               <span className="field-icon">
-                <PawPrint size={17} />
+                <PawPrint
+                  size={17}
+                  aria-hidden="true"
+                />
               </span>
 
               <select
@@ -494,7 +554,10 @@ export default function CatCareSection() {
                 required
               >
 
-                <option value="" disabled>
+                <option
+                  value=""
+                  disabled
+                >
                   Interested in Service *
                 </option>
 
@@ -538,12 +601,15 @@ export default function CatCareSection() {
             <label className="form-field message-field">
 
               <span className="field-icon">
-                <MessageCircle size={17} />
+                <MessageCircle
+                  size={17}
+                  aria-hidden="true"
+                />
               </span>
 
               <textarea
                 name="message"
-                rows="4"
+                rows={4}
                 placeholder="Tell us in detail about your requirement..."
               />
 
@@ -587,12 +653,18 @@ export default function CatCareSection() {
           </form>
 
 
-          <div className="enquiry-paw">
+          {/* =================================================
+              DECORATIVE PAW
+          ================================================= */}
+
+          <div
+            className="enquiry-paw"
+            aria-hidden="true"
+          >
 
             <PawPrint
               size={17}
               fill="currentColor"
-              aria-hidden="true"
             />
 
           </div>

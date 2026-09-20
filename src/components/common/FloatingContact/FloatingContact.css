@@ -1,0 +1,209 @@
+/* =========================================================
+   FLOATING CONTACT BUTTONS
+   PHONE LEFT + WHATSAPP RIGHT
+========================================================= */
+
+.floating-contact {
+  position: fixed;
+
+  left: 0;
+  right: 0;
+  bottom: 22px;
+
+  width: 100%;
+
+  padding: 0 22px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  pointer-events: none;
+
+  z-index: 9999;
+}
+
+/* =========================================================
+   COMMON BUTTON
+========================================================= */
+
+.floating-contact-btn {
+  width: 54px;
+  height: 54px;
+
+  min-width: 54px;
+  min-height: 54px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  text-decoration: none;
+
+  pointer-events: auto;
+
+  box-sizing: border-box;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.floating-contact-btn:hover {
+  transform: translateY(-3px) scale(1.04);
+}
+
+.floating-contact-btn:active {
+  transform: scale(0.96);
+}
+
+/* =========================================================
+   PHONE
+========================================================= */
+
+.phone-btn {
+  color: #ffffff;
+
+  background: #075c55;
+
+  border: 2px solid #ffffff;
+
+  box-shadow:
+    0 5px 18px rgba(0, 0, 0, 0.20);
+}
+
+.phone-btn svg {
+  width: 23px;
+  height: 23px;
+
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   WHATSAPP
+========================================================= */
+
+.whatsapp-btn {
+  color: #ffffff;
+
+  background: #25d366;
+
+  border: 2px solid #ffffff;
+
+  box-shadow:
+    0 5px 18px rgba(0, 0, 0, 0.20);
+}
+
+.whatsapp-icon {
+  width: 28px;
+  height: 28px;
+
+  display: block;
+
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+
+  .floating-contact {
+    bottom: 18px;
+
+    padding: 0 18px;
+  }
+
+  .floating-contact-btn {
+    width: 52px;
+    height: 52px;
+
+    min-width: 52px;
+    min-height: 52px;
+  }
+
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 560px) {
+
+  .floating-contact {
+    bottom: 16px;
+
+    padding:
+      0
+      15px;
+  }
+
+  .floating-contact-btn {
+    width: 50px;
+    height: 50px;
+
+    min-width: 50px;
+    min-height: 50px;
+  }
+
+  .phone-btn svg {
+    width: 21px;
+    height: 21px;
+  }
+
+  .whatsapp-icon {
+    width: 26px;
+    height: 26px;
+  }
+
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .floating-contact {
+    bottom: 14px;
+
+    padding: 0 12px;
+  }
+
+  .floating-contact-btn {
+    width: 48px;
+    height: 48px;
+
+    min-width: 48px;
+    min-height: 48px;
+  }
+
+  .phone-btn svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .whatsapp-icon {
+    width: 25px;
+    height: 25px;
+  }
+
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .floating-contact-btn {
+    transition: none;
+  }
+
+}

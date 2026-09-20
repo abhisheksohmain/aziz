@@ -1,3 +1,573 @@
+/* =========================================================
+   THANK YOU SECTION
+   ========================================================= */
 
-.thankyou{background:#fff5d9;padding:15px 0 0;margin-top:35px;overflow:hidden}.thankyou .container{display:flex;align-items:flex-end;justify-content:center;gap:40px}.thankyou h2{font-family:"Kalam";font-size:43px;color:#075c55;margin:0}.thankyou p{font-weight:800;color:#315a65}.thankyou img{width:390px;height:105px;object-fit:cover;object-position:center top;border-radius:80px 80px 0 0}
-@media(max-width:650px){.thankyou .container{gap:10px}.thankyou img{width:190px}.thankyou h2{font-size:34px}.thankyou p{font-size:12px}}
+.thank-you-section {
+  position: relative;
+  width: 100%;
+  min-height: 180px;
+  overflow: hidden;
+  background: #fffdf4;
+  isolation: isolate;
+}
+
+/* ---------------------------------------------------------
+   TOP CREAM WAVE
+   --------------------------------------------------------- */
+
+.thank-you-section::before {
+  content: "";
+  position: absolute;
+  top: -42px;
+  left: -5%;
+  width: 110%;
+  height: 90px;
+  background: #fffdf4;
+  border-radius: 0 0 50% 50%;
+  z-index: 1;
+}
+
+/* ---------------------------------------------------------
+   MAIN INNER
+   --------------------------------------------------------- */
+
+.thank-you-inner {
+  position: relative;
+  z-index: 5;
+
+  width: min(1180px, 94%);
+  min-height: 155px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 24px;
+
+  padding: 38px 20px 30px;
+}
+
+/* ---------------------------------------------------------
+   TITLE
+   --------------------------------------------------------- */
+
+.thank-you-title {
+  position: relative;
+
+  flex: 0 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 205px;
+}
+
+.title-paw {
+  width: 17px;
+  height: 17px;
+  margin-bottom: 2px;
+
+  stroke-width: 2.5;
+  color: #075267;
+
+  fill: #075267;
+}
+
+.thank-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.thank-title-row h2 {
+  margin: 0;
+
+  color: #075267;
+
+  font-family:
+    "Brush Script MT",
+    "Segoe Script",
+    "Comic Sans MS",
+    cursive;
+
+  font-size: clamp(30px, 3vw, 45px);
+  line-height: 0.95;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.title-heart {
+  width: 25px;
+  height: 25px;
+
+  color: #075267;
+  stroke-width: 1.8;
+}
+
+/* ---------------------------------------------------------
+   DIVIDER
+   --------------------------------------------------------- */
+
+.thank-divider {
+  width: 2px;
+  height: 62px;
+
+  flex: 0 0 2px;
+
+  background: #075267;
+
+  opacity: 0.55;
+}
+
+/* ---------------------------------------------------------
+   LEFT MESSAGE
+   --------------------------------------------------------- */
+
+.thank-message {
+  flex: 0 0 auto;
+
+  min-width: 285px;
+}
+
+.thank-message p {
+  margin: 0;
+
+  color: #075267;
+
+  font-family:
+    "Trebuchet MS",
+    Arial,
+    sans-serif;
+
+  font-size: clamp(14px, 1.3vw, 19px);
+  line-height: 1.42;
+
+  font-weight: 500;
+}
+
+/* ---------------------------------------------------------
+   CAT IMAGE
+   --------------------------------------------------------- */
+
+.thank-cat-wrapper {
+  position: relative;
+
+  align-self: flex-end;
+
+  width: 250px;
+  height: 125px;
+
+  flex: 0 0 250px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.thank-cat-image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+  object-position: center bottom;
+
+  mix-blend-mode: multiply;
+
+  transform: scale(1.12);
+}
+
+/* ---------------------------------------------------------
+   RIGHT MESSAGE
+   --------------------------------------------------------- */
+
+.thank-right-message {
+  position: relative;
+
+  flex: 0 0 auto;
+
+  width: 155px;
+  min-height: 115px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  color: #075267;
+}
+
+.thank-right-message p {
+  margin: 0;
+
+  text-align: center;
+
+  font-family:
+    "Trebuchet MS",
+    Arial,
+    sans-serif;
+
+  font-size: clamp(13px, 1.2vw, 17px);
+  line-height: 1.08;
+
+  font-weight: 700;
+}
+
+/* ---------------------------------------------------------
+   HEARTS
+   --------------------------------------------------------- */
+
+.right-heart {
+  position: absolute;
+
+  color: #075267;
+
+  stroke-width: 1.8;
+}
+
+.heart-top {
+  top: 0;
+  left: 5px;
+
+  width: 25px;
+  height: 25px;
+
+  transform: rotate(-12deg);
+}
+
+.heart-bottom {
+  bottom: 0;
+  left: 10px;
+
+  width: 19px;
+  height: 19px;
+
+  transform: rotate(12deg);
+}
+
+.right-paw {
+  position: absolute;
+
+  right: -2px;
+  bottom: 5px;
+
+  width: 23px;
+  height: 23px;
+
+  color: #075267;
+  fill: #075267;
+
+  stroke-width: 2;
+}
+
+/* ---------------------------------------------------------
+   BACKGROUND PAWS
+   --------------------------------------------------------- */
+
+.thank-paw {
+  position: absolute;
+
+  color: #075267;
+
+  opacity: 0.15;
+
+  z-index: 2;
+
+  fill: #075267;
+}
+
+.paw-1 {
+  top: 52px;
+  left: 7%;
+
+  width: 24px;
+  height: 24px;
+}
+
+.paw-2 {
+  top: 30px;
+  left: 55%;
+
+  width: 20px;
+  height: 20px;
+}
+
+.paw-3 {
+  top: 60px;
+  right: 17%;
+
+  width: 20px;
+  height: 20px;
+}
+
+.paw-4 {
+  bottom: 15px;
+  right: 4%;
+
+  width: 23px;
+  height: 23px;
+
+  opacity: 0.22;
+}
+
+/* ---------------------------------------------------------
+   BOTTOM DARK CURVE
+   --------------------------------------------------------- */
+
+.thank-bottom-curve {
+  position: absolute;
+
+  left: -5%;
+  bottom: -54px;
+
+  width: 110%;
+  height: 90px;
+
+  background: #075267;
+
+  border-radius: 50% 50% 0 0 / 45% 45% 0 0;
+
+  z-index: 3;
+}
+
+/* ---------------------------------------------------------
+   RESPONSIVE - TABLET
+   --------------------------------------------------------- */
+
+@media (max-width: 1000px) {
+  .thank-you-inner {
+    gap: 14px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .thank-you-title {
+    min-width: 170px;
+  }
+
+  .thank-message {
+    min-width: 220px;
+  }
+
+  .thank-cat-wrapper {
+    width: 210px;
+    height: 115px;
+    flex-basis: 210px;
+  }
+
+  .thank-right-message {
+    width: 125px;
+  }
+
+  .thank-message p {
+    font-size: 13px;
+  }
+
+  .thank-right-message p {
+    font-size: 12px;
+  }
+}
+
+/* ---------------------------------------------------------
+   RESPONSIVE - MOBILE
+   --------------------------------------------------------- */
+
+@media (max-width: 760px) {
+  .thank-you-section {
+    min-height: 315px;
+  }
+
+  .thank-you-inner {
+    width: 94%;
+
+    min-height: 290px;
+
+    padding: 55px 8px 60px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    grid-template-areas:
+      "title title"
+      "message message"
+      "cat right";
+
+    align-items: center;
+
+    column-gap: 8px;
+    row-gap: 8px;
+  }
+
+  /* title */
+
+  .thank-you-title {
+    grid-area: title;
+
+    min-width: 0;
+
+    width: 100%;
+  }
+
+  .title-paw {
+    width: 14px;
+    height: 14px;
+  }
+
+  .thank-title-row h2 {
+    font-size: 35px;
+  }
+
+  .title-heart {
+    width: 21px;
+    height: 21px;
+  }
+
+  /* hide divider on mobile */
+
+  .thank-divider {
+    display: none;
+  }
+
+  /* message */
+
+  .thank-message {
+    grid-area: message;
+
+    min-width: 0;
+    width: 100%;
+
+    text-align: center;
+  }
+
+  .thank-message p {
+    font-size: 13px;
+    line-height: 1.3;
+  }
+
+  /* cat */
+
+  .thank-cat-wrapper {
+    grid-area: cat;
+
+    width: 100%;
+    height: 100px;
+
+    flex-basis: auto;
+
+    align-self: end;
+  }
+
+  .thank-cat-image {
+    transform: scale(1.08);
+  }
+
+  /* right */
+
+  .thank-right-message {
+    grid-area: right;
+
+    width: 100%;
+    min-height: 100px;
+  }
+
+  .thank-right-message p {
+    font-size: 12px;
+  }
+
+  /* decorative paws */
+
+  .paw-1 {
+    top: 48px;
+    left: 5%;
+    width: 18px;
+    height: 18px;
+  }
+
+  .paw-2 {
+    top: 72px;
+    right: 9%;
+    left: auto;
+
+    width: 17px;
+    height: 17px;
+  }
+
+  .paw-3 {
+    display: none;
+  }
+
+  .paw-4 {
+    bottom: 30px;
+    right: 5%;
+
+    width: 19px;
+    height: 19px;
+  }
+
+  /* bottom curve */
+
+  .thank-bottom-curve {
+    bottom: -42px;
+
+    height: 70px;
+  }
+}
+
+/* ---------------------------------------------------------
+   SMALL MOBILE
+   --------------------------------------------------------- */
+
+@media (max-width: 420px) {
+  .thank-you-section {
+    min-height: 300px;
+  }
+
+  .thank-you-inner {
+    min-height: 280px;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .thank-title-row h2 {
+    font-size: 31px;
+  }
+
+  .thank-message p {
+    font-size: 12px;
+  }
+
+  .thank-cat-wrapper {
+    height: 85px;
+  }
+
+  .thank-right-message {
+    min-height: 85px;
+  }
+
+  .thank-right-message p {
+    font-size: 10.5px;
+  }
+
+  .heart-top {
+    width: 20px;
+    height: 20px;
+  }
+
+  .heart-bottom {
+    width: 16px;
+    height: 16px;
+  }
+
+  .right-paw {
+    width: 18px;
+    height: 18px;
+  }
+}

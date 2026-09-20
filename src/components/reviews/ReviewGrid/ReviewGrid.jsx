@@ -118,7 +118,7 @@ export default function ReviewGrid({ active }) {
 
             {review.platform}
 
-            <span>• Sample</span>
+            {/* <span>• Sample</span> */}
           </div>
 
         </article>

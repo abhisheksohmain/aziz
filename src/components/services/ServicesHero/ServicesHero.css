@@ -1,61 +1,295 @@
 /* =========================================================
-   SERVICES HERO
    AZIZ FELINES CATTERY
+   SERVICES HERO
+   FULLY RESPONSIVE
+   NO CROP
+   NO FIXED HEIGHT
 ========================================================= */
 
 .services-hero {
   position: relative;
+
   width: 100%;
+  max-width: 100%;
+
+  height: auto;
+  min-height: 0;
+  max-height: none;
+
   margin: 0;
   padding: 0;
-  overflow: hidden;
+
+  overflow: visible;
+
   background: #fffdf7;
+
   line-height: 0;
+
+  box-sizing: border-box;
 }
+
+
+/* =========================================================
+   IMAGE
+   IMPORTANT:
+   NEVER GIVE FIXED HEIGHT.
+========================================================= */
 
 .services-hero-image {
   display: block;
+
   width: 100%;
+  max-width: 100%;
+
   height: auto;
-  min-width: 100%;
-  max-width: none;
+  min-height: 0;
+  max-height: none;
+
+  margin: 0;
+  padding: 0;
+
+  /*
+    Keep original image proportions.
+    No cropping.
+  */
   object-fit: contain;
   object-position: center center;
+
+  /*
+    Prevent image from becoming inline element.
+  */
+  vertical-align: top;
+
+  /*
+    Prevent unwanted transform.
+  */
+  transform: none;
+
+  box-sizing: border-box;
 }
+
 
 /* =========================================================
-   LARGE DESKTOP
+   DESKTOP
+   1201px+
 ========================================================= */
 
-@media (min-width: 1600px) {
+@media screen and (min-width: 1201px) {
+
+  .services-hero {
+    width: 100%;
+    height: auto;
+  }
+
   .services-hero-image {
     width: 100%;
+    height: auto;
+    max-width: 100%;
   }
 }
+
+
+/* =========================================================
+   LAPTOP
+   901px - 1200px
+========================================================= */
+
+@media screen and (min-width: 901px) and (max-width: 1200px) {
+
+  .services-hero {
+    width: 100%;
+    height: auto;
+
+    min-height: 0;
+    max-height: none;
+  }
+
+  .services-hero-image {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    min-height: 0;
+    max-height: none;
+
+    object-fit: contain;
+  }
+}
+
 
 /* =========================================================
    TABLET
+   601px - 900px
 ========================================================= */
 
-@media (max-width: 900px) {
+@media screen and (min-width: 601px) and (max-width: 900px) {
+
+  .services-hero {
+    width: 100%;
+
+    height: auto;
+
+    min-height: 0;
+    max-height: none;
+
+    overflow: visible;
+  }
+
   .services-hero-image {
     width: 100%;
+    max-width: 100%;
+
     height: auto;
+
+    min-height: 0;
+    max-height: none;
+
+    object-fit: contain;
+    object-position: center center;
   }
 }
 
+
 /* =========================================================
    MOBILE
+   381px - 600px
 ========================================================= */
 
-@media (max-width: 600px) {
+@media screen and (min-width: 381px) and (max-width: 600px) {
+
   .services-hero {
     width: 100%;
+
+    height: auto;
+
+    min-height: 0;
+    max-height: none;
+
+    margin: 0;
+    padding: 0;
+
+    overflow: visible;
   }
 
   .services-hero-image {
+    display: block;
+
     width: 100%;
+    max-width: 100%;
+
     height: auto;
+
+    min-width: 0;
+    min-height: 0;
+
+    max-height: none;
+
+    margin: 0;
+    padding: 0;
+
     object-fit: contain;
+    object-position: center center;
+
+    transform: none;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   320px - 380px
+========================================================= */
+
+@media screen and (max-width: 380px) {
+
+  .services-hero {
+    width: 100%;
+
+    height: auto;
+
+    min-height: 0;
+    max-height: none;
+
+    overflow: visible;
+  }
+
+  .services-hero-image {
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+
+    height: auto;
+
+    min-width: 0;
+    min-height: 0;
+
+    max-height: none;
+
+    margin: 0;
+    padding: 0;
+
+    object-fit: contain;
+    object-position: center center;
+
+    transform: none;
+  }
+}
+
+
+/* =========================================================
+   EXTRA SAFETY
+   This overrides common global img rules.
+========================================================= */
+
+.services-hero img.services-hero-image {
+  display: block !important;
+
+  width: 100% !important;
+  max-width: 100% !important;
+
+  height: auto !important;
+
+  min-width: 0 !important;
+  min-height: 0 !important;
+
+  max-height: none !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  object-fit: contain !important;
+  object-position: center center !important;
+
+  transform: none !important;
+
+  vertical-align: top !important;
+}
+
+
+/* =========================================================
+   PREVENT COMMON GLOBAL RULES FROM CROPPING HERO
+========================================================= */
+
+.services-hero {
+  aspect-ratio: auto !important;
+}
+
+.services-hero-image {
+  aspect-ratio: auto !important;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .services-hero,
+  .services-hero-image {
+    transition: none !important;
+    animation: none !important;
   }
 }
