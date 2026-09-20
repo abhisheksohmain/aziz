@@ -1,0 +1,172 @@
+
+.founder-promise-section {
+  width: 100%;
+  padding: 110px 20px;
+  background: #fffdf7;
+}
+
+.founder-promise-container {
+  width: min(1050px, 100%);
+  margin: 0 auto;
+}
+
+.founder-promise-content {
+  position: relative;
+
+  padding: 65px 70px;
+
+  background: #741a2f;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+/* Decorative circle */
+
+.founder-promise-content::before {
+  content: "";
+  position: absolute;
+
+  width: 260px;
+  height: 260px;
+
+  top: -150px;
+  right: -100px;
+
+  border: 1px solid rgba(255, 198, 168, 0.25);
+  border-radius: 50%;
+}
+
+.founder-promise-content::after {
+  content: "";
+  position: absolute;
+
+  width: 170px;
+  height: 170px;
+
+  bottom: -100px;
+  left: -70px;
+
+  border: 1px solid rgba(255, 198, 168, 0.2);
+  border-radius: 50%;
+}
+
+/* =========================
+   KICKER
+========================= */
+
+.founder-promise-kicker {
+  position: relative;
+  z-index: 1;
+
+  display: inline-block;
+  margin-bottom: 15px;
+
+  color: #ffc6a8;
+  font-family: "Outfit", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.founder-promise-title {
+  position: relative;
+  z-index: 1;
+
+  margin: 0 0 38px;
+
+  color: #ffffff;
+  font-family: "Syne", sans-serif;
+  font-size: clamp(36px, 5vw, 58px);
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.founder-promise-text {
+  position: relative;
+  z-index: 1;
+
+  max-width: 780px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.founder-promise-text p {
+  margin: 0;
+
+  color: #ffffff;
+  font-family: "Outfit", sans-serif;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.founder-promise-text p:nth-child(2) {
+  color: #ffc6a8;
+  font-family: "Syne", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 800px) {
+  .founder-promise-section {
+    padding: 85px 20px;
+  }
+
+  .founder-promise-content {
+    padding: 50px 45px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .founder-promise-section {
+    padding: 65px 16px;
+  }
+
+  .founder-promise-content {
+    padding: 38px 24px;
+    border-radius: 22px;
+  }
+
+  .founder-promise-kicker {
+    font-size: 12px;
+    letter-spacing: 1.4px;
+  }
+
+  .founder-promise-title {
+    margin-bottom: 28px;
+    font-size: 35px;
+  }
+
+  .founder-promise-text {
+    gap: 16px;
+  }
+
+  .founder-promise-text p {
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  .founder-promise-text p:nth-child(2) {
+    font-size: 24px;
+  }
+}
+

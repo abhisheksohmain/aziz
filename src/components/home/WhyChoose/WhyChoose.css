@@ -1,0 +1,6 @@
+
+.why-section{background:#fff8df;padding:18px 0;border-top:1px solid #f2e8c5;border-bottom:1px solid #f2e8c5}
+.why-grid{display:grid;grid-template-columns:repeat(5,1fr)}
+.why-grid div{display:flex;align-items:center;justify-content:center;gap:9px;padding:8px 12px;border-right:1px solid #b9d4ca;color:#075c55;font-weight:900;font-size:13px;text-align:center}
+.why-grid div:last-child{border:0}.why-grid svg{width:36px;height:36px;flex:none}
+@media(max-width:850px){.why-grid{grid-template-columns:repeat(2,1fr)}.why-grid div:nth-child(2n){border-right:0}.why-grid div:last-child{grid-column:1/-1}}

@@ -1,0 +1,52 @@
+
+/* =========================================
+   REVIEW HERO
+   IMAGE ONLY
+========================================= */
+
+.review-hero {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #fffdf7;
+  line-height: 0;
+}
+
+.review-hero-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+  .review-hero-image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .review-hero {
+    width: 100%;
+  }
+
+  .review-hero-image {
+    width: 100%;
+    height: auto;
+  }
+}
+

@@ -1,0 +1,208 @@
+
+/* =========================================
+   ABOUT US + ABOUT OWNER
+========================================= */
+
+.about-owner-section {
+  width: 100%;
+  padding: 100px 0;
+  background: #fffdf7;
+}
+
+.about-owner-container {
+  width: min(1240px, calc(100% - 40px));
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 80px;
+
+  align-items: start;
+}
+
+/* =========================================
+   LEFT — ABOUT US
+========================================= */
+
+.about-us-content {
+  position: relative;
+  padding: 45px 40px;
+  background: #fff7e7;
+  border-radius: 28px;
+  overflow: hidden;
+}
+
+.about-us-content::before {
+  content: "";
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  top: -65px;
+  left: -65px;
+  border-radius: 50%;
+  background: #ffc6a8;
+  opacity: 0.45;
+}
+
+.about-us-content::after {
+  content: "";
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  right: -35px;
+  bottom: -35px;
+  border-radius: 50%;
+  background: #741a2f;
+  opacity: 0.08;
+}
+
+.about-owner-kicker {
+  position: relative;
+  z-index: 1;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 18px;
+
+  color: #741a2f;
+
+  font-family: "Outfit", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+.about-owner-kicker::before {
+  content: "";
+  width: 28px;
+  height: 2px;
+  background: #ffc6a8;
+  border-radius: 10px;
+}
+
+.about-owner-title {
+  position: relative;
+  z-index: 1;
+
+  margin: 0;
+
+  color: #741a2f;
+
+  font-family: "Syne", sans-serif;
+  font-size: clamp(34px, 4vw, 54px);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -1.5px;
+}
+
+/* =========================================
+   RIGHT — OWNER
+========================================= */
+
+.owner-content {
+  padding-top: 8px;
+}
+
+.owner-name {
+  margin: 0 0 8px;
+
+  color: #741a2f;
+
+  font-family: "Syne", sans-serif;
+  font-size: clamp(30px, 3vw, 46px);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -1px;
+}
+
+.owner-role {
+  margin: 0 0 30px;
+
+  color: #8c5260;
+
+  font-family: "Outfit", sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.owner-description {
+  max-width: 720px;
+}
+
+.owner-description p {
+  margin: 0 0 20px;
+
+  color: #2b1a1d;
+
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+.owner-description p:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+  .about-owner-section {
+    padding: 80px 0;
+  }
+
+  .about-owner-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .about-us-content {
+    padding: 40px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .about-owner-section {
+    padding: 60px 0;
+  }
+
+  .about-owner-container {
+    width: min(100% - 28px, 1240px);
+    gap: 40px;
+  }
+
+  .about-us-content {
+    padding: 32px 25px;
+    border-radius: 22px;
+  }
+
+  .about-owner-title {
+    font-size: 34px;
+  }
+
+  .owner-name {
+    font-size: 30px;
+  }
+
+  .owner-role {
+    font-size: 15px;
+    margin-bottom: 24px;
+  }
+
+  .owner-description p {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 17px;
+  }
+}
+

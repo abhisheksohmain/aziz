@@ -1,0 +1,5 @@
+
+.review-intro{background:#e9f8f6;border-radius:18px;padding:20px;display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+.review-intro>div:first-child{display:flex;gap:12px;align-items:center}.review-intro svg{width:45px;height:45px;color:#075c55}
+.review-intro h3{margin:0;color:#075c55;font-size:23px;line-height:1.05}.review-intro p{margin:5px 0 0;font-size:13px;color:#355e68;max-width:540px}.review-cat{font-size:54px;font-family:"Kalam";color:#075c55}
+@media(max-width:600px){.review-cat{display:none}.review-intro h3{font-size:20px}}

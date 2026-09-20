@@ -1,0 +1,74 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Nunito+Sans:wght@400;600;700;800;900&display=swap');
+
+:root{
+  --teal:#075c55;
+  --teal-dark:#004b46;
+  --teal-soft:#eaf8f3;
+  --cream:#fffaf0;
+  --cream-2:#fff4d7;
+  --ink:#083b4a;
+  --muted:#42616b;
+  --white:#fff;
+  --green:#24a866;
+  --pink:#e72b73;
+  --blue:#1597d2;
+  --orange:#f58a18;
+  --purple:#7135c8;
+  --cyan:#1caeb2;
+  --line:#d8e9e3;
+  --shadow:0 12px 30px rgba(0,73,70,.10);
+  --radius:20px;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  color:var(--ink);
+  background:#fff;
+  font-family:"Nunito Sans",Arial,sans-serif;
+  line-height:1.5;
+}
+a{color:inherit;text-decoration:none}
+button,input,textarea{font:inherit}
+button{cursor:pointer}
+img{display:block;max-width:100%}
+.container{width:min(1180px,calc(100% - 34px));margin:auto}
+.hand{font-family:"Kalam",cursive}
+.section{padding:70px 0}
+.section-title{
+  margin:0;
+  color:var(--teal);
+  font-size:clamp(34px,4vw,56px);
+  line-height:1;
+  font-family:"Kalam",cursive;
+  font-weight:700;
+}
+.section-subtitle{
+  margin:10px 0 0;
+  color:var(--teal);
+  font-size:22px;
+  font-family:"Kalam",cursive;
+}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  color:var(--teal);font-weight:900;
+}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  border:0;border-radius:999px;padding:13px 22px;
+  font-weight:900;color:#fff;background:var(--teal);
+  box-shadow:0 8px 18px rgba(0,92,85,.18);
+  transition:.2s ease;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-light{background:#fff;color:var(--teal);border:1px solid var(--line)}
+.page{min-height:100vh}
+main{overflow:hidden}
+::selection{background:#f4c15d;color:var(--ink)}
+
+@media(max-width:700px){
+  .container{width:min(100% - 22px,1180px)}
+  .section{padding:48px 0}
+}

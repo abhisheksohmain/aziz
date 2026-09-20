@@ -1,0 +1,233 @@
+
+.reputation-section {
+  width: 100%;
+  padding: 100px 20px;
+  background: #fff7e7;
+}
+
+.reputation-container {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 70px;
+  align-items: start;
+}
+
+/* =========================
+   HEADING
+========================= */
+
+.reputation-heading {
+  position: relative;
+}
+
+.reputation-kicker {
+  display: inline-block;
+  margin-bottom: 16px;
+
+  color: #741a2f;
+  font-family: "Outfit", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.reputation-title {
+  margin: 0;
+
+  color: #741a2f;
+  font-family: "Syne", sans-serif;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.reputation-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.reputation-content > p {
+  margin: 0;
+
+  color: #2b1a1d;
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* =========================
+   HIGHLIGHTS
+========================= */
+
+.reputation-highlights {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 8px 0;
+}
+
+.reputation-highlight {
+  padding: 24px 20px;
+
+  background: #ffffff;
+  border: 1px solid rgba(116, 26, 47, 0.1);
+  border-radius: 18px;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.reputation-highlight:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(116, 26, 47, 0.08);
+}
+
+.reputation-highlight-icon {
+  width: 44px;
+  height: 44px;
+  margin-bottom: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffc6a8;
+  border-radius: 50%;
+
+  font-size: 21px;
+}
+
+.reputation-highlight p {
+  margin: 0;
+
+  color: #2b1a1d;
+  font-family: "Outfit", sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* =========================
+   FINAL QUOTE
+========================= */
+
+.reputation-quote {
+  position: relative;
+
+  margin-top: 8px;
+  padding: 28px 30px;
+
+  background: #741a2f;
+  border-radius: 20px;
+}
+
+.reputation-quote::before {
+  content: "“";
+
+  position: absolute;
+  top: 5px;
+  left: 20px;
+
+  color: #ffc6a8;
+  font-family: "Syne", sans-serif;
+  font-size: 52px;
+  line-height: 1;
+}
+
+.reputation-quote p {
+  margin: 0;
+  padding-left: 25px;
+
+  color: #ffffff;
+  font-family: "Outfit", sans-serif;
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.reputation-quote span {
+  color: #ffc6a8;
+  font-weight: 600;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+  .reputation-section {
+    padding: 80px 20px;
+  }
+
+  .reputation-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .reputation-title {
+    max-width: 700px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .reputation-section {
+    padding: 65px 16px;
+  }
+
+  .reputation-container {
+    gap: 30px;
+  }
+
+  .reputation-kicker {
+    font-size: 12px;
+  }
+
+  .reputation-title {
+    font-size: 31px;
+  }
+
+  .reputation-content {
+    gap: 16px;
+  }
+
+  .reputation-content > p {
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  .reputation-highlights {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .reputation-highlight {
+    padding: 20px 18px;
+  }
+
+  .reputation-highlight p {
+    font-size: 14px;
+  }
+
+  .reputation-quote {
+    padding: 24px 20px;
+    border-radius: 16px;
+  }
+
+  .reputation-quote p {
+    padding-left: 20px;
+    font-size: 15px;
+  }
+}

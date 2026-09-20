@@ -1,0 +1,355 @@
+/* ========================================
+   HOME HERO
+======================================== */
+
+.home-hero {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1983 / 793;
+  min-height: 500px;
+  overflow: hidden;
+  background: #fff7e7;
+}
+
+
+/* ========================================
+   HERO BACKGROUND IMAGE
+======================================== */
+
+.hero-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center center;
+
+  transform: scale(1.02);
+  transform-origin: center center;
+
+  z-index: 1;
+}
+
+
+/* ========================================
+   HERO CONTENT
+======================================== */
+
+.hero-content {
+  position: relative;
+  z-index: 5;
+
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+
+  display: flex;
+  align-items: flex-end;
+
+  padding-top: 0;
+  padding-bottom: 100px;
+}
+
+
+/* ========================================
+   HERO COPY
+======================================== */
+
+.hero-copy {
+  position: relative;
+
+  width: 58%;
+  max-width: 700px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding-left: 130px !important;
+  padding-top: 0;
+}
+
+
+/* ========================================
+   HERO BUTTON
+======================================== */
+
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  text-decoration: none;
+  white-space: nowrap;
+
+  font-family: "Outfit", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+
+  padding: 15px 30px;
+
+  border-radius: 999px;
+
+  position: relative;
+  z-index: 10;
+}
+
+
+/* ========================================
+   BUTTON ARROW
+======================================== */
+
+.hero-btn svg {
+  transition: transform 0.25s ease;
+}
+
+.hero-btn:hover svg {
+  transform: translateX(4px);
+}
+
+
+/* ========================================
+   LARGE DESKTOP
+======================================== */
+
+@media (min-width: 1400px) {
+
+  .home-hero {
+    min-height: 540px;
+  }
+
+  .hero-bg-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center center;
+
+    transform: scale(1.02);
+  }
+
+  .hero-content {
+    min-height: 540px;
+
+    padding-top: 0;
+    padding-bottom: 105px;
+  }
+
+  .hero-copy {
+    width: 58%;
+    padding-left: 50px;
+    padding-top: 0;
+  }
+}
+
+
+/* ========================================
+   LAPTOP
+======================================== */
+
+@media (max-width: 1200px) {
+
+  .home-hero {
+    min-height: 520px;
+  }
+
+  .hero-bg-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center center;
+
+    transform: scale(1.02);
+  }
+
+  .hero-content {
+    min-height: 520px;
+
+    padding-top: 0;
+    padding-bottom: 100px;
+  }
+
+  .hero-copy {
+    width: 62%;
+    padding-left: 40px;
+    padding-top: 0;
+  }
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 980px) {
+
+  .home-hero {
+    min-height: 500px;
+  }
+
+  .hero-bg-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center center;
+
+    transform: scale(1.02);
+  }
+
+  .hero-content {
+    min-height: 500px;
+
+    padding-top: 0;
+    padding-bottom: 90px;
+  }
+
+  .hero-copy {
+    width: 65%;
+    padding-left: 30px;
+    padding-top: 0;
+  }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 700px) {
+
+  .home-hero {
+    width: 100%;
+    height: 650px;
+    min-height: 650px;
+
+    aspect-ratio: auto;
+
+    overflow: hidden;
+  }
+
+  .hero-bg-image {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center center;
+
+    transform: scale(1.01);
+    transform-origin: center center;
+  }
+
+  .hero-content {
+    width: 100%;
+    height: 650px;
+    min-height: 650px;
+
+    display: flex;
+    align-items: flex-end;
+
+    padding-top: 0;
+    padding-bottom: 70px;
+  }
+
+  .hero-copy {
+    width: 100%;
+    max-width: 100%;
+
+    padding: 0 0 0 30px;
+  }
+
+  .hero-btn {
+    font-size: 13px;
+    padding: 11px 16px;
+  }
+}
+
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 520px) {
+
+  .home-hero {
+    width: 100%;
+    height: 620px;
+    min-height: 620px;
+  }
+
+  .hero-bg-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center center;
+
+    transform: scale(1.01);
+  }
+
+  .hero-content {
+    width: 100%;
+    height: 620px;
+    min-height: 620px;
+
+    padding-top: 0;
+    padding-bottom: 58px;
+  }
+
+  .hero-copy {
+    width: 100%;
+    padding: 0 0 0 25px;
+  }
+}
+
+
+/* ========================================
+   VERY SMALL MOBILE
+======================================== */
+
+@media (max-width: 380px) {
+
+  .home-hero {
+    width: 100%;
+    height: 600px;
+    min-height: 600px;
+  }
+
+  .hero-bg-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center center;
+
+    transform: scale(1.01);
+  }
+
+  .hero-content {
+    width: 100%;
+    height: 600px;
+    min-height: 600px;
+
+    padding-top: 0;
+    padding-bottom: 50px;
+  }
+
+  .hero-copy {
+    width: 100%;
+    padding: 0 0 0 22px;
+  }
+}

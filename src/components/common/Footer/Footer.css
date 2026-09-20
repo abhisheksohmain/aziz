@@ -1,0 +1,17 @@
+
+.site-footer{position:relative;background:var(--teal-dark);color:#fff;margin-top:50px;padding:40px 0 20px;overflow:hidden}
+.footer-wave{position:absolute;top:-17px;left:-2%;width:104%;height:34px;background:#a9db7b;border-radius:50% 50% 0 0/100% 100% 0 0}
+.footer-inner{display:flex;align-items:center;gap:20px;justify-content:space-between;position:relative;z-index:1}
+.footer-inner>a,.footer-social{display:flex;align-items:center;gap:8px;font-weight:800;font-size:14px}
+.footer-inner>a:hover{color:#ffd86a}
+.footer-brand{display:flex;align-items:center;gap:9px}
+.footer-brand div{display:flex;flex-direction:column}
+.footer-brand strong{font-size:16px}.footer-brand span{font-family:"Kalam";font-size:14px}
+.footer-social{gap:12px}.footer-social span{font-family:"Kalam";font-size:18px}
+.footer-bottom{text-align:right;position:absolute;right:25px;bottom:7px;font-family:"Kalam";font-size:16px;color:#d9f2cf}
+@media(max-width:850px){
+  .footer-inner{flex-wrap:wrap;justify-content:center}.footer-bottom{position:static;text-align:center;margin-top:16px}
+}
+@media(max-width:520px){
+  .footer-inner{flex-direction:column;align-items:flex-start}.footer-inner>a{font-size:13px}
+}

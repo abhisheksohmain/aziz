@@ -1,0 +1,4 @@
+
+.trust-strip{padding:15px 0;background:#fff9df;border-top:1px solid #eee1b7;border-bottom:1px solid #eee1b7}
+.trust-inner{display:grid;grid-template-columns:repeat(5,1fr)}.trust-inner div{display:flex;align-items:center;justify-content:center;gap:8px;border-right:1px solid #bcd5ce;padding:5px;color:#075c55;font-size:12px;font-weight:900;text-align:center}.trust-inner div:last-child{border:0}.trust-inner svg{width:32px;height:32px;flex:none}
+@media(max-width:800px){.trust-inner{grid-template-columns:repeat(2,1fr)}.trust-inner div:nth-child(2n){border:0}.trust-inner div:last-child{grid-column:1/-1}}

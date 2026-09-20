@@ -1,0 +1,254 @@
+
+.philosophy-section {
+  width: 100%;
+  padding: 110px 20px;
+  background: #fffdf7;
+}
+
+.philosophy-container {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+}
+
+/* =========================
+   HEADING
+========================= */
+
+.philosophy-heading {
+  max-width: 760px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.philosophy-kicker {
+  display: inline-block;
+  margin-bottom: 15px;
+
+  color: #741a2f;
+  font-family: "Outfit", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.7px;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.philosophy-title {
+  margin: 0;
+
+  color: #741a2f;
+  font-family: "Syne", sans-serif;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+/* =========================
+   MAIN QUOTE
+========================= */
+
+.philosophy-quote {
+  position: relative;
+
+  max-width: 950px;
+  margin: 0 auto 50px;
+  padding: 48px 60px;
+
+  background: #741a2f;
+  border-radius: 28px;
+
+  text-align: center;
+}
+
+.philosophy-quote-mark {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #ffc6a8;
+  font-family: "Syne", sans-serif;
+  font-size: 68px;
+  font-weight: 700;
+  line-height: 0.7;
+}
+
+.philosophy-quote p {
+  margin: 0;
+
+  color: #ffffff;
+  font-family: "Syne", sans-serif;
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* =========================
+   BODY
+========================= */
+
+.philosophy-body {
+  max-width: 850px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.philosophy-body p {
+  margin: 0;
+
+  color: #2b1a1d;
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* =========================
+   PERSONALITIES
+========================= */
+
+.philosophy-personalities {
+  max-width: 850px;
+  margin: 32px auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.personality-item {
+  min-height: 64px;
+  padding: 16px 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  background: #fff7e7;
+  border: 1px solid rgba(116, 26, 47, 0.1);
+  border-radius: 14px;
+
+  color: #2b1a1d;
+  font-family: "Outfit", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.personality-item:hover {
+  transform: translateY(-3px);
+  border-color: rgba(116, 26, 47, 0.22);
+  box-shadow: 0 10px 25px rgba(116, 26, 47, 0.07);
+}
+
+.personality-dot {
+  color: #741a2f;
+  font-size: 12px;
+}
+
+/* =========================
+   CLOSING
+========================= */
+
+.philosophy-closing {
+  max-width: 850px;
+  margin: 0 auto;
+  padding-top: 12px;
+}
+
+.philosophy-closing p {
+  margin: 0;
+
+  color: #741a2f;
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+  .philosophy-section {
+    padding: 85px 20px;
+  }
+
+  .philosophy-heading {
+    margin-bottom: 35px;
+  }
+
+  .philosophy-quote {
+    padding: 40px 40px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .philosophy-section {
+    padding: 65px 16px;
+  }
+
+  .philosophy-heading {
+    margin-bottom: 30px;
+  }
+
+  .philosophy-kicker {
+    font-size: 11px;
+    letter-spacing: 1.3px;
+  }
+
+  .philosophy-title {
+    font-size: 31px;
+  }
+
+  .philosophy-quote {
+    margin-bottom: 35px;
+    padding: 35px 22px;
+    border-radius: 20px;
+  }
+
+  .philosophy-quote-mark {
+    font-size: 55px;
+  }
+
+  .philosophy-quote p {
+    font-size: 21px;
+    line-height: 1.45;
+  }
+
+  .philosophy-body {
+    gap: 16px;
+  }
+
+  .philosophy-body p {
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  .philosophy-personalities {
+    grid-template-columns: 1fr;
+    margin: 25px auto;
+    gap: 10px;
+  }
+
+  .personality-item {
+    min-height: 58px;
+    padding: 14px 16px;
+    font-size: 14px;
+  }
+
+  .philosophy-closing p {
+    font-size: 16px;
+  }
+}
+

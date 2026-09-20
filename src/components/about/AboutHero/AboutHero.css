@@ -1,0 +1,55 @@
+/* =========================================================
+   ABOUT HERO
+   AZIZ FELINES CATTERY
+========================================================= */
+
+.about-hero {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #fffdf7;
+  line-height: 0;
+}
+
+.about-hero-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-width: 100%;
+  max-width: none;
+  object-fit: contain;
+  object-position: center center;
+}
+
+/* ================= LARGE DESKTOP ================= */
+
+@media (min-width: 1600px) {
+  .about-hero-image {
+    width: 100%;
+  }
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 900px) {
+  .about-hero-image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+  .about-hero {
+    width: 100%;
+  }
+
+  .about-hero-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
