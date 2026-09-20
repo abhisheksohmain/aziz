@@ -7,11 +7,11 @@ export default function Hero() {
     <section className="home-hero">
 
       {/* BACKGROUND IMAGE */}
+
       <img
-        className="hero-bg-image"
-        src="/images/home-hero-cat.png"
-        alt="AZIZ FELINES CATTERY"
-      />
+  src={`${import.meta.env.BASE_URL}images/home-hero-cat.png`}
+  alt="AZIZ FELINES CATTERY logo"
+/>
 
       {/* SOFT OVERLAY */}
       <div className="hero-shade"></div>
