@@ -1,14 +1,1122 @@
+/* =========================================================
+   AZIZ FELINES CATTERY
+   SERVICE CARD
+   FULL RESPONSIVE VERSION
+========================================================= */
 
-.service-card{border:1.5px solid color-mix(in srgb,var(--accent) 48%,#fff);border-radius:20px;padding:12px;background:linear-gradient(180deg,#fff,#fbfffd);box-shadow:0 8px 20px rgba(0,70,65,.06);position:relative;overflow:hidden}
-.service-card-head{display:grid;grid-template-columns:1fr 140px;gap:8px;align-items:center}
-.service-card-title{display:flex;gap:9px;align-items:center}.service-card-title>span{width:54px;height:54px;background:var(--accent);border-radius:50%;color:#fff;display:grid;place-items:center}.service-card-title svg{width:29px;height:29px}
-.service-card h3{font-size:22px;line-height:1;margin:0;color:var(--accent)}.service-card strong{font-family:"Kalam";font-size:14px;color:#3d5661}
-.service-card-head img{width:140px;height:92px;border-radius:13px;object-fit:cover}
-.service-card>p{font-size:13px;color:#285361;margin:10px 3px}
-.feature-list{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:8px}
-.feature-list div{min-height:47px;border-radius:10px;padding:5px;background:color-mix(in srgb,var(--accent) 7%,#fff);border:1px solid color-mix(in srgb,var(--accent) 18%,#fff);display:flex;align-items:center;gap:6px;color:#234d59;font-size:11px;font-weight:800}
-.feature-list svg{width:19px;color:var(--accent);flex:none}
-.service-btn{background:var(--accent);padding:10px 24px;margin-top:10px;box-shadow:none}
-.service-doodle{position:absolute;right:12px;bottom:10px;font-family:"Kalam";color:var(--accent);font-weight:700;transform:rotate(-4deg);font-size:15px;opacity:.9}
-@media(max-width:1000px){.service-card-head{grid-template-columns:1fr 125px}.service-card-head img{width:125px}}
-@media(max-width:620px){.service-card-head{grid-template-columns:1fr}.service-card-head img{width:100%;height:145px}.feature-list{grid-template-columns:repeat(2,1fr)}}
+
+/* =========================================================
+   BASE CARD
+========================================================= */
+
+.service-card {
+  width: 100%;
+  min-width: 0;
+
+  box-sizing: border-box;
+
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 12px;
+
+  border: 1.5px solid var(--accent);
+
+  border-radius: 20px;
+
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #fbfffd 100%
+  );
+
+  box-shadow:
+    0 8px 20px rgba(0, 70, 65, 0.06);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* =========================================================
+   CARD HOVER
+========================================================= */
+
+.service-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 28px rgba(0, 70, 65, 0.10);
+}
+
+
+/* =========================================================
+   CARD HEADER
+========================================================= */
+
+.service-card-head {
+  width: 100%;
+  min-width: 0;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    140px;
+
+  gap: 10px;
+
+  align-items: center;
+}
+
+
+/* =========================================================
+   TITLE WRAPPER
+========================================================= */
+
+.service-card-title {
+  min-width: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+}
+
+
+/* =========================================================
+   SERVICE ICON CIRCLE
+========================================================= */
+
+.service-card-title > span {
+  width: 54px;
+  height: 54px;
+
+  flex: 0 0 54px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: var(--accent);
+
+  color: #ffffff;
+}
+
+
+.service-card-title svg {
+  width: 29px;
+  height: 29px;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   TITLE TEXT
+========================================================= */
+
+.service-card-title > div {
+  min-width: 0;
+}
+
+
+.service-card h3 {
+  margin: 0;
+
+  color: var(--accent);
+
+  font-family: "Outfit", sans-serif;
+
+  font-size: clamp(18px, 2vw, 22px);
+
+  font-weight: 800;
+
+  line-height: 1.1;
+
+  overflow-wrap: anywhere;
+}
+
+
+.service-card strong {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #3d5661;
+
+  font-family: "Kalam", cursive;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   SERVICE IMAGE
+========================================================= */
+
+.service-card-head img {
+  display: block;
+
+  width: 140px;
+  height: 92px;
+
+  max-width: 100%;
+
+  box-sizing: border-box;
+
+  border-radius: 13px;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  background: #f4f8f7;
+
+  flex-shrink: 0;
+
+  transition:
+    transform 0.3s ease;
+}
+
+
+.service-card:hover .service-card-head img {
+  transform: scale(1.03);
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.service-card > p {
+  margin: 10px 3px 0;
+
+  color: #285361;
+
+  font-family: "Outfit", sans-serif;
+
+  font-size: 13px;
+
+  line-height: 1.55;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   FEATURE LIST
+========================================================= */
+
+.feature-list {
+  width: 100%;
+
+  min-width: 0;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 6px;
+
+  margin-top: 8px;
+}
+
+
+/* =========================================================
+   FEATURE ITEM
+========================================================= */
+
+.feature-list div {
+  min-width: 0;
+  min-height: 47px;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  padding: 5px;
+
+  border-radius: 10px;
+
+  background:
+    color-mix(
+      in srgb,
+      var(--accent) 7%,
+      #ffffff
+    );
+
+  border: 1px solid
+    color-mix(
+      in srgb,
+      var(--accent) 18%,
+      #ffffff
+    );
+
+  color: #234d59;
+
+  font-family: "Outfit", sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  line-height: 1.25;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   FEATURE ICON
+========================================================= */
+
+.feature-list svg {
+  width: 19px;
+  height: 19px;
+
+  flex: 0 0 19px;
+
+  color: var(--accent);
+}
+
+
+/* =========================================================
+   FEATURE TEXT
+========================================================= */
+
+.feature-list span {
+  min-width: 0;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   LEARN MORE BUTTON
+========================================================= */
+
+.service-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  width: fit-content;
+
+  margin-top: 10px;
+
+  padding: 10px 24px;
+
+  border-radius: 999px;
+
+  background: var(--accent);
+
+  box-shadow: none;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  color: #ffffff;
+
+  font-family: "Outfit", sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+
+.service-btn:hover {
+  transform: translateY(-2px);
+
+  opacity: 0.94;
+}
+
+
+.service-btn svg {
+  flex-shrink: 0;
+
+  transition:
+    transform 0.25s ease;
+}
+
+
+.service-btn:hover svg {
+  transform: translateX(3px);
+}
+
+
+/* =========================================================
+   DOODLE
+========================================================= */
+
+.service-doodle {
+  position: absolute;
+
+  right: 12px;
+  bottom: 10px;
+
+  max-width: 45%;
+
+  color: var(--accent);
+
+  font-family: "Kalam", cursive;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  text-align: right;
+
+  opacity: 0.9;
+
+  transform: rotate(-4deg);
+
+  pointer-events: none;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   1400px+
+========================================================= */
+
+@media (min-width: 1400px) {
+
+  .service-card {
+    padding: 15px;
+  }
+
+
+  .service-card-head {
+    grid-template-columns:
+      minmax(0, 1fr)
+      150px;
+
+    gap: 12px;
+  }
+
+
+  .service-card-head img {
+    width: 150px;
+    height: 98px;
+  }
+
+
+  .service-card-title {
+    gap: 10px;
+  }
+
+
+  .service-card-title > span {
+    width: 58px;
+    height: 58px;
+
+    flex-basis: 58px;
+  }
+
+
+  .service-card-title svg {
+    width: 30px;
+    height: 30px;
+  }
+
+
+  .service-card h3 {
+    font-size: 23px;
+  }
+
+
+  .service-card strong {
+    font-size: 14px;
+  }
+
+
+  .service-card > p {
+    font-size: 14px;
+  }
+
+
+  .feature-list div {
+    font-size: 12px;
+  }
+}
+
+
+/* =========================================================
+   LAPTOP
+   1001px - 1399px
+========================================================= */
+
+@media (min-width: 1001px) and (max-width: 1399px) {
+
+  .service-card {
+    padding: 12px;
+  }
+
+
+  .service-card-head {
+    grid-template-columns:
+      minmax(0, 1fr)
+      125px;
+
+    gap: 9px;
+  }
+
+
+  .service-card-head img {
+    width: 125px;
+    height: 85px;
+  }
+
+
+  .service-card-title {
+    gap: 8px;
+  }
+
+
+  .service-card-title > span {
+    width: 51px;
+    height: 51px;
+
+    flex-basis: 51px;
+  }
+
+
+  .service-card-title svg {
+    width: 27px;
+    height: 27px;
+  }
+
+
+  .service-card h3 {
+    font-size: 20px;
+  }
+
+
+  .service-card strong {
+    font-size: 13px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   768px - 1000px
+========================================================= */
+
+@media (min-width: 768px) and (max-width: 1000px) {
+
+  .service-card {
+    padding: 12px;
+
+    border-radius: 18px;
+  }
+
+
+  .service-card-head {
+    grid-template-columns:
+      minmax(0, 1fr)
+      110px;
+
+    gap: 8px;
+  }
+
+
+  .service-card-head img {
+    width: 110px;
+    height: 78px;
+
+    border-radius: 11px;
+  }
+
+
+  .service-card-title {
+    gap: 8px;
+  }
+
+
+  .service-card-title > span {
+    width: 48px;
+    height: 48px;
+
+    flex-basis: 48px;
+  }
+
+
+  .service-card-title svg {
+    width: 25px;
+    height: 25px;
+  }
+
+
+  .service-card h3 {
+    font-size: 18px;
+  }
+
+
+  .service-card strong {
+    font-size: 12px;
+  }
+
+
+  .service-card > p {
+    font-size: 12px;
+
+    line-height: 1.5;
+  }
+
+
+  .feature-list {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 6px;
+  }
+
+
+  .feature-list div {
+    min-height: 43px;
+
+    font-size: 10px;
+  }
+
+
+  .feature-list svg {
+    width: 17px;
+    height: 17px;
+
+    flex-basis: 17px;
+  }
+
+
+  .service-btn {
+    padding: 9px 20px;
+
+    font-size: 12px;
+  }
+
+
+  .service-doodle {
+    font-size: 13px;
+  }
+}
+
+
+/* =========================================================
+   SMALL TABLET / LARGE MOBILE
+   621px - 767px
+========================================================= */
+
+@media (min-width: 621px) and (max-width: 767px) {
+
+  .service-card {
+    padding: 12px;
+
+    border-radius: 18px;
+  }
+
+
+  .service-card-head {
+    grid-template-columns:
+      minmax(0, 1fr)
+      100px;
+
+    gap: 8px;
+  }
+
+
+  .service-card-head img {
+    width: 100px;
+    height: 72px;
+
+    border-radius: 10px;
+  }
+
+
+  .service-card-title {
+    gap: 8px;
+  }
+
+
+  .service-card-title > span {
+    width: 46px;
+    height: 46px;
+
+    flex-basis: 46px;
+  }
+
+
+  .service-card-title svg {
+    width: 24px;
+    height: 24px;
+  }
+
+
+  .service-card h3 {
+    font-size: 17px;
+  }
+
+
+  .service-card strong {
+    font-size: 11px;
+  }
+
+
+  .service-card > p {
+    font-size: 12px;
+
+    line-height: 1.5;
+  }
+
+
+  .feature-list {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+
+  .feature-list div {
+    min-height: 41px;
+
+    font-size: 10px;
+  }
+
+
+  .service-btn {
+    padding: 9px 18px;
+
+    font-size: 11px;
+  }
+
+
+  .service-doodle {
+    font-size: 12px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   481px - 620px
+========================================================= */
+
+@media (min-width: 481px) and (max-width: 620px) {
+
+  .service-card {
+    padding: 12px;
+
+    border-radius: 17px;
+  }
+
+
+  .service-card-head {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+  }
+
+
+  .service-card-head img {
+    width: 100%;
+    height: 145px;
+
+    border-radius: 12px;
+  }
+
+
+  .service-card-title {
+    gap: 9px;
+  }
+
+
+  .service-card-title > span {
+    width: 48px;
+    height: 48px;
+
+    flex-basis: 48px;
+  }
+
+
+  .service-card-title svg {
+    width: 25px;
+    height: 25px;
+  }
+
+
+  .service-card h3 {
+    font-size: 18px;
+  }
+
+
+  .service-card strong {
+    font-size: 12px;
+  }
+
+
+  .service-card > p {
+    margin-top: 10px;
+
+    font-size: 12px;
+
+    line-height: 1.55;
+  }
+
+
+  .feature-list {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 6px;
+  }
+
+
+  .feature-list div {
+    min-height: 43px;
+
+    font-size: 10px;
+  }
+
+
+  .service-btn {
+    margin-top: 10px;
+
+    padding: 9px 18px;
+
+    font-size: 12px;
+  }
+
+
+  .service-doodle {
+    position: static;
+
+    max-width: none;
+
+    margin-top: 12px;
+
+    text-align: left;
+
+    font-size: 12px;
+
+    transform: rotate(-3deg);
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   381px - 480px
+========================================================= */
+
+@media (min-width: 381px) and (max-width: 480px) {
+
+  .service-card {
+    padding: 11px;
+
+    border-radius: 16px;
+  }
+
+
+  .service-card-head {
+    grid-template-columns: 1fr;
+
+    gap: 9px;
+  }
+
+
+  .service-card-head img {
+    width: 100%;
+    height: 135px;
+
+    border-radius: 11px;
+  }
+
+
+  .service-card-title {
+    gap: 8px;
+  }
+
+
+  .service-card-title > span {
+    width: 45px;
+    height: 45px;
+
+    flex-basis: 45px;
+  }
+
+
+  .service-card-title svg {
+    width: 23px;
+    height: 23px;
+  }
+
+
+  .service-card h3 {
+    font-size: 16px;
+  }
+
+
+  .service-card strong {
+    font-size: 11px;
+  }
+
+
+  .service-card > p {
+    margin: 9px 2px 0;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+  }
+
+
+  .feature-list {
+    grid-template-columns: 1fr;
+
+    gap: 6px;
+
+    margin-top: 8px;
+  }
+
+
+  .feature-list div {
+    min-height: 39px;
+
+    padding: 5px 7px;
+
+    font-size: 10px;
+  }
+
+
+  .feature-list svg {
+    width: 17px;
+    height: 17px;
+
+    flex-basis: 17px;
+  }
+
+
+  .service-btn {
+    margin-top: 9px;
+
+    padding: 9px 16px;
+
+    font-size: 11px;
+  }
+
+
+  .service-doodle {
+    position: static;
+
+    max-width: none;
+
+    margin-top: 11px;
+
+    text-align: left;
+
+    font-size: 11px;
+
+    transform: rotate(-3deg);
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   <= 380px
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .service-card {
+    padding: 10px;
+
+    border-radius: 15px;
+  }
+
+
+  .service-card-head {
+    grid-template-columns: 1fr;
+
+    gap: 8px;
+  }
+
+
+  .service-card-head img {
+    width: 100%;
+    height: 120px;
+
+    border-radius: 10px;
+  }
+
+
+  .service-card-title {
+    gap: 7px;
+  }
+
+
+  .service-card-title > span {
+    width: 42px;
+    height: 42px;
+
+    flex-basis: 42px;
+  }
+
+
+  .service-card-title svg {
+    width: 21px;
+    height: 21px;
+  }
+
+
+  .service-card h3 {
+    font-size: 15px;
+  }
+
+
+  .service-card strong {
+    font-size: 10px;
+  }
+
+
+  .service-card > p {
+    margin: 8px 2px 0;
+
+    font-size: 10px;
+
+    line-height: 1.5;
+  }
+
+
+  .feature-list {
+    grid-template-columns: 1fr;
+
+    gap: 5px;
+
+    margin-top: 7px;
+  }
+
+
+  .feature-list div {
+    min-height: 36px;
+
+    padding: 5px 6px;
+
+    font-size: 9px;
+  }
+
+
+  .feature-list svg {
+    width: 15px;
+    height: 15px;
+
+    flex-basis: 15px;
+  }
+
+
+  .service-btn {
+    margin-top: 8px;
+
+    padding: 8px 13px;
+
+    font-size: 10px;
+  }
+
+
+  .service-btn svg {
+    width: 14px;
+    height: 14px;
+  }
+
+
+  .service-doodle {
+    position: static;
+
+    max-width: none;
+
+    margin-top: 9px;
+
+    text-align: left;
+
+    font-size: 10px;
+
+    transform: rotate(-3deg);
+  }
+}
+
+
+/* =========================================================
+   TOUCH DEVICES
+========================================================= */
+
+@media (hover: none) {
+
+  .service-card:hover {
+    transform: none;
+
+    box-shadow:
+      0 8px 20px rgba(0, 70, 65, 0.06);
+  }
+
+
+  .service-card:hover .service-card-head img {
+    transform: none;
+  }
+
+
+  .service-btn:hover {
+    transform: none;
+
+    opacity: 1;
+  }
+
+
+  .service-btn:hover svg {
+    transform: none;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .service-card,
+  .service-card-head img,
+  .service-btn,
+  .service-btn svg {
+    transition: none;
+  }
+}

@@ -1,208 +1,1395 @@
+/* =========================================================
+   AZIZ FELINES CATTERY
+   ABOUT CATTERY + ABOUT OWNER
+========================================================= */
 
-/* =========================================
-   ABOUT US + ABOUT OWNER
-========================================= */
-
-.about-owner-section {
+.about-cattery-section {
   width: 100%;
-  padding: 100px 0;
-  background: #fffdf7;
+  padding: 24px 0 35px;
+  background: #ffffff;
+  box-sizing: border-box;
 }
 
-.about-owner-container {
-  width: min(1240px, calc(100% - 40px));
+
+.about-cattery-container {
+  width: min(1450px, calc(100% - 28px));
   margin: 0 auto;
 
   display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
-  gap: 80px;
+  grid-template-columns: minmax(300px, 0.78fr) minmax(520px, 1.22fr);
+
+  gap: 10px;
+
+  align-items: stretch;
+}
+
+
+/* =========================================================
+   COMMON PANELS
+========================================================= */
+
+.about-cattery-panel,
+.about-owner-panel {
+  min-width: 0;
+
+  border: 1px solid #cfe2d7;
+
+  border-radius: 7px;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   LEFT PANEL
+========================================================= */
+
+.about-cattery-panel {
+  background:
+    linear-gradient(
+      180deg,
+      #f5fbf3 0%,
+      #eef8ed 100%
+    );
+
+  color: #194d43;
+
+  padding: 12px;
+}
+
+
+/* =========================================================
+   LEFT HEADING
+========================================================= */
+
+.about-panel-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  margin-bottom: 10px;
+}
+
+
+.heading-icon {
+  position: relative;
+  width: 37px;
+  min-width: 37px;
+  height: 37px;
+
+  display: grid;
+  place-items: center;
+
+  color: #075c55;
+}
+
+
+.heading-paw {
+  position: absolute;
+  right: -1px;
+  bottom: -1px;
+}
+
+
+.about-panel-heading h2 {
+  margin: 0;
+
+  color: #075c55;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 25px;
+
+  font-weight: 900;
+
+  line-height: 1;
+}
+
+
+.about-panel-heading p {
+  margin: 4px 0 0;
+
+  color: #17685e;
+
+  font-family: "Kalam", cursive;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  line-height: 1.05;
+}
+
+
+/* =========================================================
+   LEFT INTRO
+========================================================= */
+
+.about-intro p {
+  margin: 0 0 8px;
+
+  color: #285c62;
+
+  font-size: 11px;
+
+  line-height: 1.42;
+
+  font-weight: 500;
+}
+
+
+.about-intro strong {
+  color: #075c55;
+
+  font-weight: 900;
+}
+
+
+/* =========================================================
+   APPROACH
+========================================================= */
+
+.approach-box {
+  margin-top: 9px;
+
+  padding: 9px 8px 7px;
+
+  background: #e4f2e0;
+
+  border-radius: 10px;
+}
+
+
+.small-section-heading {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  color: #075c55;
+
+  margin-bottom: 6px;
+}
+
+
+.small-section-heading h3 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 18px;
+
+  line-height: 1;
+}
+
+
+.approach-grid {
+  display: grid;
+
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+
+  border-top: 1px solid #b6d8c0;
+}
+
+
+.approach-item {
+  min-width: 0;
+
+  min-height: 67px;
+
+  padding: 7px 4px 4px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  color: #075c55;
+
+  border-right: 1px solid #b6d8c0;
+}
+
+
+.approach-item:last-child {
+  border-right: 0;
+}
+
+
+.approach-item svg {
+  margin-bottom: 4px;
+}
+
+
+.approach-item strong,
+.approach-item span {
+  display: block;
+
+  font-size: 9px;
+
+  line-height: 1.1;
+}
+
+
+.approach-item strong {
+  font-weight: 900;
+}
+
+
+.approach-item span {
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   PROMISE
+========================================================= */
+
+.promise-box {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 8px;
+
+  margin: 10px 3px 8px;
+
+  color: #075c55;
+}
+
+
+.promise-box > svg {
+  flex: 0 0 auto;
+  margin-top: 1px;
+}
+
+
+.promise-box h3 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 17px;
+
+  line-height: 1;
+}
+
+
+.promise-box p {
+  margin: 4px 0 0;
+
+  color: #37636a;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  line-height: 1.25;
+}
+
+
+/* =========================================================
+   CAT IMAGE
+========================================================= */
+
+.about-cats-image {
+  position: relative;
+
+  width: 100%;
+
+  height: 185px;
+
+  overflow: hidden;
+
+  border-radius: 6px 6px 0 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      #dcebd9,
+      #b8d5c1
+    );
+}
+
+
+.about-cats-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  margin: 0;
+}
+
+
+.about-cats-image.image-fallback::before {
+  content: "🐱  🐈  🐱";
+
+  position: absolute;
+
+  inset: 0;
+
+  display: grid;
+
+  place-items: center;
+
+  color: #075c55;
+
+  font-size: 38px;
+}
+
+
+.happy-cats-note {
+  position: absolute;
+
+  right: 10px;
+  top: 16px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  color: #075c55;
+
+  font-family: "Kalam", cursive;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  line-height: 0.95;
+
+  transform: rotate(-6deg);
+
+  text-shadow: 0 1px 0 #ffffff;
+}
+
+
+.happy-cats-note svg {
+  margin-top: 3px;
+}
+
+
+.happy-cats-note svg:first-of-type {
+  color: #ef7d88;
+}
+
+
+/* =========================================================
+   SERVICE BAR
+========================================================= */
+
+.about-service-bar {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  background: #075c55;
+
+  border-radius: 0 0 5px 5px;
+
+  overflow: hidden;
+}
+
+
+.about-service-item {
+  min-width: 0;
+
+  min-height: 57px;
+
+  padding: 5px 4px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+
+  text-align: center;
+
+  border-right: 1px solid rgba(255, 255, 255, 0.42);
+}
+
+
+.about-service-item:last-child {
+  border-right: 0;
+}
+
+
+.about-service-item svg {
+  margin-bottom: 3px;
+}
+
+
+.about-service-item strong,
+.about-service-item span {
+  font-size: 8px;
+
+  line-height: 1.05;
+}
+
+
+.about-service-item strong {
+  font-weight: 900;
+}
+
+
+/* =========================================================
+   RIGHT PANEL
+========================================================= */
+
+.about-owner-panel {
+  position: relative;
+
+  background: #edf8fc;
+
+  color: #234f61;
+
+  padding: 12px;
+
+  border-color: #c6e2ed;
+}
+
+
+/* =========================================================
+   OWNER HEADING
+========================================================= */
+
+.owner-heading {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 8px;
+
+  color: #075c55;
+
+  margin-bottom: 8px;
+}
+
+
+.owner-heading > svg {
+  flex: 0 0 auto;
+}
+
+
+.owner-heading h2 {
+  margin: 0;
+
+  color: #0b4965;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 25px;
+
+  line-height: 1;
+}
+
+
+.owner-heading h3 {
+  margin: 5px 0 1px;
+
+  color: #083e57;
+
+  font-size: 16px;
+
+  font-weight: 900;
+
+  line-height: 1;
+}
+
+
+.owner-heading p {
+  margin: 0;
+
+  color: #356273;
+
+  font-size: 9px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   OWNER TOP GRID
+========================================================= */
+
+.owner-top-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.05fr)
+    minmax(200px, 0.95fr);
+
+  gap: 9px;
 
   align-items: start;
 }
 
-/* =========================================
-   LEFT — ABOUT US
-========================================= */
 
-.about-us-content {
-  position: relative;
-  padding: 45px 40px;
-  background: #fff7e7;
-  border-radius: 28px;
+.owner-story {
+  min-width: 0;
+}
+
+
+.owner-story-block {
+  margin-bottom: 8px;
+}
+
+
+.owner-story-block h3 {
+  margin: 0 0 2px;
+
+  color: #075c55;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 13px;
+
+  font-weight: 900;
+
+  line-height: 1.05;
+}
+
+
+.owner-story-block p {
+  margin: 0;
+
+  color: #37636e;
+
+  font-size: 8.5px;
+
+  font-weight: 500;
+
+  line-height: 1.27;
+}
+
+
+/* =========================================================
+   OWNER IMAGE
+========================================================= */
+
+.owner-image-wrap {
+  min-width: 0;
+
+  width: 100%;
+
+  height: 168px;
+
   overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #c9e0dc,
+      #8ebdb1
+    );
 }
 
-.about-us-content::before {
-  content: "";
-  position: absolute;
-  width: 130px;
-  height: 130px;
-  top: -65px;
-  left: -65px;
-  border-radius: 50%;
-  background: #ffc6a8;
-  opacity: 0.45;
+
+.owner-image-wrap img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  margin: 0;
 }
 
-.about-us-content::after {
-  content: "";
-  position: absolute;
-  width: 90px;
-  height: 90px;
-  right: -35px;
-  bottom: -35px;
-  border-radius: 50%;
-  background: #741a2f;
-  opacity: 0.08;
+
+.owner-image-wrap.image-fallback::before {
+  content: "🐱";
+
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+
+  place-items: center;
+
+  color: #075c55;
+
+  font-size: 55px;
 }
 
-.about-owner-kicker {
-  position: relative;
-  z-index: 1;
 
-  display: inline-flex;
+/* =========================================================
+   REPUTATION
+========================================================= */
+
+.reputation-box {
+  grid-column: 2;
+
+  padding: 7px 8px;
+
+  background: #edf8fc;
+
+  border-top: 1px solid #c8e1ea;
+}
+
+
+.reputation-box h3 {
+  margin: 0 0 4px;
+
+  color: #075c55;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 12px;
+
+  line-height: 1.05;
+}
+
+
+.reputation-box p {
+  margin: 0 0 5px;
+
+  color: #37636e;
+
+  font-size: 8.5px;
+
+  line-height: 1.27;
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   OWNER INFO GRID
+========================================================= */
+
+.owner-info-grid {
+  display: grid;
+
+  grid-template-columns: minmax(0, 1.35fr) minmax(180px, 0.65fr);
+
+  gap: 8px;
+
+  margin-top: 7px;
+}
+
+
+/* =========================================================
+   PHILOSOPHY
+========================================================= */
+
+.philosophy-box {
+  min-height: 88px;
+
+  padding: 9px 14px;
+
+  display: flex;
+  flex-direction: column;
+
   align-items: center;
-  gap: 10px;
+  justify-content: center;
 
-  margin-bottom: 18px;
+  text-align: center;
 
-  color: #741a2f;
+  background: #e4f4fa;
 
-  font-family: "Outfit", sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 1.8px;
-  text-transform: uppercase;
+  border-radius: 6px;
 }
 
-.about-owner-kicker::before {
-  content: "";
-  width: 28px;
-  height: 2px;
-  background: #ffc6a8;
-  border-radius: 10px;
+
+.philosophy-box h3 {
+  margin: 0 0 6px;
+
+  color: #075c55;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 13px;
+
+  font-weight: 900;
 }
 
-.about-owner-title {
+
+.philosophy-box blockquote {
+  max-width: 520px;
+
+  margin: 0;
+
+  color: #37636e;
+
+  font-family: "Kalam", cursive;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  line-height: 1.2;
+}
+
+
+.philosophy-box > svg {
+  margin-top: 5px;
+
+  color: #075c55;
+}
+
+
+/* =========================================================
+   UNDERSTANDING
+========================================================= */
+
+.understanding-box {
+  padding: 8px;
+
+  background: #e1f1f9;
+
+  border-radius: 6px;
+}
+
+
+.understanding-box h3 {
+  margin: 0 0 3px;
+
+  color: #075c55;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 12px;
+
+  line-height: 1.05;
+}
+
+
+.understanding-box p,
+.understanding-box li {
+  color: #37636e;
+
+  font-size: 8px;
+
+  line-height: 1.25;
+}
+
+
+.understanding-box p {
+  margin: 0 0 2px;
+}
+
+
+.understanding-box ul {
+  margin: 2px 0;
+
+  padding-left: 13px;
+}
+
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+
+.owner-timeline {
+  margin-top: 7px;
+}
+
+
+.timeline-heading {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  color: #075c55;
+}
+
+
+.timeline-heading h3 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 17px;
+
+  line-height: 1;
+}
+
+
+.timeline-track {
+  display: grid;
+
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+
+  margin-top: 6px;
+}
+
+
+.timeline-item {
+  min-width: 0;
+
+  padding: 0 5px;
+
   position: relative;
+
+  border-right: 1px solid #bdd8e1;
+}
+
+
+.timeline-item:last-child {
+  border-right: 0;
+}
+
+
+.timeline-pill {
+  width: fit-content;
+
+  min-width: 54px;
+
+  padding: 4px 8px;
+
+  margin-bottom: 5px;
+
+  border-radius: 999px;
+
+  background: #075c55;
+
+  color: #ffffff;
+
+  font-size: 7px;
+
+  font-weight: 900;
+
+  text-align: center;
+
+  line-height: 1;
+}
+
+
+.timeline-line {
+  position: absolute;
+
+  top: 10px;
+
+  left: 63px;
+  right: -1px;
+
+  height: 1px;
+
+  background: #a9ccd7;
+
+  z-index: 0;
+}
+
+
+.timeline-item p {
+  position: relative;
+
   z-index: 1;
 
   margin: 0;
 
-  color: #741a2f;
+  color: #37636e;
 
-  font-family: "Syne", sans-serif;
-  font-size: clamp(34px, 4vw, 54px);
-  font-weight: 700;
-  line-height: 1.08;
-  letter-spacing: -1.5px;
+  font-size: 7.5px;
+
+  line-height: 1.25;
 }
 
-/* =========================================
-   RIGHT — OWNER
-========================================= */
 
-.owner-content {
-  padding-top: 8px;
+/* =========================================================
+   FOUNDER PROMISE
+========================================================= */
+
+.founder-promise {
+  margin-top: 7px;
+
+  padding: 8px 10px;
+
+  background: #edf5df;
+
+  border-radius: 7px;
 }
 
-.owner-name {
-  margin: 0 0 8px;
 
-  color: #741a2f;
+.founder-promise-heading {
+  display: flex;
 
-  font-family: "Syne", sans-serif;
-  font-size: clamp(30px, 3vw, 46px);
-  font-weight: 700;
-  line-height: 1.12;
-  letter-spacing: -1px;
+  align-items: center;
+
+  gap: 6px;
+
+  color: #075c55;
 }
 
-.owner-role {
-  margin: 0 0 30px;
 
-  color: #8c5260;
+.founder-promise-heading h3 {
+  margin: 0;
 
-  font-family: "Outfit", sans-serif;
-  font-size: 17px;
-  font-weight: 600;
-  line-height: 1.5;
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 13px;
+
+  line-height: 1;
 }
 
-.owner-description {
-  max-width: 720px;
+
+.founder-promise p {
+  margin: 4px 0 0;
+
+  color: #37636e;
+
+  font-size: 8px;
+
+  line-height: 1.25;
 }
 
-.owner-description p {
-  margin: 0 0 20px;
 
-  color: #2b1a1d;
+/* =========================================================
+   1250px
+========================================================= */
 
-  font-family: "Outfit", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.8;
-}
+@media (max-width: 1250px) {
 
-.owner-description p:last-child {
-  margin-bottom: 0;
-}
-
-/* =========================================
-   TABLET
-========================================= */
-
-@media (max-width: 1000px) {
-  .about-owner-section {
-    padding: 80px 0;
+  .about-cattery-container {
+    grid-template-columns:
+      minmax(290px, 0.72fr)
+      minmax(500px, 1.28fr);
   }
 
-  .about-owner-container {
+
+  .about-panel-heading h2,
+  .owner-heading h2 {
+    font-size: 22px;
+  }
+
+
+  .about-cats-image {
+    height: 165px;
+  }
+
+
+  .owner-image-wrap {
+    height: 150px;
+  }
+
+}
+
+
+/* =========================================================
+   1050px
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .about-cattery-container {
+    width: calc(100% - 20px);
+
     grid-template-columns: 1fr;
-    gap: 50px;
   }
 
-  .about-us-content {
-    padding: 40px;
+
+  .about-cattery-panel,
+  .about-owner-panel {
+    width: 100%;
   }
+
+
+  .about-cats-image {
+    height: 260px;
+  }
+
+
+  .owner-image-wrap {
+    height: 220px;
+  }
+
+
+  .owner-story-block p,
+  .reputation-box p {
+    font-size: 10px;
+  }
+
+
+  .owner-story-block h3,
+  .reputation-box h3 {
+    font-size: 14px;
+  }
+
+
+  .understanding-box p,
+  .understanding-box li,
+  .founder-promise p {
+    font-size: 9px;
+  }
+
+
+  .timeline-item p {
+    font-size: 8px;
+  }
+
 }
 
-/* =========================================
+
+/* =========================================================
+   800px
+========================================================= */
+
+@media (max-width: 800px) {
+
+  .about-cattery-section {
+    padding: 18px 0 25px;
+  }
+
+
+  .about-cattery-container {
+    width: calc(100% - 18px);
+
+    gap: 12px;
+  }
+
+
+  .owner-top-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .owner-image-wrap {
+    grid-row: auto;
+
+    height: 270px;
+  }
+
+
+  .reputation-box {
+    grid-column: auto;
+  }
+
+
+  .owner-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .timeline-track {
+    grid-template-columns: 1fr;
+    gap: 9px;
+  }
+
+
+  .timeline-item {
+    padding: 0 0 8px;
+
+    border-right: 0;
+
+    border-bottom: 1px solid #bdd8e1;
+  }
+
+
+  .timeline-item:last-child {
+    border-bottom: 0;
+  }
+
+
+  .timeline-line {
+    display: none;
+  }
+
+
+  .timeline-pill {
+    font-size: 8px;
+  }
+
+
+  .timeline-item p {
+    font-size: 9px;
+  }
+
+
+  .founder-promise {
+    margin-top: 10px;
+  }
+
+}
+
+
+/* =========================================================
    MOBILE
-========================================= */
+========================================================= */
 
 @media (max-width: 600px) {
-  .about-owner-section {
-    padding: 60px 0;
+
+  .about-cattery-panel,
+  .about-owner-panel {
+    border-radius: 8px;
+
+    padding: 10px;
   }
 
-  .about-owner-container {
-    width: min(100% - 28px, 1240px);
-    gap: 40px;
+
+  .about-panel-heading h2,
+  .owner-heading h2 {
+    font-size: 21px;
   }
 
-  .about-us-content {
-    padding: 32px 25px;
-    border-radius: 22px;
+
+  .about-panel-heading p {
+    font-size: 12px;
   }
 
-  .about-owner-title {
-    font-size: 34px;
+
+  .about-intro p {
+    font-size: 10.5px;
+
+    line-height: 1.45;
   }
 
-  .owner-name {
-    font-size: 30px;
+
+  .approach-box {
+    padding: 9px 5px 5px;
   }
 
-  .owner-role {
+
+  .approach-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  .approach-item {
+    min-height: 65px;
+
+    border-bottom: 1px solid #b6d8c0;
+  }
+
+
+  .approach-item:nth-child(2n) {
+    border-right: 0;
+  }
+
+
+  .approach-item:nth-last-child(-n + 1) {
+    border-bottom: 0;
+  }
+
+
+  .approach-item strong,
+  .approach-item span {
+    font-size: 9px;
+  }
+
+
+  .about-cats-image {
+    height: 210px;
+  }
+
+
+  .about-service-bar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  .about-service-item {
+    min-height: 55px;
+
+    border-bottom: 1px solid rgba(255,255,255,.35);
+  }
+
+
+  .about-service-item:nth-child(2n) {
+    border-right: 0;
+  }
+
+
+  .about-service-item:nth-last-child(-n + 2) {
+    border-bottom: 0;
+  }
+
+
+  .owner-heading h3 {
     font-size: 15px;
-    margin-bottom: 24px;
   }
 
-  .owner-description p {
-    font-size: 15px;
-    line-height: 1.7;
-    margin-bottom: 17px;
+
+  .owner-heading p {
+    font-size: 8.5px;
   }
+
+
+  .owner-story-block {
+    margin-bottom: 10px;
+  }
+
+
+  .owner-story-block h3,
+  .reputation-box h3 {
+    font-size: 13px;
+  }
+
+
+  .owner-story-block p,
+  .reputation-box p {
+    font-size: 9.5px;
+
+    line-height: 1.35;
+  }
+
+
+  .owner-image-wrap {
+    height: 220px;
+  }
+
+
+  .philosophy-box {
+    min-height: 105px;
+  }
+
+
+  .philosophy-box h3 {
+    font-size: 12px;
+  }
+
+
+  .philosophy-box blockquote {
+    font-size: 10px;
+  }
+
+
+  .understanding-box p,
+  .understanding-box li {
+    font-size: 9px;
+  }
+
+
+  .founder-promise p {
+    font-size: 9px;
+
+    line-height: 1.35;
+  }
+
 }
 
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .about-cattery-container {
+    width: calc(100% - 12px);
+  }
+
+
+  .about-panel-heading h2,
+  .owner-heading h2 {
+    font-size: 19px;
+  }
+
+
+  .about-panel-heading p {
+    font-size: 11px;
+  }
+
+
+  .about-intro p {
+    font-size: 10px;
+  }
+
+
+  .about-cats-image {
+    height: 180px;
+  }
+
+
+  .owner-image-wrap {
+    height: 190px;
+  }
+
+
+  .happy-cats-note {
+    font-size: 12px;
+  }
+
+
+  .timeline-heading h3 {
+    font-size: 15px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL
+========================================================= */
+
+@media (max-width: 340px) {
+
+  .about-cattery-panel,
+  .about-owner-panel {
+    padding: 8px;
+  }
+
+
+  .about-panel-heading h2,
+  .owner-heading h2 {
+    font-size: 17px;
+  }
+
+
+  .about-panel-heading p {
+    font-size: 10px;
+  }
+
+
+  .about-intro p,
+  .owner-story-block p,
+  .reputation-box p {
+    font-size: 9px;
+  }
+
+
+  .about-cats-image {
+    height: 155px;
+  }
+
+
+  .owner-image-wrap {
+    height: 165px;
+  }
+
+
+  .approach-item {
+    min-height: 58px;
+  }
+
+
+  .approach-item strong,
+  .approach-item span {
+    font-size: 8px;
+  }
+
+
+  .about-service-item strong,
+  .about-service-item span {
+    font-size: 7px;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  * {
+    scroll-behavior: auto !important;
+    transition: none !important;
+    animation: none !important;
+  }
+
+}

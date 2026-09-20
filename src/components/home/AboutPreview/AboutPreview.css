@@ -1,447 +1,1299 @@
-/* ================================
-   ABOUT SECTION
-================================ */
+/* =========================================================
+   AZIZ FELINES CATTERY
+   CAT CARE / SPECIALISATION SECTION
+========================================================= */
 
-.about-section {
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.cat-care-section {
   width: 100%;
-  padding: 90px 20px;
+
+  padding: 24px 0 30px;
+
   background: #ffffff;
-  overflow: hidden;
+
+  box-sizing: border-box;
 }
 
-.about-container {
-  width: min(1180px, 100%);
+
+.cat-care-container {
+  width: min(1400px, calc(100% - 30px));
+
   margin: 0 auto;
 
   display: grid;
-  grid-template-columns: 0.95fr 1.05fr;
-  align-items: center;
-  gap: 75px;
+
+  grid-template-columns:
+    minmax(0, 2fr)
+    minmax(250px, 0.92fr)
+    minmax(280px, 1.08fr);
+
+  gap: 10px;
+
+  align-items: stretch;
+
+  box-sizing: border-box;
 }
 
 
-/* ================================
-   IMAGE
-================================ */
+/* =========================================================
+   COMMON CARD
+========================================================= */
 
-.about-image-wrapper {
-  position: relative;
-  padding: 14px;
+.specialisation-card,
+.mission-card,
+.why-card,
+.enquiry-card {
+  background:
+    linear-gradient(
+      180deg,
+      #f5fcf7 0%,
+      #eef9f2 100%
+    );
+
+  border: 1px solid #d6e9dc;
+
+  border-radius: 7px;
+
+  box-sizing: border-box;
 }
 
-.about-image-wrapper::before {
-  content: "";
-  position: absolute;
-  width: 180px;
-  height: 180px;
-  left: -30px;
-  bottom: -30px;
 
-  background: #fff6d8;
-  border-radius: 50%;
-  z-index: 0;
+/* =========================================================
+   LEFT COLUMN
+========================================================= */
+
+.cat-care-left {
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
 }
 
-.about-image-card {
-  position: relative;
-  z-index: 1;
 
-  width: 100%;
-  height: 500px;
+/* =========================================================
+   SPECIALISATION CARD
+========================================================= */
+
+.specialisation-card {
+  padding: 10px 12px 8px;
 
   overflow: hidden;
-  border-radius: 28px;
-
-  background: #e9f7f3;
-
-  box-shadow:
-    0 20px 45px rgba(0, 91, 87, 0.13);
 }
 
-.about-image {
+
+/* =========================================================
+   HEADINGS
+========================================================= */
+
+.specialisation-heading,
+.mission-heading,
+.why-heading,
+.enquiry-heading {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 9px;
+
+  color: #075c55;
+}
+
+
+.specialisation-heading > svg,
+.mission-heading > svg,
+.why-heading > svg,
+.enquiry-heading > svg {
+  flex: 0 0 auto;
+
+  margin-top: 1px;
+}
+
+
+.specialisation-heading h2,
+.mission-heading h2,
+.why-heading h2,
+.enquiry-heading h2 {
+  margin: 0;
+
+  color: #075c55;
+
+  font-family: "Outfit", sans-serif;
+
+  font-size: 22px;
+
+  font-weight: 900;
+
+  line-height: 1.05;
+}
+
+
+.specialisation-heading p,
+.mission-heading p,
+.why-heading p,
+.enquiry-heading p {
+  margin: 3px 0 0;
+
+  color: #08746c;
+
+  font-family: "Kalam", cursive;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  line-height: 1.05;
+}
+
+
+/* =========================================================
+   SPECIALISATION INTRO
+========================================================= */
+
+.specialisation-intro {
+  display: grid;
+
+  grid-template-columns: minmax(0, 1.4fr) minmax(150px, 0.8fr);
+
+  gap: 8px;
+
+  align-items: center;
+
+  margin-top: 7px;
+}
+
+
+.specialisation-copy {
+  min-width: 0;
+}
+
+
+.specialisation-copy p {
+  margin: 0 0 5px;
+
+  color: #245964;
+
+  font-size: 11px;
+
+  font-weight: 500;
+
+  line-height: 1.35;
+}
+
+
+.specialisation-copy strong {
+  color: #075c55;
+
+  font-weight: 900;
+}
+
+
+/* =========================================================
+   CAT IMAGE
+========================================================= */
+
+.specialisation-image-wrap {
+  position: relative;
+
+  width: 100%;
+
+  height: 125px;
+
+  overflow: hidden;
+
+  border-radius: 4px;
+
+  background: #dfeee5;
+}
+
+
+.specialisation-image {
+  display: block;
+
   width: 100%;
   height: 100%;
 
-  display: block;
-
   object-fit: cover;
 
-  transition:
-    transform 0.7s ease,
-    filter 0.7s ease;
-}
+  object-position: center;
 
-.about-image-card:hover .about-image {
-  transform: scale(1.06);
-  filter: brightness(1.03);
+  margin: 0;
 }
 
 
-/* ================================
-   IMAGE BADGE
-================================ */
-
-.about-image-badge {
+.image-heart {
   position: absolute;
-  left: 22px;
-  bottom: 22px;
 
-  display: flex;
-  align-items: center;
-  gap: 11px;
+  right: 6px;
+  top: 6px;
 
-  padding: 13px 19px;
+  color: #ef7f8d;
 
-  background: rgba(255, 255, 255, 0.95);
-  border: 1px solid rgba(0, 105, 99, 0.08);
+  font-size: 22px;
 
-  border-radius: 14px;
-
-  color: #006b66;
-
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1);
-
-  backdrop-filter: blur(8px);
-}
-
-.about-image-badge svg {
-  flex-shrink: 0;
-}
-
-.about-image-badge div {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.about-image-badge strong {
-  font-size: 14px;
-  font-weight: 700;
-  color: #075a63;
-}
-
-.about-image-badge span {
-  font-size: 12px;
-  color: #557477;
+  line-height: 1;
 }
 
 
-/* ================================
-   CONTENT
-================================ */
+/* =========================================================
+   SPECIALISATION SERVICE STRIP
+========================================================= */
 
-.about-content {
-  max-width: 620px;
-}
-
-.about-label {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-
-  margin-bottom: 13px;
-
-  color: #00736d;
-
-  font-family: "Kalam", "Segoe Print", cursive;
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.about-label-icon {
-  font-size: 18px;
-}
-
-
-/* ================================
-   HEADING
-================================ */
-
-.about-content h2 {
-  margin: 0 0 20px;
-
-  color: #075269;
-
-  font-family: "Kalam", "Segoe Print", cursive;
-  font-size: clamp(36px, 4vw, 50px);
-  line-height: 1.12;
-  font-weight: 700;
-  letter-spacing: 0.2px;
-}
-
-.about-content h2 span {
-  display: block;
-  color: #008f7e;
-}
-
-
-/* ================================
-   TEXT
-================================ */
-
-.about-intro {
-  margin: 0 0 13px;
-
-  color: #365e66;
-
-  font-size: 16px;
-  line-height: 1.75;
-  font-weight: 500;
-}
-
-.about-description {
-  margin: 0 0 25px;
-
-  color: #61777b;
-
-  font-size: 14.5px;
-  line-height: 1.75;
-}
-
-
-/* ================================
-   FEATURES
-================================ */
-
-.about-features {
+.specialisation-services {
   display: grid;
-  grid-template-columns: 1fr 1fr;
 
-  gap: 14px;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
 
-  margin-bottom: 28px;
+  margin-top: 7px;
+
+  padding: 4px 2px;
+
+  background: rgba(221, 243, 224, 0.72);
+
+  border-radius: 5px;
 }
 
-.about-feature {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
 
-  padding: 14px;
+.specialisation-service {
+  min-width: 0;
 
-  background: #f5fbf9;
+  min-height: 57px;
 
-  border: 1px solid #dceeea;
-  border-radius: 14px;
-
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease,
-    border-color 0.3s ease,
-    background 0.3s ease;
-}
-
-.about-feature:hover {
-  transform: translateY(-4px);
-
-  background: #ffffff;
-
-  border-color: #a8dcd4;
-
-  box-shadow:
-    0 10px 25px rgba(0, 105, 99, 0.1);
-}
-
-.about-feature-icon {
-  width: 42px;
-  height: 42px;
-
-  flex-shrink: 0;
+  padding: 3px 3px;
 
   display: flex;
+
+  flex-direction: column;
+
   align-items: center;
+
   justify-content: center;
 
-  color: #00756e;
-  background: #e3f6f1;
+  text-align: center;
 
-  border-radius: 11px;
+  color: #075c55;
 
-  transition:
-    background 0.3s ease,
-    color 0.3s ease;
+  border-right: 1px solid #b8ddc5;
+
+  box-sizing: border-box;
 }
 
-.about-feature:hover .about-feature-icon {
-  color: #ffffff;
-  background: #00756e;
+
+.specialisation-service:last-child {
+  border-right: 0;
 }
 
-.about-feature h3 {
-  margin: 1px 0 4px;
 
-  color: #075269;
+.specialisation-service svg {
+  margin-bottom: 2px;
 
-  font-size: 13.5px;
+  color: #075c55;
+
+  flex: 0 0 auto;
+}
+
+
+.specialisation-service span {
+  display: block;
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  line-height: 1.05;
+}
+
+
+.specialisation-service small {
+  display: block;
+
+  margin-top: 1px;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  line-height: 1.05;
+}
+
+
+/* =========================================================
+   MISSION CARD
+========================================================= */
+
+.mission-card {
+  padding: 9px 12px 8px;
+
+  overflow: hidden;
+}
+
+
+.mission-content {
+  display: grid;
+
+  grid-template-columns: minmax(0, 1fr) 145px;
+
+  gap: 10px;
+
+  align-items: center;
+
+  margin-top: 5px;
+}
+
+
+.mission-copy p {
+  margin: 0 0 5px;
+
+  color: #245964;
+
+  font-size: 10.5px;
+
+  font-weight: 500;
+
+  line-height: 1.35;
+}
+
+
+.mission-doodle {
+  min-height: 70px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #075c55;
+
+  font-family: "Kalam", cursive;
+
+  font-size: 17px;
+
   font-weight: 700;
+
+  line-height: 0.95;
+
+  transform: rotate(-3deg);
 }
 
-.about-feature p {
+
+.mission-doodle svg {
+  margin-top: 4px;
+}
+
+
+/* =========================================================
+   WHY CHOOSE US
+========================================================= */
+
+.why-card {
+  position: relative;
+
+  padding: 10px 11px 12px;
+
+  overflow: hidden;
+}
+
+
+.why-heading {
+  margin-bottom: 8px;
+}
+
+
+.why-heading > svg {
+  color: #075c55;
+}
+
+
+.why-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+
+.why-item {
+  display: grid;
+
+  grid-template-columns: 35px minmax(0, 1fr);
+
+  gap: 7px;
+
+  align-items: center;
+}
+
+
+.why-icon {
+  width: 34px;
+  height: 34px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: #08746c;
+
+  color: #ffffff;
+}
+
+
+.why-item-content {
+  min-width: 0;
+}
+
+
+.why-item-content h3 {
   margin: 0;
 
-  color: #668083;
+  color: #075c55;
 
-  font-size: 11.5px;
-  line-height: 1.45;
+  font-size: 10.5px;
+
+  font-weight: 900;
+
+  line-height: 1.1;
 }
 
 
-/* ================================
-   BUTTON
-================================ */
+.why-item-content p {
+  margin: 2px 0 0;
 
-.about-button {
-  display: inline-flex;
+  color: #37636a;
+
+  font-size: 8.5px;
+
+  font-weight: 500;
+
+  line-height: 1.2;
+}
+
+
+/* =========================================================
+   WHY DOODLE
+========================================================= */
+
+.why-doodle {
+  margin-top: 8px;
+
+  padding-right: 8px;
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: flex-end;
+
   align-items: center;
-  justify-content: center;
-  gap: 9px;
 
-  min-height: 48px;
+  gap: 3px;
 
-  padding: 0 23px;
+  color: #075c55;
 
-  color: #ffffff;
-  background: #006b65;
+  font-family: "Kalam", cursive;
 
-  border: 2px solid #006b65;
-  border-radius: 28px;
+  font-size: 16px;
 
-  font-size: 13.5px;
   font-weight: 700;
 
-  text-decoration: none;
+  line-height: 0.9;
 
-  box-shadow:
-    0 8px 20px rgba(0, 107, 101, 0.18);
+  transform: rotate(-3deg);
+}
+
+
+.why-doodle span:first-child {
+  width: 100%;
+
+  text-align: right;
+}
+
+
+.why-doodle span:nth-child(2) {
+  text-align: right;
+}
+
+
+.why-doodle svg {
+  margin-left: 2px;
+}
+
+
+.why-doodle b {
+  color: #ef7f8d;
+
+  font-size: 19px;
+}
+
+
+/* =========================================================
+   ENQUIRY CARD
+========================================================= */
+
+.enquiry-card {
+  position: relative;
+
+  padding: 10px 11px 9px;
+
+  overflow: hidden;
+}
+
+
+.enquiry-heading {
+  margin-bottom: 8px;
+}
+
+
+.enquiry-form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+
+/* =========================================================
+   FORM FIELD
+========================================================= */
+
+.form-field {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 30px;
+
+  display: flex;
+
+  align-items: center;
+
+  box-sizing: border-box;
+}
+
+
+.field-icon {
+  position: absolute;
+
+  left: 8px;
+
+  top: 50%;
+
+  z-index: 2;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #075c55;
+
+  transform: translateY(-50%);
+
+  pointer-events: none;
+}
+
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+
+  border: 1px solid #c9dfd1;
+
+  border-radius: 6px;
+
+  background: rgba(255, 255, 255, 0.9);
+
+  color: #245964;
+
+  font-family: "Outfit", sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 500;
+
+  outline: none;
+
+  box-sizing: border-box;
 
   transition:
-    transform 0.3s ease,
-    background 0.3s ease,
-    box-shadow 0.3s ease;
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
-.about-button svg {
-  transition: transform 0.3s ease;
+
+.form-field input,
+.form-field select {
+  height: 30px;
+
+  padding: 0 9px 0 29px;
 }
 
-.about-button:hover {
-  color: #006b65;
-  background: #ffffff;
 
-  transform: translateY(-3px);
+.form-field textarea {
+  min-height: 54px;
+
+  padding: 8px 9px 8px 29px;
+
+  resize: vertical;
+
+  line-height: 1.35;
+}
+
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: #80969a;
+
+  opacity: 1;
+}
+
+
+.form-field select {
+  appearance: none;
+
+  -webkit-appearance: none;
+
+  cursor: pointer;
+
+  padding-right: 28px;
+}
+
+
+.form-field select:invalid {
+  color: #80969a;
+}
+
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: #08746c;
 
   box-shadow:
-    0 12px 25px rgba(0, 107, 101, 0.22);
-}
-
-.about-button:hover svg {
-  transform: translateX(4px);
+    0 0 0 2px rgba(8, 116, 108, 0.08);
 }
 
 
-/* ================================
+/* =========================================================
+   SELECT ARROW
+========================================================= */
+
+.select-arrow {
+  position: absolute;
+
+  right: 8px;
+
+  top: 50%;
+
+  color: #075c55;
+
+  transform: translateY(-50%);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   MESSAGE FIELD
+========================================================= */
+
+.message-field {
+  align-items: flex-start;
+}
+
+
+.message-field .field-icon {
+  top: 13px;
+
+  transform: none;
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+========================================================= */
+
+.enquiry-submit {
+  width: 100%;
+
+  min-height: 30px;
+
+  margin-top: 1px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  padding: 7px 12px;
+
+  border: 0;
+
+  border-radius: 999px;
+
+  background: #075c55;
+
+  color: #ffffff;
+
+  font-family: "Outfit", sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.enquiry-submit:hover {
+  background: #064b45;
+
+  transform: translateY(-1px);
+}
+
+
+.enquiry-submit:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   SECURITY
+========================================================= */
+
+.form-security {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 4px;
+
+  color: #4e7773;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  text-align: center;
+}
+
+
+.form-security svg {
+  color: #075c55;
+
+  flex: 0 0 auto;
+}
+
+
+/* =========================================================
+   BOTTOM PAW
+========================================================= */
+
+.enquiry-paw {
+  display: flex;
+
+  justify-content: center;
+
+  margin-top: 3px;
+
+  color: #075c55;
+}
+
+
+/* =========================================================
+   1200px
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .cat-care-container {
+    grid-template-columns:
+      minmax(0, 1.8fr)
+      minmax(230px, 0.9fr)
+      minmax(260px, 1fr);
+
+    gap: 8px;
+  }
+
+
+  .specialisation-heading h2,
+  .mission-heading h2,
+  .why-heading h2,
+  .enquiry-heading h2 {
+    font-size: 19px;
+  }
+
+
+  .specialisation-intro {
+    grid-template-columns:
+      minmax(0, 1.3fr)
+      minmax(130px, 0.7fr);
+  }
+
+
+  .specialisation-image-wrap {
+    height: 110px;
+  }
+
+
+  .mission-content {
+    grid-template-columns: minmax(0, 1fr) 115px;
+  }
+
+
+  .mission-doodle {
+    font-size: 15px;
+  }
+}
+
+
+/* =========================================================
    TABLET
-================================ */
+   <= 1000px
+========================================================= */
 
-@media (max-width: 900px) {
-  .about-section {
-    padding: 70px 20px;
-  }
+@media (max-width: 1000px) {
 
-  .about-container {
-    grid-template-columns: 1fr;
-    gap: 45px;
-  }
+  .cat-care-container {
+    width: min(760px, calc(100% - 24px));
 
-  .about-image-wrapper {
-    max-width: 650px;
-    width: 100%;
-    margin: 0 auto;
-  }
+    grid-template-columns: 1fr 1fr;
 
-  .about-image-card {
-    height: 430px;
-  }
-
-  .about-content {
-    max-width: 700px;
-    margin: 0 auto;
-  }
-}
-
-
-/* ================================
-   MOBILE
-================================ */
-
-@media (max-width: 600px) {
-  .about-section {
-    padding: 55px 16px;
-  }
-
-  .about-container {
-    gap: 32px;
-  }
-
-  .about-image-wrapper {
-    padding: 8px;
-  }
-
-  .about-image-card {
-    height: 350px;
-    border-radius: 22px;
-  }
-
-  .about-image-wrapper::before {
-    width: 120px;
-    height: 120px;
-
-    left: -15px;
-    bottom: -15px;
-  }
-
-  .about-image-badge {
-    left: 15px;
-    bottom: 15px;
-
-    padding: 10px 13px;
-  }
-
-  .about-image-badge strong {
-    font-size: 12px;
-  }
-
-  .about-image-badge span {
-    font-size: 10px;
-  }
-
-  .about-label {
-    font-size: 18px;
-  }
-
-  .about-content h2 {
-    font-size: 34px;
-  }
-
-  .about-intro {
-    font-size: 14px;
-    line-height: 1.7;
-  }
-
-  .about-description {
-    font-size: 13px;
-  }
-
-  .about-features {
-    grid-template-columns: 1fr;
     gap: 10px;
   }
 
-  .about-feature {
-    padding: 12px;
+
+  .cat-care-left {
+    grid-column: 1 / -1;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
   }
 
-  .about-button {
+
+  .specialisation-card,
+  .mission-card {
+    min-width: 0;
+  }
+
+
+  .why-card {
+    grid-column: 1;
+
+    min-width: 0;
+  }
+
+
+  .enquiry-card {
+    grid-column: 2;
+
+    min-width: 0;
+  }
+}
+
+
+/* =========================================================
+   TABLET / LARGE MOBILE
+   <= 760px
+========================================================= */
+
+@media (max-width: 760px) {
+
+  .cat-care-container {
+    width: min(620px, calc(100% - 22px));
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+
+  .cat-care-left {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+
+  .why-card,
+  .enquiry-card {
     width: 100%;
+  }
+
+
+  .specialisation-intro {
+    grid-template-columns: 1fr 190px;
+  }
+
+
+  .specialisation-image-wrap {
+    height: 125px;
+  }
+
+
+  .specialisation-services {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+
+  .specialisation-service {
+    border-bottom: 1px solid #b8ddc5;
+  }
+
+
+  .specialisation-service:nth-child(4) {
+    border-right: 0;
+  }
+
+
+  .specialisation-service:nth-child(n + 5) {
+    border-bottom: 0;
+  }
+
+
+  .mission-content {
+    grid-template-columns: 1fr 140px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   <= 600px
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .cat-care-section {
+    padding: 18px 0 25px;
+  }
+
+
+  .cat-care-container {
+    width: calc(100% - 20px);
+
+    gap: 9px;
+  }
+
+
+  .specialisation-card,
+  .mission-card,
+  .why-card,
+  .enquiry-card {
+    border-radius: 9px;
+  }
+
+
+  .specialisation-card {
+    padding: 11px;
+  }
+
+
+  .specialisation-heading h2,
+  .mission-heading h2,
+  .why-heading h2,
+  .enquiry-heading h2 {
+    font-size: 20px;
+  }
+
+
+  .specialisation-heading p,
+  .mission-heading p,
+  .why-heading p,
+  .enquiry-heading p {
+    font-size: 13px;
+  }
+
+
+  .specialisation-intro {
+    grid-template-columns: 1fr;
+
+    gap: 8px;
+  }
+
+
+  .specialisation-copy p {
+    font-size: 11px;
+
+    line-height: 1.4;
+  }
+
+
+  .specialisation-image-wrap {
+    width: 100%;
+
+    height: 190px;
+  }
+
+
+  .specialisation-services {
+    grid-template-columns: repeat(2, 1fr);
+
+    padding: 4px;
+  }
+
+
+  .specialisation-service {
+    min-height: 62px;
+
+    border-right: 1px solid #b8ddc5;
+
+    border-bottom: 1px solid #b8ddc5;
+  }
+
+
+  .specialisation-service:nth-child(2n) {
+    border-right: 0;
+  }
+
+
+  .specialisation-service:nth-last-child(-n + 1) {
+    border-bottom: 0;
+  }
+
+
+  .specialisation-service span {
+    font-size: 10px;
+  }
+
+
+  .specialisation-service small {
+    font-size: 8px;
+  }
+
+
+  .mission-card {
+    padding: 11px;
+  }
+
+
+  .mission-content {
+    grid-template-columns: 1fr;
+  }
+
+
+  .mission-copy p {
+    font-size: 10.5px;
+
+    line-height: 1.4;
+  }
+
+
+  .mission-doodle {
+    min-height: 55px;
+
+    justify-self: end;
+
+    font-size: 17px;
+  }
+
+
+  .why-card,
+  .enquiry-card {
+    padding: 11px;
+  }
+
+
+  .why-list {
+    gap: 7px;
+  }
+
+
+  .why-item {
+    grid-template-columns: 38px 1fr;
+
+    gap: 8px;
+  }
+
+
+  .why-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+
+  .why-item-content h3 {
+    font-size: 11px;
+  }
+
+
+  .why-item-content p {
+    font-size: 9px;
+
+    line-height: 1.3;
+  }
+
+
+  .why-doodle {
+    margin-top: 12px;
+  }
+
+
+  .form-field input,
+  .form-field select {
+    height: 38px;
+
+    font-size: 11px;
+  }
+
+
+  .form-field textarea {
+    min-height: 90px;
+
+    font-size: 11px;
+  }
+
+
+  .enquiry-submit {
+    min-height: 40px;
+
+    font-size: 12px;
+  }
+
+
+  .form-security {
+    font-size: 9px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   <= 400px
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .cat-care-container {
+    width: calc(100% - 14px);
+  }
+
+
+  .specialisation-heading > svg,
+  .mission-heading > svg,
+  .why-heading > svg,
+  .enquiry-heading > svg {
+    width: 32px;
+    height: 32px;
+  }
+
+
+  .specialisation-heading h2,
+  .mission-heading h2,
+  .why-heading h2,
+  .enquiry-heading h2 {
+    font-size: 18px;
+  }
+
+
+  .specialisation-heading p,
+  .mission-heading p,
+  .why-heading p,
+  .enquiry-heading p {
+    font-size: 12px;
+  }
+
+
+  .specialisation-image-wrap {
+    height: 170px;
+  }
+
+
+  .specialisation-service {
+    min-height: 60px;
+  }
+
+
+  .specialisation-service svg {
+    width: 21px;
+    height: 21px;
+  }
+
+
+  .specialisation-service span {
+    font-size: 9px;
+  }
+
+
+  .specialisation-service small {
+    font-size: 7.5px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   <= 350px
+========================================================= */
+
+@media (max-width: 350px) {
+
+  .cat-care-container {
+    width: calc(100% - 10px);
+  }
+
+
+  .specialisation-image-wrap {
+    height: 150px;
+  }
+
+
+  .specialisation-services {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  .why-item-content h3 {
+    font-size: 10px;
+  }
+
+
+  .why-item-content p {
+    font-size: 8.5px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .enquiry-submit,
+  .form-field input,
+  .form-field select,
+  .form-field textarea {
+    transition: none;
   }
 }

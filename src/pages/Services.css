@@ -1,3 +1,179 @@
+/* =========================================================
+   AZIZ FELINES CATTERY
+   SERVICES PAGE
+   RESPONSIVE GRID
+========================================================= */
 
-.services-page{padding-top:25px}.services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-@media(max-width:850px){.services-grid{grid-template-columns:1fr}}
+
+/* =========================================================
+   SERVICES SECTION
+========================================================= */
+
+.services-page {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding-top: 25px;
+  padding-bottom: 45px;
+}
+
+
+/* =========================================================
+   SERVICES GRID
+========================================================= */
+
+.services-grid {
+  width: 100%;
+  min-width: 0;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 16px;
+
+  align-items: stretch;
+}
+
+
+/* =========================================================
+   CARD SAFETY
+========================================================= */
+
+.services-grid > * {
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   1400px+
+========================================================= */
+
+@media (min-width: 1400px) {
+
+  .services-page {
+    padding-top: 30px;
+    padding-bottom: 55px;
+  }
+
+
+  .services-grid {
+    gap: 20px;
+  }
+}
+
+
+/* =========================================================
+   DESKTOP / LAPTOP
+   1001px - 1399px
+========================================================= */
+
+@media (min-width: 1001px) and (max-width: 1399px) {
+
+  .services-page {
+    padding-top: 28px;
+    padding-bottom: 50px;
+  }
+
+
+  .services-grid {
+    gap: 16px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   768px - 1000px
+========================================================= */
+
+@media (min-width: 768px) and (max-width: 1000px) {
+
+  .services-page {
+    padding-top: 24px;
+    padding-bottom: 42px;
+  }
+
+
+  .services-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 14px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE / SMALL TABLET
+   <= 767px
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .services-page {
+    padding-top: 22px;
+    padding-bottom: 38px;
+  }
+
+
+  .services-grid {
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   <= 480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .services-page {
+    padding-top: 18px;
+    padding-bottom: 32px;
+  }
+
+
+  .services-grid {
+    gap: 14px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   <= 380px
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .services-page {
+    padding-top: 16px;
+    padding-bottom: 28px;
+  }
+
+
+  .services-grid {
+    gap: 12px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .services-grid > * {
+    scroll-behavior: auto;
+  }
+}

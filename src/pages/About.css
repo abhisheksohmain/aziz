@@ -1,0 +1,2174 @@
+/* =========================================================
+   AZIZ FELINES CATTERY
+   ABOUT PAGE
+   FIXED HEADER SAFE + RESPONSIVE
+========================================================= */
+
+.about-page {
+  --green-dark: #063f35;
+  --green: #0c5b4c;
+  --green-mid: #1d6d5d;
+
+  --green-light: #dfede2;
+  --green-soft: #edf5ed;
+
+  --cream: #f7f5ec;
+  --cream-dark: #ebe8da;
+
+  --blue-soft: #e6f1f5;
+
+  --text: #173c3a;
+  --text-soft: #315753;
+
+  --border: #c7d9d1;
+
+  width: 100%;
+  min-height: 100vh;
+
+  color: var(--text);
+
+  background:
+    linear-gradient(
+      180deg,
+      #faf9f4 0%,
+      #f4f4ec 50%,
+      #eef2e9 100%
+    );
+
+  overflow-x: hidden;
+
+  font-family:
+    "Trebuchet MS",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  /*
+    IMPORTANT:
+    Existing Header is fixed.
+    Desktop header height is approximately 120px.
+  */
+  padding-top: 120px;
+}
+
+.about-page *,
+.about-page *::before,
+.about-page *::after {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.about-hero {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 175px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(320px, 43%)
+    minmax(0, 57%);
+
+  overflow: hidden;
+
+  border-bottom: 1px solid var(--border);
+
+  background: var(--cream);
+}
+
+.about-hero-content {
+  position: relative;
+
+  z-index: 2;
+
+  min-height: 175px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 18px 25px 14px;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at center top,
+      #ffffff,
+      #f7f5ec 75%
+    );
+}
+
+.about-hero-title h1 {
+  margin: 0;
+
+  color: #0a2027;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(38px, 4vw, 58px);
+
+  line-height: 0.95;
+
+  font-weight: 800;
+
+  letter-spacing: -1.8px;
+}
+
+.about-hero-title p {
+  margin: 9px 0 0;
+
+  color: #202c2d;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(14px, 1.5vw, 20px);
+
+  font-style: italic;
+
+  line-height: 1.2;
+}
+
+.hero-paw {
+  margin-top: 7px;
+
+  color: var(--green-dark);
+}
+
+.hero-divider {
+  width: min(270px, 90%);
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-top: 6px;
+
+  color: var(--green-dark);
+}
+
+.hero-divider span {
+  height: 1px;
+
+  flex: 1;
+
+  background: var(--green-dark);
+}
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.about-image {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #dbe7dc,
+      #f1eee2 50%,
+      #d4e4db
+    );
+}
+
+.about-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.image-fallback-content {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 5px;
+
+  color: var(--green-dark);
+
+  text-align: center;
+}
+
+.image-fallback-content span {
+  font-size: 14px;
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
+}
+
+.image-fallback-content small {
+  font-size: 12px;
+
+  opacity: 0.75;
+}
+
+.about-image:not(.image-fallback)
+  .image-fallback-content {
+  display: none;
+}
+
+.hero-image {
+  min-height: 175px;
+}
+
+.hero-image img {
+  /*
+    Don't let the cat disappear behind the header.
+  */
+  object-position: center center;
+}
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.about-main {
+  width: 100%;
+
+  max-width: 1500px;
+
+  margin: 0 auto;
+
+  padding: 10px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(350px, 40%)
+    minmax(0, 60%);
+
+  gap: 8px;
+}
+
+.about-left-column,
+.about-right-column {
+  min-width: 0;
+}
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.about-card {
+  width: 100%;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  border: 1px solid var(--border);
+
+  border-radius: 7px;
+
+  box-shadow:
+    0 2px 10px rgba(8, 60, 50, 0.07);
+
+  overflow: hidden;
+}
+
+.cattery-card {
+  padding: 11px;
+}
+
+.owner-card {
+  padding: 10px;
+}
+
+/* =========================================================
+   HEADINGS
+========================================================= */
+
+.card-heading {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 8px;
+
+  color: var(--green-dark);
+}
+
+.heading-icon {
+  width: 32px;
+  min-width: 32px;
+
+  height: 32px;
+
+  display: grid;
+
+  place-items: center;
+
+  color: var(--green-dark);
+}
+
+.card-heading h2 {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(21px, 2vw, 29px);
+
+  line-height: 1;
+
+  font-weight: 800;
+}
+
+.card-heading p {
+  margin: 4px 0 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 14px;
+
+  font-style: italic;
+
+  line-height: 1.15;
+}
+
+/* =========================================================
+   LEFT TEXT
+========================================================= */
+
+.card-copy {
+  margin-top: 10px;
+}
+
+.card-copy p {
+  margin: 0 0 11px;
+
+  color: var(--text);
+
+  font-size: 13px;
+
+  line-height: 1.55;
+}
+
+.card-copy p:last-child {
+  margin-bottom: 0;
+}
+
+.card-copy strong {
+  color: var(--green-dark);
+
+  font-weight: 800;
+}
+
+/* =========================================================
+   APPROACH
+========================================================= */
+
+.approach-box {
+  margin-top: 10px;
+
+  padding: 9px;
+
+  border-radius: 8px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e6f1e3,
+      #dceeda
+    );
+}
+
+.section-mini-title {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: var(--green-dark);
+}
+
+.section-mini-title h3 {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 17px;
+}
+
+.approach-grid {
+  margin-top: 7px;
+
+  display: grid;
+
+  grid-template-columns: repeat(5, 1fr);
+
+  border-top: 1px solid rgba(15, 78, 65, 0.1);
+}
+
+.approach-item {
+  min-height: 78px;
+
+  padding: 8px 4px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  color: var(--green-dark);
+
+  background: transparent;
+}
+
+.approach-item + .approach-item {
+  border-left: 1px solid rgba(15, 78, 65, 0.12);
+}
+
+.approach-item strong {
+  margin-top: 4px;
+
+  font-size: 10px;
+
+  line-height: 1.15;
+}
+
+.approach-item span {
+  margin-top: 2px;
+
+  font-size: 9px;
+
+  line-height: 1.15;
+}
+
+/* =========================================================
+   PROMISE
+========================================================= */
+
+.promise-box {
+  margin-top: 8px;
+
+  padding: 7px;
+}
+
+.promise-heading {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: var(--green-dark);
+}
+
+.promise-heading h3 {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 17px;
+}
+
+.promise-box p {
+  margin: 4px 0 0 27px;
+
+  font-size: 12px;
+
+  line-height: 1.45;
+}
+
+/* =========================================================
+   CATS IMAGE
+========================================================= */
+
+.cats-image-wrap {
+  position: relative;
+
+  width: 100%;
+
+  height: 175px;
+
+  margin-top: 5px;
+
+  overflow: hidden;
+
+  border-radius: 5px 5px 0 0;
+}
+
+.cats-image {
+  width: 100%;
+  height: 100%;
+}
+
+.cats-image img {
+  object-position: center;
+}
+
+.happy-cats-text {
+  position: absolute;
+
+  top: 14px;
+  right: 12px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  color: var(--green-dark);
+
+  transform: rotate(-4deg);
+
+  font-family:
+    "Comic Sans MS",
+    "Bradley Hand",
+    cursive;
+
+  text-align: center;
+}
+
+.happy-cats-text span {
+  font-size: 15px;
+
+  line-height: 1.05;
+}
+
+.happy-cats-text strong {
+  margin-top: 2px;
+
+  font-size: 15px;
+
+  line-height: 1.05;
+}
+
+.happy-cats-text small {
+  margin-top: 2px;
+
+  font-size: 20px;
+
+  line-height: 1;
+}
+
+/* =========================================================
+   SERVICE STRIP
+========================================================= */
+
+.about-page .service-strip {
+  position: relative;
+
+  z-index: 5;
+
+  width: 100%;
+
+  min-height: 58px;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  margin: 0;
+
+  padding: 0;
+
+  background: var(--green-dark) !important;
+
+  border-radius: 0 0 5px 5px;
+
+  overflow: hidden;
+}
+
+.about-page .service-item {
+  min-width: 0;
+
+  min-height: 58px;
+
+  display: flex !important;
+
+  flex-direction: column !important;
+
+  align-items: center !important;
+
+  justify-content: center !important;
+
+  gap: 2px;
+
+  margin: 0;
+
+  padding: 7px 4px;
+
+  color: #fff !important;
+
+  background: transparent !important;
+
+  border: 0 !important;
+
+  border-radius: 0 !important;
+
+  box-shadow: none !important;
+
+  text-align: center;
+}
+
+.about-page .service-item + .service-item {
+  border-left:
+    1px solid
+    rgba(255, 255, 255, 0.22) !important;
+}
+
+.about-page .service-item svg {
+  display: block !important;
+
+  flex-shrink: 0;
+
+  color: #fff !important;
+}
+
+.about-page .service-item strong {
+  display: block !important;
+
+  color: #fff !important;
+
+  font-size: 9px !important;
+
+  line-height: 1.1 !important;
+
+  font-weight: 800 !important;
+}
+
+.about-page .service-item span {
+  display: block !important;
+
+  color: #fff !important;
+
+  font-size: 8px !important;
+
+  line-height: 1 !important;
+}
+
+/* =========================================================
+   OUR MISSION
+   ADDED BELOW SERVICE STRIP
+   FILLS THE PREVIOUS EMPTY AREA
+========================================================= */
+
+.mission-box {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 135px;
+
+  margin-top: 10px;
+
+  padding: 14px 16px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(150px, 34%);
+
+  align-items: center;
+
+  gap: 18px;
+
+  overflow: hidden;
+
+  border: 1px solid #cfe0d7;
+
+  border-radius: 7px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f1f7f2 0%,
+      #edf5ee 52%,
+      #e4f0e8 100%
+    );
+
+  box-shadow:
+    0 2px 8px
+    rgba(8, 60, 50, 0.05);
+}
+
+/*
+  Very subtle decorative glow.
+  It does not cover the text.
+*/
+
+.mission-box::before {
+  content: "";
+
+  position: absolute;
+
+  width: 150px;
+  height: 150px;
+
+  left: -75px;
+  bottom: -90px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(198, 220, 207, 0.28);
+
+  pointer-events: none;
+}
+
+.mission-content {
+  position: relative;
+
+  z-index: 2;
+
+  min-width: 0;
+}
+
+.mission-heading {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 8px;
+
+  color: var(--green-dark);
+}
+
+.mission-heading svg {
+  flex-shrink: 0;
+
+  margin-top: 1px;
+}
+
+.mission-heading h3 {
+  margin: 0;
+
+  color: var(--green-dark);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 18px;
+
+  line-height: 1;
+
+  font-weight: 800;
+}
+
+.mission-heading p {
+  margin: 3px 0 0;
+
+  color: var(--green-mid);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 12px;
+
+  line-height: 1.15;
+
+  font-style: italic;
+
+  font-weight: 700;
+}
+
+.mission-copy {
+  margin-top: 8px;
+
+  max-width: 620px;
+}
+
+.mission-copy p {
+  margin: 0 0 6px;
+
+  color: #28504b;
+
+  font-size: 11px;
+
+  line-height: 1.45;
+}
+
+.mission-copy p:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   MISSION RIGHT SIDE
+========================================================= */
+
+.mission-side {
+  position: relative;
+
+  z-index: 2;
+
+  min-width: 0;
+
+  min-height: 100px;
+
+  padding: 8px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  color: var(--green-dark);
+
+  font-family:
+    "Comic Sans MS",
+    "Bradley Hand",
+    cursive;
+
+  transform: rotate(-2deg);
+}
+
+.mission-side::before {
+  content: "";
+
+  position: absolute;
+
+  left: 8%;
+
+  right: 8%;
+
+  top: 12%;
+
+  bottom: 12%;
+
+  border: 1px solid rgba(6, 63, 53, 0.08);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.mission-side span,
+.mission-side strong,
+.mission-heart,
+.mission-paw {
+  position: relative;
+
+  z-index: 2;
+}
+
+.mission-side span {
+  font-size: 16px;
+
+  line-height: 1.05;
+}
+
+.mission-side strong {
+  margin-top: 3px;
+
+  font-size: 16px;
+
+  line-height: 1.05;
+}
+
+.mission-heart {
+  margin-top: 5px;
+
+  color: #b56d67;
+
+  transform: rotate(7deg);
+}
+
+.mission-paw {
+  margin-top: 3px;
+
+  color: var(--green-dark);
+}
+
+/* =========================================================
+   OWNER
+========================================================= */
+
+.owner-heading {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(190px, 41%);
+
+  gap: 9px;
+
+  min-height: 100px;
+}
+
+.owner-heading-title {
+  min-width: 0;
+}
+
+.owner-image {
+  width: 100%;
+
+  min-height: 95px;
+
+  height: 110px;
+
+  border-radius: 5px;
+}
+
+.owner-image img {
+  object-position: center 35%;
+}
+
+.owner-name {
+  margin-top: 8px;
+
+  padding-left: 40px;
+}
+
+.owner-name h3 {
+  margin: 0;
+
+  color: var(--green-dark);
+
+  font-size: 14px;
+
+  line-height: 1.1;
+
+  font-weight: 900;
+}
+
+.owner-name p {
+  margin: 3px 0 0;
+
+  color: #234947;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  line-height: 1.2;
+}
+
+/* =========================================================
+   OWNER CONTENT
+========================================================= */
+
+.owner-content-grid {
+  margin-top: 9px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 14px;
+}
+
+.owner-story {
+  min-width: 0;
+}
+
+.owner-story + .owner-story {
+  padding-left: 12px;
+
+  border-left: 1px solid #d4e1dc;
+}
+
+.owner-story section {
+  margin-bottom: 9px;
+}
+
+.owner-story section:last-child {
+  margin-bottom: 0;
+}
+
+.owner-story h4 {
+  margin: 0 0 4px;
+
+  color: var(--green-dark);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 12px;
+
+  line-height: 1.15;
+
+  font-weight: 800;
+}
+
+.owner-story p {
+  margin: 0;
+
+  color: #244746;
+
+  font-size: 10px;
+
+  line-height: 1.45;
+}
+
+.owner-story .italic-copy {
+  margin-top: 5px;
+
+  font-style: italic;
+}
+
+/* =========================================================
+   PHILOSOPHY
+========================================================= */
+
+.philosophy-grid {
+  display: grid;
+
+  grid-template-columns:
+    1.15fr
+    1fr;
+
+  gap: 8px;
+
+  margin-top: 9px;
+}
+
+.philosophy-box,
+.understanding-box {
+  min-height: 105px;
+
+  padding: 10px;
+
+  border-radius: 6px;
+}
+
+.philosophy-box {
+  background: #e3f0e7;
+
+  text-align: center;
+}
+
+.understanding-box {
+  background: #e4f2f5;
+}
+
+.quote-icon {
+  color: var(--green-dark);
+}
+
+.philosophy-box h4,
+.understanding-box h4 {
+  margin: 4px 0 6px;
+
+  color: var(--green-dark);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 11px;
+
+  line-height: 1.2;
+}
+
+.philosophy-box p {
+  margin: 0;
+
+  color: #274b47;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 10px;
+
+  line-height: 1.4;
+
+  font-style: italic;
+
+  font-weight: 700;
+}
+
+.understanding-heading {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+}
+
+.understanding-box ul {
+  margin: 5px 0 0;
+
+  padding-left: 17px;
+}
+
+.understanding-box li {
+  margin: 0 0 2px;
+
+  color: #294c49;
+
+  font-size: 9px;
+
+  line-height: 1.35;
+}
+
+/* =========================================================
+   TIMELINE HEADER
+========================================================= */
+
+.timeline-section {
+  width: 100%;
+
+  margin-top: 10px;
+
+  /*
+    IMPORTANT:
+    Prevent global CSS from changing timeline.
+  */
+  isolation: isolate;
+}
+
+.timeline-heading {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding-bottom: 7px;
+
+  color: var(--green-dark);
+
+  border-bottom: 1px solid #b8cec4;
+}
+
+.timeline-heading h3 {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 17px;
+
+  line-height: 1;
+
+  font-weight: 800;
+}
+
+/* =========================================================
+   TIMELINE DESKTOP
+========================================================= */
+
+.about-page .timeline {
+  position: relative;
+
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(5, minmax(0, 1fr));
+
+  margin: 13px 0 0;
+
+  padding: 0;
+
+  background: transparent !important;
+
+  border-top: 1px solid #b8cec4;
+
+  border-left: 0;
+
+  border-right: 0;
+
+  border-bottom: 0;
+
+  overflow: visible;
+}
+
+.about-page .timeline-item {
+  position: relative;
+
+  min-width: 0;
+
+  min-height: 170px;
+
+  display: grid;
+
+  grid-template-columns: 1fr;
+
+  grid-template-rows:
+    auto
+    auto
+    1fr;
+
+  align-content: start;
+
+  padding: 13px 8px 8px;
+
+  margin: 0;
+
+  background: transparent !important;
+
+  border: 0;
+
+  border-radius: 0;
+
+  box-shadow: none;
+
+  text-align: center;
+
+  overflow: visible;
+}
+
+.about-page .timeline-item + .timeline-item {
+  border-left: 1px solid #d1ded8;
+}
+
+/* =========================================================
+   TIMELINE DOT
+========================================================= */
+
+.about-page .timeline-dot {
+  position: absolute;
+
+  top: -8px;
+
+  left: 50%;
+
+  width: 16px;
+  height: 16px;
+
+  display: grid;
+
+  place-items: center;
+
+  transform: translateX(-50%);
+
+  border-radius: 50%;
+
+  color: #fff;
+
+  background: var(--green-dark);
+
+  border: 2px solid #edf4ed;
+
+  z-index: 5;
+
+  padding: 0;
+
+  margin: 0;
+}
+
+/* =========================================================
+   TIMELINE YEAR
+========================================================= */
+
+.timeline-year-box {
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  min-height: 27px;
+
+  background: transparent !important;
+
+  border: 0;
+
+  box-shadow: none;
+}
+
+.about-page .timeline-year {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 22px;
+
+  padding: 4px 8px;
+
+  border-radius: 11px;
+
+  background: #dcebe4 !important;
+
+  color: var(--green-dark) !important;
+
+  font-size: 10px;
+
+  line-height: 1;
+
+  font-weight: 900;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   TIMELINE CONTENT
+========================================================= */
+
+.timeline-content {
+  width: 100%;
+
+  min-width: 0;
+
+  padding-top: 5px;
+
+  background: transparent !important;
+
+  overflow-wrap: anywhere;
+
+  word-break: normal;
+}
+
+.about-page .timeline-content strong {
+  display: block;
+
+  width: 100%;
+
+  margin: 0;
+
+  color: var(--green-dark) !important;
+
+  font-size: 11px;
+
+  line-height: 1.2;
+
+  font-weight: 900;
+
+  overflow-wrap: anywhere;
+}
+
+.about-page .timeline-content p {
+  width: 100%;
+
+  max-width: 150px;
+
+  margin: 6px auto 0;
+
+  padding: 0;
+
+  color: #365653 !important;
+
+  background: transparent !important;
+
+  font-size: 9px;
+
+  line-height: 1.4;
+
+  font-weight: 400;
+
+  overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   FOUNDER
+========================================================= */
+
+.founder-promise {
+  margin-top: 9px;
+
+  padding: 10px;
+
+  border-radius: 6px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e4f0df,
+      #e7f2e4
+    );
+}
+
+.founder-promise-heading {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  color: var(--green-dark);
+}
+
+.founder-promise-heading h3 {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 13px;
+
+  line-height: 1.1;
+}
+
+.founder-promise p {
+  margin: 5px 0 0;
+
+  color: #2b504c;
+
+  font-size: 9px;
+
+  line-height: 1.4;
+}
+
+/* =========================================================
+   LARGE TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .about-page {
+    padding-top: 120px;
+  }
+
+  .about-main {
+    grid-template-columns: 1fr;
+
+    max-width: 900px;
+  }
+
+  .card-copy p {
+    font-size: 13px;
+  }
+
+  .owner-story p {
+    font-size: 10px;
+  }
+
+  .owner-story h4 {
+    font-size: 12px;
+  }
+
+  /* ==========================================
+     MISSION
+  =========================================== */
+
+  .mission-box {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(140px, 30%);
+
+    gap: 14px;
+
+    padding: 14px;
+  }
+
+  .mission-copy p {
+    font-size: 11px;
+  }
+
+  .mission-side span,
+  .mission-side strong {
+    font-size: 15px;
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+
+  .about-page {
+    padding-top: 90px;
+  }
+
+  .about-hero {
+    grid-template-columns: 1fr;
+
+    min-height: auto;
+  }
+
+  .about-hero-content {
+    min-height: 150px;
+  }
+
+  .hero-image {
+    height: 230px;
+
+    min-height: 230px;
+  }
+
+  .owner-heading {
+    grid-template-columns: 1fr;
+  }
+
+  .owner-image {
+    height: 240px;
+
+    min-height: 240px;
+  }
+
+  .owner-name {
+    padding-left: 0;
+  }
+
+  .owner-content-grid {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+  .owner-story + .owner-story {
+    padding-left: 0;
+
+    padding-top: 12px;
+
+    border-left: 0;
+
+    border-top: 1px solid #d4e1dc;
+  }
+
+  .owner-story p {
+    font-size: 11px;
+
+    line-height: 1.5;
+  }
+
+  .owner-story h4 {
+    font-size: 13px;
+  }
+
+  .philosophy-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* ==========================================
+     MISSION
+  =========================================== */
+
+  .mission-box {
+    grid-template-columns: 1fr;
+
+    gap: 8px;
+
+    min-height: auto;
+
+    padding: 15px;
+  }
+
+  .mission-copy {
+    max-width: none;
+  }
+
+  .mission-side {
+    min-height: 95px;
+
+    width: 100%;
+
+    margin-top: 2px;
+  }
+
+  /* ==========================================
+     MOBILE/TABLET TIMELINE
+  =========================================== */
+
+  .about-page .timeline {
+    display: flex;
+
+    flex-direction: column;
+
+    width: 100%;
+
+    margin-top: 12px;
+
+    padding: 0 0 0 22px;
+
+    border-top: 0;
+
+    border-left: 1px solid #b8cec4;
+
+    border-right: 0;
+
+    border-bottom: 0;
+  }
+
+  .about-page .timeline-item {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 0;
+
+    display: grid;
+
+    grid-template-columns:
+      105px
+      minmax(0, 1fr);
+
+    grid-template-rows: auto;
+
+    align-items: start;
+
+    gap: 12px;
+
+    padding: 13px 8px 14px 12px;
+
+    text-align: left;
+
+    background: transparent !important;
+
+    border: 0 !important;
+
+    border-bottom:
+      1px solid
+      #d1ded8 !important;
+
+    overflow: visible;
+  }
+
+  .about-page .timeline-item:last-child {
+    border-bottom: 0 !important;
+  }
+
+  .about-page .timeline-dot {
+    top: 22px;
+
+    left: -1px;
+
+    width: 16px;
+
+    height: 16px;
+
+    transform:
+      translate(-50%, -50%);
+  }
+
+  .timeline-year-box {
+    width: 105px;
+
+    min-height: 38px;
+
+    display: flex;
+
+    justify-content: flex-start;
+
+    align-items: flex-start;
+
+    padding: 0;
+
+    background: transparent !important;
+  }
+
+  .about-page .timeline-year {
+    min-height: 28px;
+
+    padding: 6px 9px;
+
+    font-size: 10px;
+
+    border-radius: 14px;
+
+    white-space: nowrap;
+  }
+
+  .timeline-content {
+    min-width: 0;
+
+    padding: 1px 0 0;
+
+    text-align: left;
+  }
+
+  .about-page .timeline-content strong {
+    width: 100%;
+
+    font-size: 12px;
+
+    line-height: 1.25;
+
+    overflow-wrap: anywhere;
+  }
+
+  .about-page .timeline-content p {
+    width: 100%;
+
+    max-width: none;
+
+    margin: 5px 0 0;
+
+    font-size: 10px;
+
+    line-height: 1.45;
+
+    overflow-wrap: break-word;
+  }
+
+  .founder-promise p {
+    font-size: 10px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 560px) {
+
+  /*
+    Existing desktop header is replaced/condensed by your
+    responsive Header CSS. This keeps About below it.
+  */
+
+  .about-page {
+    padding-top: 76px;
+  }
+
+  .about-main {
+    padding: 6px;
+
+    gap: 6px;
+  }
+
+  .cattery-card,
+  .owner-card {
+    padding: 9px;
+  }
+
+  .about-hero-content {
+    min-height: 130px;
+
+    padding:
+      17px
+      13px
+      11px;
+  }
+
+  .about-hero-title h1 {
+    font-size: 40px;
+  }
+
+  .about-hero-title p {
+    font-size: 14px;
+  }
+
+  .hero-image {
+    height: 180px;
+
+    min-height: 180px;
+  }
+
+  .card-heading h2 {
+    font-size: 22px;
+  }
+
+  .card-heading p {
+    font-size: 12px;
+  }
+
+  .card-copy p {
+    font-size: 12px;
+
+    line-height: 1.55;
+  }
+
+  /* ==========================================
+     APPROACH
+  =========================================== */
+
+  .approach-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .approach-item {
+    min-height: 75px;
+  }
+
+  .approach-item:nth-child(3) {
+    border-left: 0;
+
+    border-top:
+      1px solid
+      rgba(15, 78, 65, 0.12);
+  }
+
+  .approach-item:nth-child(4),
+  .approach-item:nth-child(5) {
+    border-top:
+      1px solid
+      rgba(15, 78, 65, 0.12);
+  }
+
+  .approach-item:nth-child(5) {
+    grid-column: 1 / -1;
+  }
+
+  /* ==========================================
+     CATS
+  =========================================== */
+
+  .cats-image-wrap {
+    height: 180px;
+  }
+
+  /* ==========================================
+     SERVICE STRIP
+  =========================================== */
+
+  .about-page .service-strip {
+    grid-template-columns: repeat(2, 1fr);
+
+    min-height: 112px;
+  }
+
+  .about-page .service-item {
+    min-height: 56px;
+  }
+
+  .about-page .service-item:nth-child(3),
+  .about-page .service-item:nth-child(4) {
+    border-top:
+      1px solid
+      rgba(255, 255, 255, 0.22) !important;
+  }
+
+  .about-page .service-item:nth-child(3) {
+    border-left: 0 !important;
+  }
+
+  .about-page .service-item strong {
+    font-size: 9px !important;
+  }
+
+  .about-page .service-item span {
+    font-size: 8px !important;
+  }
+
+  /* ==========================================
+     OUR MISSION
+  =========================================== */
+
+  .mission-box {
+    min-height: 0;
+
+    margin-top: 9px;
+
+    padding: 13px 12px;
+
+    grid-template-columns: 1fr;
+
+    gap: 5px;
+
+    border-radius: 7px;
+  }
+
+  .mission-heading {
+    gap: 7px;
+  }
+
+  .mission-heading h3 {
+    font-size: 18px;
+  }
+
+  .mission-heading p {
+    font-size: 11px;
+  }
+
+  .mission-copy {
+    margin-top: 8px;
+  }
+
+  .mission-copy p {
+    font-size: 11px;
+
+    line-height: 1.5;
+  }
+
+  .mission-side {
+    min-height: 82px;
+
+    margin-top: 3px;
+  }
+
+  .mission-side span,
+  .mission-side strong {
+    font-size: 15px;
+  }
+
+  /* ==========================================
+     OWNER
+  =========================================== */
+
+  .owner-image {
+    height: 200px;
+
+    min-height: 200px;
+  }
+
+  .owner-name h3 {
+    font-size: 15px;
+  }
+
+  .owner-name p {
+    font-size: 9px;
+  }
+
+  .owner-story p {
+    font-size: 10.5px;
+
+    line-height: 1.5;
+  }
+
+  .owner-story h4 {
+    font-size: 12px;
+  }
+
+  /* ==========================================
+     PHILOSOPHY
+  =========================================== */
+
+  .philosophy-box,
+  .understanding-box {
+    min-height: auto;
+
+    padding: 10px;
+  }
+
+  .philosophy-box p {
+    font-size: 10px;
+
+    line-height: 1.45;
+  }
+
+  .understanding-box li {
+    font-size: 9px;
+
+    line-height: 1.4;
+  }
+
+  /* ==========================================
+     TIMELINE
+  =========================================== */
+
+  .timeline-heading h3 {
+    font-size: 16px;
+  }
+
+  .about-page .timeline {
+    padding-left: 20px;
+  }
+
+  .about-page .timeline-item {
+    grid-template-columns:
+      92px
+      minmax(0, 1fr);
+
+    gap: 9px;
+
+    padding:
+      12px
+      5px
+      13px
+      11px;
+  }
+
+  .timeline-year-box {
+    width: 92px;
+  }
+
+  .about-page .timeline-year {
+    font-size: 9px;
+
+    padding:
+      6px
+      7px;
+  }
+
+  .about-page .timeline-content strong {
+    font-size: 11px;
+  }
+
+  .about-page .timeline-content p {
+    font-size: 9.5px;
+
+    line-height: 1.45;
+  }
+
+  /* ==========================================
+     FOUNDER
+  =========================================== */
+
+  .founder-promise p {
+    font-size: 9.5px;
+
+    line-height: 1.45;
+  }
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .about-page {
+    padding-top: 72px;
+  }
+
+  .about-hero-title h1 {
+    font-size: 34px;
+  }
+
+  .about-hero-title p {
+    font-size: 12px;
+  }
+
+  .card-heading h2 {
+    font-size: 20px;
+  }
+
+  .card-copy p {
+    font-size: 11px;
+  }
+
+  .cats-image-wrap {
+    height: 155px;
+  }
+
+  .about-page .service-item strong {
+    font-size: 8px !important;
+  }
+
+  .about-page .service-item span {
+    font-size: 7px !important;
+  }
+
+  /* ==========================================
+     VERY SMALL MISSION
+  =========================================== */
+
+  .mission-box {
+    padding: 11px 9px;
+
+    gap: 4px;
+  }
+
+  .mission-heading h3 {
+    font-size: 16px;
+  }
+
+  .mission-heading p {
+    font-size: 10px;
+  }
+
+  .mission-copy p {
+    font-size: 10px;
+
+    line-height: 1.45;
+  }
+
+  .mission-side {
+    min-height: 75px;
+  }
+
+  .mission-side span,
+  .mission-side strong {
+    font-size: 14px;
+  }
+
+  .owner-story p {
+    font-size: 10px;
+  }
+
+  .about-page .timeline-item {
+    grid-template-columns:
+      82px
+      minmax(0, 1fr);
+
+    gap: 7px;
+  }
+
+  .timeline-year-box {
+    width: 82px;
+  }
+
+  .about-page .timeline-year {
+    font-size: 8px;
+
+    padding:
+      6px
+      6px;
+  }
+
+  .about-page .timeline-content strong {
+    font-size: 10px;
+  }
+
+  .about-page .timeline-content p {
+    font-size: 8.5px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .about-page *,
+  .about-page *::before,
+  .about-page *::after {
+    scroll-behavior: auto !important;
+
+    transition: none !important;
+
+    animation: none !important;
+  }
+}
