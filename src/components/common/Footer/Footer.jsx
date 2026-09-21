@@ -505,22 +505,22 @@ export default function Footer() {
 
           <div className="newsletter-content">
 
-            <div className="newsletter-icon">
+            {/* <div className="newsletter-icon">
 
               <Mail size={20} />
 
-            </div>
+            </div> */}
 
 
             <div>
 
-              <h3>
+              {/* <h3>
                 Stay Connected
-              </h3>
+              </h3> */}
 
-              <p>
+              {/* <p>
                 Get cat care tips, updates and special offers.
-              </p>
+              </p> */}
 
             </div>
 
@@ -532,7 +532,7 @@ export default function Footer() {
             onSubmit={(event) => event.preventDefault()}
           >
 
-            <div className="newsletter-input">
+            {/* <div className="newsletter-input">
 
               <Mail size={16} />
 
@@ -543,21 +543,10 @@ export default function Footer() {
                 required
               />
 
-            </div>
+            </div> */}
 
 
-            <button
-              type="submit"
-              className="newsletter-button"
-            >
-
-              <Send size={15} />
-
-              <span>
-                Subscribe
-              </span>
-
-            </button>
+             
 
           </form>
 
@@ -589,21 +578,21 @@ export default function Footer() {
 
             <PawPrint size={16} />
 
-            <span>
+            {/* <span>
               Because Every Cat Matters
-            </span>
+            </span> */}
 
             <span className="tagline-line"></span>
 
           </div>
 
 
-          <Link
+          {/* <Link
             to="/contact"
             className="footer-bottom-contact"
           >
             Book / Enquire
-          </Link>
+          </Link> */}
 
         </div>
 

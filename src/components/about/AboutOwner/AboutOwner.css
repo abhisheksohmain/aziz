@@ -1,28 +1,22 @@
 /* =========================================================
+   ABOUT CATTERY SECTION
    AZIZ FELINES CATTERY
-   ABOUT CATTERY + ABOUT OWNER
 ========================================================= */
 
 .about-cattery-section {
   width: 100%;
-  padding: 24px 0 35px;
-  background: #ffffff;
+  padding: 70px 20px;
+  background: #f4f8f4;
   box-sizing: border-box;
 }
 
-
 .about-cattery-container {
-  width: min(1450px, calc(100% - 28px));
+  width: min(1180px, 100%);
   margin: 0 auto;
-
   display: grid;
-  grid-template-columns: minmax(300px, 0.78fr) minmax(520px, 1.22fr);
-
-  gap: 10px;
-
-  align-items: stretch;
+  grid-template-columns: 1fr;
+  gap: 35px;
 }
-
 
 /* =========================================================
    COMMON PANELS
@@ -30,264 +24,204 @@
 
 .about-cattery-panel,
 .about-owner-panel {
-  min-width: 0;
-
-  border: 1px solid #cfe2d7;
-
-  border-radius: 7px;
-
-  overflow: hidden;
-
+  width: 100%;
   box-sizing: border-box;
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 34px;
+  border: 1px solid rgba(13, 76, 72, 0.12);
+  box-shadow: 0 12px 35px rgba(13, 76, 72, 0.08);
+  overflow: hidden;
 }
 
-
 /* =========================================================
-   LEFT PANEL
+   ABOUT PANEL HEADING
 ========================================================= */
 
-.about-cattery-panel {
-  background:
-    linear-gradient(
-      180deg,
-      #f5fbf3 0%,
-      #eef8ed 100%
-    );
-
-  color: #194d43;
-
-  padding: 12px;
-}
-
-
-/* =========================================================
-   LEFT HEADING
-========================================================= */
-
-.about-panel-heading {
+.about-panel-heading,
+.owner-heading {
   display: flex;
-  align-items: flex-start;
-  gap: 9px;
-  margin-bottom: 10px;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
 }
-
 
 .heading-icon {
   position: relative;
-  width: 37px;
-  min-width: 37px;
-  height: 37px;
-
-  display: grid;
-  place-items: center;
-
-  color: #075c55;
+  width: 54px;
+  height: 54px;
+  min-width: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #075b55;
+  background: #e4f1ea;
+  border-radius: 16px;
 }
-
 
 .heading-paw {
   position: absolute;
-  right: -1px;
-  bottom: -1px;
+  right: 2px;
+  bottom: 2px;
 }
 
-
-.about-panel-heading h2 {
+.about-panel-heading h2,
+.owner-heading h2 {
   margin: 0;
-
-  color: #075c55;
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: 25px;
-
-  font-weight: 900;
-
-  line-height: 1;
+  color: #064f4a;
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 800;
 }
 
-
-.about-panel-heading p {
-  margin: 4px 0 0;
-
-  color: #17685e;
-
-  font-family: "Kalam", cursive;
-
-  font-size: 13px;
-
-  font-weight: 600;
-
-  line-height: 1.05;
+.about-panel-heading p,
+.owner-heading p {
+  margin: 5px 0 0;
+  color: #52716d;
+  font-size: 15px;
+  line-height: 1.5;
 }
-
 
 /* =========================================================
-   LEFT INTRO
+   OWNER HEADING
 ========================================================= */
+
+.owner-heading > svg {
+  width: 54px;
+  height: 54px;
+  min-width: 54px;
+  padding: 12px;
+  box-sizing: border-box;
+  color: #075b55;
+  background: #e4f1ea;
+  border-radius: 16px;
+}
+
+.owner-heading h3 {
+  margin: 5px 0 0;
+  color: #075b55;
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 800;
+}
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.about-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
 
 .about-intro p {
-  margin: 0 0 8px;
-
-  color: #285c62;
-
-  font-size: 11px;
-
-  line-height: 1.42;
-
-  font-weight: 500;
+  margin: 0;
+  color: #3f5f5a;
+  font-size: 15px;
+  line-height: 1.75;
 }
-
 
 .about-intro strong {
-  color: #075c55;
-
-  font-weight: 900;
+  color: #075b55;
+  font-weight: 800;
 }
-
 
 /* =========================================================
-   APPROACH
+   SMALL SECTION HEADING
 ========================================================= */
-
-.approach-box {
-  margin-top: 9px;
-
-  padding: 9px 8px 7px;
-
-  background: #e4f2e0;
-
-  border-radius: 10px;
-}
-
 
 .small-section-heading {
   display: flex;
   align-items: center;
-  gap: 7px;
-
-  color: #075c55;
-
-  margin-bottom: 6px;
+  gap: 10px;
+  margin-bottom: 20px;
+  color: #075b55;
 }
-
 
 .small-section-heading h3 {
   margin: 0;
-
-  font-family: Georgia, "Times New Roman", serif;
-
   font-size: 18px;
-
-  line-height: 1;
+  line-height: 1.3;
+  font-weight: 800;
 }
 
+/* =========================================================
+   APPROACH BOX
+========================================================= */
+
+.approach-box {
+  margin-top: 30px;
+  padding: 24px;
+  border-radius: 22px;
+  background: #eef6ef;
+  border: 1px solid rgba(7, 91, 85, 0.1);
+}
 
 .approach-grid {
   display: grid;
-
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-
-  border-top: 1px solid #b6d8c0;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
 }
-
 
 .approach-item {
-  min-width: 0;
-
-  min-height: 67px;
-
-  padding: 7px 4px 4px;
-
+  min-height: 130px;
+  padding: 16px 10px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-
   align-items: center;
   justify-content: center;
-
   text-align: center;
-
-  color: #075c55;
-
-  border-right: 1px solid #b6d8c0;
+  gap: 5px;
+  color: #075b55;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid rgba(7, 91, 85, 0.08);
 }
-
-
-.approach-item:last-child {
-  border-right: 0;
-}
-
-
-.approach-item svg {
-  margin-bottom: 4px;
-}
-
-
-.approach-item strong,
-.approach-item span {
-  display: block;
-
-  font-size: 9px;
-
-  line-height: 1.1;
-}
-
 
 .approach-item strong {
-  font-weight: 900;
+  margin-top: 5px;
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 800;
 }
-
 
 .approach-item span {
-  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.3;
+  font-weight: 600;
 }
 
-
 /* =========================================================
-   PROMISE
+   PROMISE BOX
 ========================================================= */
 
 .promise-box {
+  margin-top: 25px;
+  padding: 22px;
   display: flex;
   align-items: flex-start;
-
-  gap: 8px;
-
-  margin: 10px 3px 8px;
-
-  color: #075c55;
+  gap: 16px;
+  background: #e7f3ea;
+  border-left: 5px solid #075b55;
+  border-radius: 18px;
+  color: #075b55;
 }
-
-
-.promise-box > svg {
-  flex: 0 0 auto;
-  margin-top: 1px;
-}
-
 
 .promise-box h3 {
-  margin: 0;
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: 17px;
-
-  line-height: 1;
+  margin: 0 0 6px;
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 800;
 }
-
 
 .promise-box p {
-  margin: 4px 0 0;
-
-  color: #37636a;
-
-  font-size: 10px;
-
-  font-weight: 600;
-
-  line-height: 1.25;
+  margin: 0;
+  color: #456560;
+  font-size: 15px;
+  line-height: 1.65;
 }
-
 
 /* =========================================================
    CAT IMAGE
@@ -295,91 +229,42 @@
 
 .about-cats-image {
   position: relative;
-
   width: 100%;
-
-  height: 185px;
-
+  height: 300px;
+  margin-top: 28px;
   overflow: hidden;
-
-  border-radius: 6px 6px 0 0;
-
-  background:
-    linear-gradient(
-      135deg,
-      #dcebd9,
-      #b8d5c1
-    );
+  border-radius: 24px;
+  background: #e7f1ea;
 }
-
 
 .about-cats-image img {
   display: block;
-
   width: 100%;
   height: 100%;
-
   object-fit: cover;
-
-  object-position: center;
-
-  margin: 0;
 }
 
-
-.about-cats-image.image-fallback::before {
-  content: "🐱  🐈  🐱";
-
-  position: absolute;
-
-  inset: 0;
-
-  display: grid;
-
-  place-items: center;
-
-  color: #075c55;
-
-  font-size: 38px;
+.about-cats-image.image-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
 
 .happy-cats-note {
   position: absolute;
-
-  right: 10px;
-  top: 16px;
-
+  left: 18px;
+  bottom: 18px;
   display: flex;
-  flex-direction: column;
-
   align-items: center;
-
-  color: #075c55;
-
-  font-family: "Kalam", cursive;
-
-  font-size: 14px;
-
+  gap: 8px;
+  padding: 10px 14px;
+  color: #ffffff;
+  background: rgba(4, 70, 65, 0.88);
+  border-radius: 14px;
+  font-size: 15px;
+  line-height: 1.2;
   font-weight: 700;
-
-  line-height: 0.95;
-
-  transform: rotate(-6deg);
-
-  text-shadow: 0 1px 0 #ffffff;
 }
-
-
-.happy-cats-note svg {
-  margin-top: 3px;
-}
-
-
-.happy-cats-note svg:first-of-type {
-  color: #ef7d88;
-}
-
 
 /* =========================================================
    SERVICE BAR
@@ -387,135 +272,41 @@
 
 .about-service-bar {
   display: grid;
-
   grid-template-columns: repeat(4, 1fr);
-
-  background: #075c55;
-
-  border-radius: 0 0 5px 5px;
-
+  margin-top: 25px;
+  border-radius: 20px;
   overflow: hidden;
+  background: #075b55;
 }
-
 
 .about-service-item {
-  min-width: 0;
-
-  min-height: 57px;
-
-  padding: 5px 4px;
-
+  min-height: 100px;
+  padding: 18px 10px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-
   align-items: center;
   justify-content: center;
-
-  color: #ffffff;
-
+  gap: 4px;
   text-align: center;
-
-  border-right: 1px solid rgba(255, 255, 255, 0.42);
+  color: #ffffff;
 }
 
-
-.about-service-item:last-child {
-  border-right: 0;
+.about-service-item + .about-service-item {
+  border-left: 1px solid rgba(255, 255, 255, 0.18);
 }
-
-
-.about-service-item svg {
-  margin-bottom: 3px;
-}
-
-
-.about-service-item strong,
-.about-service-item span {
-  font-size: 8px;
-
-  line-height: 1.05;
-}
-
 
 .about-service-item strong {
-  font-weight: 900;
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 800;
 }
 
-
-/* =========================================================
-   RIGHT PANEL
-========================================================= */
-
-.about-owner-panel {
-  position: relative;
-
-  background: #edf8fc;
-
-  color: #234f61;
-
-  padding: 12px;
-
-  border-color: #c6e2ed;
+.about-service-item span {
+  font-size: 15px;
+  line-height: 1.25;
+  font-weight: 600;
 }
-
-
-/* =========================================================
-   OWNER HEADING
-========================================================= */
-
-.owner-heading {
-  display: flex;
-  align-items: flex-start;
-
-  gap: 8px;
-
-  color: #075c55;
-
-  margin-bottom: 8px;
-}
-
-
-.owner-heading > svg {
-  flex: 0 0 auto;
-}
-
-
-.owner-heading h2 {
-  margin: 0;
-
-  color: #0b4965;
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: 25px;
-
-  line-height: 1;
-}
-
-
-.owner-heading h3 {
-  margin: 5px 0 1px;
-
-  color: #083e57;
-
-  font-size: 16px;
-
-  font-weight: 900;
-
-  line-height: 1;
-}
-
-
-.owner-heading p {
-  margin: 0;
-
-  color: #356273;
-
-  font-size: 9px;
-
-  font-weight: 700;
-}
-
 
 /* =========================================================
    OWNER TOP GRID
@@ -523,147 +314,95 @@
 
 .owner-top-grid {
   display: grid;
-
-  grid-template-columns:
-    minmax(0, 1.05fr)
-    minmax(200px, 0.95fr);
-
-  gap: 9px;
-
+  grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.65fr);
+  gap: 28px;
   align-items: start;
 }
 
+/* =========================================================
+   OWNER STORY
+========================================================= */
 
 .owner-story {
-  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
 }
-
 
 .owner-story-block {
-  margin-bottom: 8px;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed rgba(7, 91, 85, 0.18);
 }
 
+.owner-story-block:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
 
 .owner-story-block h3 {
-  margin: 0 0 2px;
-
-  color: #075c55;
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: 13px;
-
-  font-weight: 900;
-
-  line-height: 1.05;
+  margin: 0 0 8px;
+  color: #075b55;
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 800;
 }
-
 
 .owner-story-block p {
   margin: 0;
-
-  color: #37636e;
-
-  font-size: 8.5px;
-
-  font-weight: 500;
-
-  line-height: 1.27;
+  color: #486660;
+  font-size: 15px;
+  line-height: 1.75;
 }
-
 
 /* =========================================================
    OWNER IMAGE
 ========================================================= */
 
 .owner-image-wrap {
-  min-width: 0;
-
   width: 100%;
-
-  height: 168px;
-
+  height: 390px;
   overflow: hidden;
-
-  background:
-    linear-gradient(
-      135deg,
-      #c9e0dc,
-      #8ebdb1
-    );
+  border-radius: 24px;
+  background: #e7f1ea;
 }
-
 
 .owner-image-wrap img {
+  width: 100%;
+  height: 100%;
   display: block;
-
-  width: 100%;
-  height: 100%;
-
   object-fit: cover;
-
-  object-position: center;
-
-  margin: 0;
 }
-
-
-.owner-image-wrap.image-fallback::before {
-  content: "🐱";
-
-  width: 100%;
-  height: 100%;
-
-  display: grid;
-
-  place-items: center;
-
-  color: #075c55;
-
-  font-size: 55px;
-}
-
 
 /* =========================================================
    REPUTATION
 ========================================================= */
 
 .reputation-box {
-  grid-column: 2;
-
-  padding: 7px 8px;
-
-  background: #edf8fc;
-
-  border-top: 1px solid #c8e1ea;
+  grid-column: 1 / -1;
+  padding: 25px;
+  background: #f0f7f1;
+  border-radius: 22px;
+  border: 1px solid rgba(7, 91, 85, 0.1);
 }
-
 
 .reputation-box h3 {
-  margin: 0 0 4px;
-
-  color: #075c55;
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: 12px;
-
-  line-height: 1.05;
+  margin: 0 0 14px;
+  color: #075b55;
+  font-size: 18px;
+  line-height: 1.35;
+  font-weight: 800;
 }
-
 
 .reputation-box p {
-  margin: 0 0 5px;
-
-  color: #37636e;
-
-  font-size: 8.5px;
-
-  line-height: 1.27;
-
-  font-weight: 500;
+  margin: 0 0 14px;
+  color: #486660;
+  font-size: 15px;
+  line-height: 1.75;
 }
 
+.reputation-box p:last-child {
+  margin-bottom: 0;
+}
 
 /* =========================================================
    OWNER INFO GRID
@@ -671,450 +410,272 @@
 
 .owner-info-grid {
   display: grid;
-
-  grid-template-columns: minmax(0, 1.35fr) minmax(180px, 0.65fr);
-
-  gap: 8px;
-
-  margin-top: 7px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 30px;
 }
 
-
 /* =========================================================
-   PHILOSOPHY
+   PHILOSOPHY BOX
 ========================================================= */
 
 .philosophy-box {
-  min-height: 88px;
-
-  padding: 9px 14px;
-
-  display: flex;
-  flex-direction: column;
-
-  align-items: center;
-  justify-content: center;
-
+  position: relative;
+  padding: 28px;
   text-align: center;
-
-  background: #e4f4fa;
-
-  border-radius: 6px;
+  background: #e7f3ea;
+  border-radius: 22px;
+  color: #075b55;
+  overflow: hidden;
 }
-
 
 .philosophy-box h3 {
-  margin: 0 0 6px;
-
-  color: #075c55;
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: 13px;
-
-  font-weight: 900;
+  margin: 0 0 18px;
+  color: #075b55;
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 800;
 }
-
-
-.philosophy-box blockquote {
-  max-width: 520px;
-
-  margin: 0;
-
-  color: #37636e;
-
-  font-family: "Kalam", cursive;
-
-  font-size: 11px;
-
-  font-weight: 600;
-
-  line-height: 1.2;
-}
-
-
-.philosophy-box > svg {
-  margin-top: 5px;
-
-  color: #075c55;
-}
-
 
 /* =========================================================
-   UNDERSTANDING
+   PHILOSOPHY TEXT
+   NORMAL P ELEMENT
+   NO BLOCKQUOTE
+   NO GENERATED QUOTES
+========================================================= */
+
+.philosophy-text {
+  margin: 0;
+  padding: 0;
+  color: #075b55;
+  font-size: 15px;
+  line-height: 1.75;
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* =========================================================
+   EXTRA SAFETY:
+   IF SOME GLOBAL CSS TARGETS BLOCKQUOTE
+========================================================= */
+
+.philosophy-box blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+.philosophy-box blockquote::before,
+.philosophy-box blockquote::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* =========================================================
+   UNDERSTANDING BOX
 ========================================================= */
 
 .understanding-box {
-  padding: 8px;
-
-  background: #e1f1f9;
-
-  border-radius: 6px;
+  padding: 28px;
+  background: #f6f8f5;
+  border-radius: 22px;
+  border: 1px solid rgba(7, 91, 85, 0.08);
 }
-
 
 .understanding-box h3 {
-  margin: 0 0 3px;
-
-  color: #075c55;
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: 12px;
-
-  line-height: 1.05;
+  margin: 0 0 14px;
+  color: #075b55;
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 800;
 }
-
-
-.understanding-box p,
-.understanding-box li {
-  color: #37636e;
-
-  font-size: 8px;
-
-  line-height: 1.25;
-}
-
 
 .understanding-box p {
-  margin: 0 0 2px;
+  margin: 0 0 12px;
+  color: #486660;
+  font-size: 15px;
+  line-height: 1.7;
 }
-
 
 .understanding-box ul {
-  margin: 2px 0;
-
-  padding-left: 13px;
+  margin: 0 0 15px;
+  padding-left: 20px;
 }
 
+.understanding-box li {
+  margin-bottom: 6px;
+  color: #486660;
+  font-size: 15px;
+  line-height: 1.55;
+}
 
 /* =========================================================
    TIMELINE
 ========================================================= */
 
 .owner-timeline {
-  margin-top: 7px;
+  margin-top: 30px;
+  padding: 28px;
+  background: #f1f7f2;
+  border-radius: 22px;
 }
-
 
 .timeline-heading {
   display: flex;
-
   align-items: center;
-
-  gap: 6px;
-
-  color: #075c55;
+  gap: 10px;
+  margin-bottom: 25px;
+  color: #075b55;
 }
-
 
 .timeline-heading h3 {
   margin: 0;
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: 17px;
-
-  line-height: 1;
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 800;
 }
-
 
 .timeline-track {
   display: grid;
-
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-
-  margin-top: 6px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
 }
-
 
 .timeline-item {
-  min-width: 0;
-
-  padding: 0 5px;
-
   position: relative;
-
-  border-right: 1px solid #bdd8e1;
+  min-width: 0;
 }
-
-
-.timeline-item:last-child {
-  border-right: 0;
-}
-
 
 .timeline-pill {
-  width: fit-content;
-
-  min-width: 54px;
-
-  padding: 4px 8px;
-
-  margin-bottom: 5px;
-
-  border-radius: 999px;
-
-  background: #075c55;
-
-  color: #ffffff;
-
-  font-size: 7px;
-
-  font-weight: 900;
-
+  width: 100%;
+  box-sizing: border-box;
+  padding: 9px 8px;
   text-align: center;
-
-  line-height: 1;
+  color: #ffffff;
+  background: #075b55;
+  border-radius: 12px;
+  font-size: 15px;
+  line-height: 1.2;
+  font-weight: 800;
 }
-
 
 .timeline-line {
-  position: absolute;
-
-  top: 10px;
-
-  left: 63px;
-  right: -1px;
-
-  height: 1px;
-
-  background: #a9ccd7;
-
-  z-index: 0;
+  width: 2px;
+  height: 20px;
+  margin: 0 auto;
+  background: rgba(7, 91, 85, 0.35);
 }
-
 
 .timeline-item p {
-  position: relative;
-
-  z-index: 1;
-
   margin: 0;
-
-  color: #37636e;
-
-  font-size: 7.5px;
-
-  line-height: 1.25;
+  color: #486660;
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.55;
 }
-
 
 /* =========================================================
    FOUNDER PROMISE
 ========================================================= */
 
 .founder-promise {
-  margin-top: 7px;
-
-  padding: 8px 10px;
-
-  background: #edf5df;
-
-  border-radius: 7px;
+  margin-top: 30px;
+  padding: 28px;
+  background: #e5f2e8;
+  border-radius: 22px;
+  border: 1px solid rgba(7, 91, 85, 0.1);
 }
-
 
 .founder-promise-heading {
   display: flex;
-
   align-items: center;
-
-  gap: 6px;
-
-  color: #075c55;
+  gap: 10px;
+  margin-bottom: 15px;
+  color: #075b55;
 }
-
 
 .founder-promise-heading h3 {
   margin: 0;
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: 13px;
-
-  line-height: 1;
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 800;
 }
 
-
-.founder-promise p {
-  margin: 4px 0 0;
-
-  color: #37636e;
-
-  font-size: 8px;
-
-  line-height: 1.25;
+.founder-promise > p {
+  margin: 0 0 12px;
+  color: #486660;
+  font-size: 15px;
+  line-height: 1.7;
 }
 
+.founder-promise > p:last-child {
+  margin-bottom: 0;
+}
 
 /* =========================================================
-   1250px
+   IMAGE FALLBACK
 ========================================================= */
 
-@media (max-width: 1250px) {
-
-  .about-cattery-container {
-    grid-template-columns:
-      minmax(290px, 0.72fr)
-      minmax(500px, 1.28fr);
-  }
-
-
-  .about-panel-heading h2,
-  .owner-heading h2 {
-    font-size: 22px;
-  }
-
-
-  .about-cats-image {
-    height: 165px;
-  }
-
-
-  .owner-image-wrap {
-    height: 150px;
-  }
-
+.image-fallback {
+  background: linear-gradient(
+    135deg,
+    #e7f3ea,
+    #d8ebe0
+  );
 }
 
-
 /* =========================================================
-   1050px
+   TABLET
 ========================================================= */
 
-@media (max-width: 1050px) {
+@media (max-width: 900px) {
 
-  .about-cattery-container {
-    width: calc(100% - 20px);
-
-    grid-template-columns: 1fr;
+  .about-cattery-section {
+    padding: 55px 16px;
   }
-
 
   .about-cattery-panel,
   .about-owner-panel {
-    width: 100%;
+    padding: 28px;
   }
 
-
-  .about-cats-image {
-    height: 260px;
+  .approach-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
-
-
-  .owner-image-wrap {
-    height: 220px;
-  }
-
-
-  .owner-story-block p,
-  .reputation-box p {
-    font-size: 10px;
-  }
-
-
-  .owner-story-block h3,
-  .reputation-box h3 {
-    font-size: 14px;
-  }
-
-
-  .understanding-box p,
-  .understanding-box li,
-  .founder-promise p {
-    font-size: 9px;
-  }
-
-
-  .timeline-item p {
-    font-size: 8px;
-  }
-
-}
-
-
-/* =========================================================
-   800px
-========================================================= */
-
-@media (max-width: 800px) {
-
-  .about-cattery-section {
-    padding: 18px 0 25px;
-  }
-
-
-  .about-cattery-container {
-    width: calc(100% - 18px);
-
-    gap: 12px;
-  }
-
 
   .owner-top-grid {
     grid-template-columns: 1fr;
   }
 
-
   .owner-image-wrap {
-    grid-row: auto;
-
-    height: 270px;
+    height: 360px;
   }
-
-
-  .reputation-box {
-    grid-column: auto;
-  }
-
 
   .owner-info-grid {
     grid-template-columns: 1fr;
   }
 
-
   .timeline-track {
-    grid-template-columns: 1fr;
-    gap: 9px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
-
-
-  .timeline-item {
-    padding: 0 0 8px;
-
-    border-right: 0;
-
-    border-bottom: 1px solid #bdd8e1;
-  }
-
-
-  .timeline-item:last-child {
-    border-bottom: 0;
-  }
-
 
   .timeline-line {
     display: none;
   }
 
-
-  .timeline-pill {
-    font-size: 8px;
+  .about-service-bar {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-
-  .timeline-item p {
-    font-size: 9px;
+  .about-service-item:nth-child(3) {
+    border-left: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
   }
 
-
-  .founder-promise {
-    margin-top: 10px;
+  .about-service-item:nth-child(4) {
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
   }
-
 }
-
 
 /* =========================================================
    MOBILE
@@ -1122,274 +683,175 @@
 
 @media (max-width: 600px) {
 
+  .about-cattery-section {
+    padding: 40px 12px;
+  }
+
+  .about-cattery-container {
+    gap: 22px;
+  }
+
   .about-cattery-panel,
   .about-owner-panel {
-    border-radius: 8px;
-
-    padding: 10px;
+    padding: 20px;
+    border-radius: 22px;
   }
 
+  .about-panel-heading,
+  .owner-heading {
+    gap: 12px;
+    margin-bottom: 22px;
+  }
+
+  .heading-icon,
+  .owner-heading > svg {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+  }
 
   .about-panel-heading h2,
-  .owner-heading h2 {
-    font-size: 21px;
+  .owner-heading h2,
+  .owner-heading h3 {
+    font-size: 18px;
   }
 
-
-  .about-panel-heading p {
-    font-size: 12px;
+  .about-panel-heading p,
+  .owner-heading p {
+    font-size: 15px;
   }
 
-
-  .about-intro p {
-    font-size: 10.5px;
-
-    line-height: 1.45;
+  .about-intro p,
+  .owner-story-block p,
+  .reputation-box p,
+  .promise-box p,
+  .understanding-box p,
+  .understanding-box li,
+  .timeline-item p,
+  .founder-promise > p {
+    font-size: 15px;
   }
-
 
   .approach-box {
-    padding: 9px 5px 5px;
+    padding: 18px;
   }
-
 
   .approach-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-
   .approach-item {
-    min-height: 65px;
-
-    border-bottom: 1px solid #b6d8c0;
+    min-height: 120px;
   }
 
-
-  .approach-item:nth-child(2n) {
-    border-right: 0;
+  .approach-item strong {
+    font-size: 18px;
   }
 
-
-  .approach-item:nth-last-child(-n + 1) {
-    border-bottom: 0;
-  }
-
-
-  .approach-item strong,
   .approach-item span {
-    font-size: 9px;
-  }
-
-
-  .about-cats-image {
-    height: 210px;
-  }
-
-
-  .about-service-bar {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-
-  .about-service-item {
-    min-height: 55px;
-
-    border-bottom: 1px solid rgba(255,255,255,.35);
-  }
-
-
-  .about-service-item:nth-child(2n) {
-    border-right: 0;
-  }
-
-
-  .about-service-item:nth-last-child(-n + 2) {
-    border-bottom: 0;
-  }
-
-
-  .owner-heading h3 {
     font-size: 15px;
   }
 
-
-  .owner-heading p {
-    font-size: 8.5px;
+  .about-cats-image {
+    height: 240px;
   }
 
-
-  .owner-story-block {
-    margin-bottom: 10px;
+  .about-service-bar {
+    grid-template-columns: 1fr 1fr;
   }
 
-
-  .owner-story-block h3,
-  .reputation-box h3 {
-    font-size: 13px;
+  .about-service-item {
+    min-height: 90px;
+    padding: 14px 8px;
   }
 
-
-  .owner-story-block p,
-  .reputation-box p {
-    font-size: 9.5px;
-
-    line-height: 1.35;
+  .about-service-item strong {
+    font-size: 18px;
   }
 
+  .about-service-item span {
+    font-size: 15px;
+  }
 
   .owner-image-wrap {
-    height: 220px;
+    height: 300px;
   }
 
-
-  .philosophy-box {
-    min-height: 105px;
+  .reputation-box,
+  .philosophy-box,
+  .understanding-box,
+  .owner-timeline,
+  .founder-promise {
+    padding: 20px;
   }
 
-
-  .philosophy-box h3 {
-    font-size: 12px;
+  .philosophy-box h3,
+  .understanding-box h3,
+  .timeline-heading h3,
+  .founder-promise-heading h3 {
+    font-size: 18px;
   }
 
-
-  .philosophy-box blockquote {
-    font-size: 10px;
+  .philosophy-text {
+    font-size: 15px;
+    line-height: 1.7;
   }
 
-
-  .understanding-box p,
-  .understanding-box li {
-    font-size: 9px;
+  .timeline-track {
+    grid-template-columns: 1fr;
+    gap: 14px;
   }
 
-
-  .founder-promise p {
-    font-size: 9px;
-
-    line-height: 1.35;
+  .timeline-pill {
+    font-size: 15px;
   }
 
+  .happy-cats-note {
+    left: 12px;
+    bottom: 12px;
+    padding: 8px 11px;
+    font-size: 15px;
+  }
 }
-
 
 /* =========================================================
    SMALL MOBILE
 ========================================================= */
 
-@media (max-width: 400px) {
-
-  .about-cattery-container {
-    width: calc(100% - 12px);
-  }
-
-
-  .about-panel-heading h2,
-  .owner-heading h2 {
-    font-size: 19px;
-  }
-
-
-  .about-panel-heading p {
-    font-size: 11px;
-  }
-
-
-  .about-intro p {
-    font-size: 10px;
-  }
-
-
-  .about-cats-image {
-    height: 180px;
-  }
-
-
-  .owner-image-wrap {
-    height: 190px;
-  }
-
-
-  .happy-cats-note {
-    font-size: 12px;
-  }
-
-
-  .timeline-heading h3 {
-    font-size: 15px;
-  }
-
-}
-
-
-/* =========================================================
-   VERY SMALL
-========================================================= */
-
-@media (max-width: 340px) {
+@media (max-width: 380px) {
 
   .about-cattery-panel,
   .about-owner-panel {
-    padding: 8px;
+    padding: 16px;
   }
 
-
-  .about-panel-heading h2,
-  .owner-heading h2 {
-    font-size: 17px;
+  .about-panel-heading,
+  .owner-heading {
+    align-items: flex-start;
   }
 
-
-  .about-panel-heading p {
-    font-size: 10px;
+  .heading-icon,
+  .owner-heading > svg {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
   }
 
-
-  .about-intro p,
-  .owner-story-block p,
-  .reputation-box p {
-    font-size: 9px;
+  .approach-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
   }
-
-
-  .about-cats-image {
-    height: 155px;
-  }
-
-
-  .owner-image-wrap {
-    height: 165px;
-  }
-
 
   .approach-item {
-    min-height: 58px;
+    min-height: 110px;
+    padding: 12px 6px;
   }
 
-
-  .approach-item strong,
-  .approach-item span {
-    font-size: 8px;
+  .about-cats-image {
+    height: 210px;
   }
 
-
-  .about-service-item strong,
-  .about-service-item span {
-    font-size: 7px;
+  .about-service-item {
+    min-height: 85px;
   }
-
-}
-
-
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-  * {
-    scroll-behavior: auto !important;
-    transition: none !important;
-    animation: none !important;
-  }
-
 }

@@ -1,6 +1,9 @@
 /* =========================================================
    AZIZ FELINES CATTERY
    PREMIUM COMPACT FOOTER
+   TYPOGRAPHY:
+   HEADINGS     = 18px
+   PARAGRAPHS   = 15px
 ========================================================= */
 
 
@@ -31,7 +34,6 @@
 
 /* =========================================================
    PREMIUM TOP ACCENT
-   - OLD CURVES REMOVED
 ========================================================= */
 
 .footer-top-curves {
@@ -226,6 +228,8 @@
 }
 
 
+/* Paragraph / description */
+
 .footer-brand-text {
   max-width: 320px;
 
@@ -233,7 +237,7 @@
 
   color: rgba(255, 255, 255, 0.74);
 
-  font-size: 10.5px;
+  font-size: 15px;
 
   line-height: 1.65;
 }
@@ -305,9 +309,9 @@
     "Segoe Print",
     cursive;
 
-  font-size: 17px;
+  font-size: 18px;
 
-  line-height: 1.05;
+  line-height: 1.2;
 }
 
 
@@ -379,9 +383,9 @@
     "Segoe Print",
     cursive;
 
-  font-size: 20px;
+  font-size: 18px;
 
-  line-height: 1;
+  line-height: 1.3;
 
   font-weight: 700;
 }
@@ -416,9 +420,9 @@
 
   text-decoration: none;
 
-  font-size: 10.5px;
+  font-size: 15px;
 
-  line-height: 1.4;
+  line-height: 1.5;
 
   transition:
     color 0.2s ease,
@@ -461,7 +465,7 @@
 
   flex-direction: column;
 
-  gap: 7px;
+  gap: 9px;
 }
 
 
@@ -523,9 +527,9 @@
 
   color: rgba(255, 255, 255, 0.80);
 
-  font-size: 10px;
+  font-size: 15px;
 
-  line-height: 1.3;
+  line-height: 1.4;
 }
 
 
@@ -601,13 +605,15 @@
 }
 
 
+/* Contact paragraph/text */
+
 .footer-contact-item span,
 .footer-contact-item a {
   color: rgba(255, 255, 255, 0.76);
 
-  font-size: 9.5px;
+  font-size: 15px;
 
-  line-height: 1.45;
+  line-height: 1.5;
 
   text-decoration: none;
 
@@ -637,7 +643,7 @@
 
   gap: 5px;
 
-  padding: 8px 14px;
+  padding: 9px 16px;
 
   color: #075b56;
 
@@ -647,7 +653,7 @@
 
   text-decoration: none;
 
-  font-size: 9.5px;
+  font-size: 15px;
 
   font-weight: 700;
 
@@ -736,7 +742,7 @@
 
 
 .newsletter-content h3 {
-  margin: 0 0 3px;
+  margin: 0 0 5px;
 
   color: #ffffff;
 
@@ -747,7 +753,7 @@
 
   font-size: 18px;
 
-  line-height: 1;
+  line-height: 1.3;
 }
 
 
@@ -756,9 +762,9 @@
 
   color: rgba(255, 255, 255, 0.65);
 
-  font-size: 9.5px;
+  font-size: 15px;
 
-  line-height: 1.35;
+  line-height: 1.5;
 }
 
 
@@ -780,7 +786,7 @@
 .newsletter-input {
   width: 270px;
 
-  height: 40px;
+  height: 42px;
 
   display: flex;
 
@@ -821,19 +827,21 @@
 
   font-family: inherit;
 
-  font-size: 10px;
+  font-size: 15px;
 }
 
 
 .newsletter-input input::placeholder {
   color: rgba(255, 255, 255, 0.50);
+
+  font-size: 15px;
 }
 
 
 .newsletter-button {
-  height: 40px;
+  height: 42px;
 
-  min-width: 112px;
+  min-width: 125px;
 
   display: flex;
 
@@ -843,7 +851,7 @@
 
   gap: 5px;
 
-  padding: 0 15px;
+  padding: 0 16px;
 
   color: #075b56;
 
@@ -857,7 +865,7 @@
 
   font-family: inherit;
 
-  font-size: 10px;
+  font-size: 15px;
 
   font-weight: 700;
 
@@ -917,14 +925,16 @@
 }
 
 
+/* Copyright paragraph */
+
 .footer-copyright {
   margin: 0;
 
   color: rgba(255, 255, 255, 0.62);
 
-  font-size: 9.5px;
+  font-size: 15px;
 
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 
@@ -941,7 +951,9 @@
 
   color: #b5eee4;
 
-  font-size: 9.5px;
+  font-size: 15px;
+
+  line-height: 1.4;
 }
 
 
@@ -970,7 +982,7 @@
 
   justify-content: center;
 
-  padding: 6px 12px;
+  padding: 7px 14px;
 
   color: #075b56;
 
@@ -980,7 +992,7 @@
 
   text-decoration: none;
 
-  font-size: 9px;
+  font-size: 15px;
 
   font-weight: 700;
 
@@ -1001,7 +1013,6 @@
 
 /* =========================================================
    BOTTOM DECORATIVE GLOW
-   - NO WAVES
 ========================================================= */
 
 .footer-waves {
@@ -1077,8 +1088,12 @@
   }
 
 
+  /*
+     Heading remains exactly 18px
+  */
+
   .footer-heading h3 {
-    font-size: 19px;
+    font-size: 18px;
   }
 
 
@@ -1139,7 +1154,7 @@
 
     margin-right: auto;
 
-    font-size: 10px;
+    font-size: 15px;
   }
 
 
@@ -1152,6 +1167,8 @@
     display: inline-block;
 
     text-align: left;
+
+    font-size: 18px;
   }
 
 
@@ -1161,6 +1178,11 @@
 
   .footer-heading {
     justify-content: center;
+  }
+
+
+  .footer-heading h3 {
+    font-size: 18px;
   }
 
 
@@ -1175,14 +1197,24 @@
   }
 
 
+  .footer-links a {
+    font-size: 15px;
+  }
+
+
   /* -------------------------------------------------------
      SERVICES
   ------------------------------------------------------- */
 
   .footer-service-list {
-    width: min(300px, 100%);
+    width: min(350px, 100%);
 
     margin: 0 auto;
+  }
+
+
+  .footer-service-name {
+    font-size: 15px;
   }
 
 
@@ -1191,20 +1223,28 @@
   ------------------------------------------------------- */
 
   .footer-contact-list {
-    width: min(350px, 100%);
+    width: min(380px, 100%);
 
     margin: 0 auto;
+  }
+
+
+  .footer-contact-item span,
+  .footer-contact-item a {
+    font-size: 15px;
   }
 
 
   .footer-contact-button {
     display: flex;
 
-    width: min(350px, 100%);
+    width: min(380px, 100%);
 
     margin-left: auto;
 
     margin-right: auto;
+
+    font-size: 15px;
   }
 
 
@@ -1236,7 +1276,7 @@
 
 
   .newsletter-content p {
-    font-size: 9px;
+    font-size: 15px;
   }
 
 
@@ -1245,7 +1285,7 @@
 
     flex-direction: column;
 
-    gap: 7px;
+    gap: 8px;
   }
 
 
@@ -1256,8 +1296,16 @@
   }
 
 
+  .newsletter-input input,
+  .newsletter-input input::placeholder {
+    font-size: 15px;
+  }
+
+
   .newsletter-button {
     width: 100%;
+
+    font-size: 15px;
   }
 
 
@@ -1266,7 +1314,7 @@
   ------------------------------------------------------- */
 
   .footer-bottom {
-    min-height: 130px;
+    min-height: 145px;
 
     padding:
       20px 16px 28px;
@@ -1285,17 +1333,19 @@
 
 
   .footer-copyright {
-    font-size: 8.8px;
+    font-size: 15px;
   }
 
 
   .footer-bottom-tagline {
-    font-size: 9px;
+    font-size: 15px;
   }
 
 
   .footer-bottom-contact {
-    padding: 6px 13px;
+    padding: 7px 14px;
+
+    font-size: 15px;
   }
 
 
@@ -1339,7 +1389,7 @@
 
 
   .footer-brand-text {
-    font-size: 9.5px;
+    font-size: 15px;
 
     line-height: 1.6;
   }
@@ -1364,10 +1414,21 @@
   }
 
 
+  .footer-service-name {
+    font-size: 15px;
+  }
+
+
   .footer-contact-icon {
     width: 31px;
 
     height: 31px;
+  }
+
+
+  .footer-contact-item span,
+  .footer-contact-item a {
+    font-size: 15px;
   }
 
 
@@ -1379,29 +1440,50 @@
 
 
   .newsletter-content h3 {
-    font-size: 17px;
+    font-size: 18px;
   }
 
 
   .newsletter-content p {
-    font-size: 8.5px;
+    font-size: 15px;
+  }
+
+
+  .newsletter-input input,
+  .newsletter-input input::placeholder {
+    font-size: 15px;
+  }
+
+
+  .newsletter-button {
+    font-size: 15px;
   }
 
 
   .footer-bottom {
-    min-height: 125px;
+    min-height: 140px;
+  }
+
+
+  .footer-copyright {
+    font-size: 15px;
   }
 
 
   .footer-bottom-tagline {
     gap: 5px;
 
-    font-size: 8.5px;
+    font-size: 15px;
   }
 
 
   .tagline-line {
     width: 20px;
+  }
+
+
+  .footer-bottom-contact {
+    font-size: 15px;
   }
 }
 
@@ -1420,33 +1502,59 @@
 
 
   .footer-heading h3 {
-    font-size: 17px;
+    font-size: 18px;
   }
 
 
   .footer-brand-text {
-    font-size: 9px;
+    font-size: 15px;
+  }
+
+
+  .footer-links a {
+    font-size: 15px;
   }
 
 
   .footer-service-name {
-    font-size: 9px;
+    font-size: 15px;
   }
 
 
   .footer-contact-item span,
   .footer-contact-item a {
-    font-size: 8.5px;
+    font-size: 15px;
   }
 
 
   .newsletter-content h3 {
-    font-size: 16px;
+    font-size: 18px;
+  }
+
+
+  .newsletter-content p {
+    font-size: 15px;
+  }
+
+
+  .newsletter-input input,
+  .newsletter-input input::placeholder {
+    font-size: 15px;
+  }
+
+
+  .newsletter-button {
+    font-size: 15px;
   }
 
 
   .footer-bottom-tagline {
-    font-size: 8px;
+    font-size: 15px;
+  }
+
+
+  .footer-bottom-contact {
+    font-size: 15px;
   }
 }
 

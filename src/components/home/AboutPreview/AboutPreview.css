@@ -1,27 +1,17 @@
 /* =========================================================
-   AZIZ FELINES CATTERY
    CAT CARE / SPECIALISATION SECTION
-========================================================= */
-
-
-/* =========================================================
-   SECTION
+   AZIZ FELINES CATTERY
 ========================================================= */
 
 .cat-care-section {
   width: 100%;
-
   padding: 24px 0 30px;
-
   background: #ffffff;
-
   box-sizing: border-box;
 }
 
-
 .cat-care-container {
   width: min(1400px, calc(100% - 30px));
-
   margin: 0 auto;
 
   display: grid;
@@ -38,9 +28,8 @@
   box-sizing: border-box;
 }
 
-
 /* =========================================================
-   COMMON CARD
+   COMMON CARDS
 ========================================================= */
 
 .specialisation-card,
@@ -55,27 +44,23 @@
     );
 
   border: 1px solid #d6e9dc;
-
   border-radius: 7px;
 
   box-sizing: border-box;
 }
 
-
 /* =========================================================
-   LEFT COLUMN
+   LEFT AREA
 ========================================================= */
 
 .cat-care-left {
   min-width: 0;
 
   display: flex;
-
   flex-direction: column;
 
   gap: 8px;
 }
-
 
 /* =========================================================
    SPECIALISATION CARD
@@ -87,9 +72,8 @@
   overflow: hidden;
 }
 
-
 /* =========================================================
-   HEADINGS
+   COMMON HEADINGS
 ========================================================= */
 
 .specialisation-heading,
@@ -97,14 +81,12 @@
 .why-heading,
 .enquiry-heading {
   display: flex;
-
   align-items: flex-start;
 
   gap: 9px;
 
   color: #075c55;
 }
-
 
 .specialisation-heading > svg,
 .mission-heading > svg,
@@ -115,6 +97,10 @@
   margin-top: 1px;
 }
 
+/* =========================================================
+   MAIN HEADINGS
+   EXACTLY 18PX
+========================================================= */
 
 .specialisation-heading h2,
 .mission-heading h2,
@@ -126,13 +112,16 @@
 
   font-family: "Outfit", sans-serif;
 
-  font-size: 22px;
-
+  font-size: 18px !important;
   font-weight: 900;
 
-  line-height: 1.05;
+  line-height: 1.15;
 }
 
+/* =========================================================
+   HEADING SUBTITLE
+   EXACTLY 15PX
+========================================================= */
 
 .specialisation-heading p,
 .mission-heading p,
@@ -144,13 +133,11 @@
 
   font-family: "Kalam", cursive;
 
-  font-size: 14px;
-
+  font-size: 15px !important;
   font-weight: 600;
 
-  line-height: 1.05;
+  line-height: 1.25;
 }
-
 
 /* =========================================================
    SPECIALISATION INTRO
@@ -159,7 +146,9 @@
 .specialisation-intro {
   display: grid;
 
-  grid-template-columns: minmax(0, 1.4fr) minmax(150px, 0.8fr);
+  grid-template-columns:
+    minmax(0, 1.4fr)
+    minmax(150px, 0.8fr);
 
   gap: 8px;
 
@@ -168,24 +157,27 @@
   margin-top: 7px;
 }
 
-
 .specialisation-copy {
   min-width: 0;
 }
 
+/* =========================================================
+   SPECIALISATION PARAGRAPHS
+   EXACTLY 15PX
+========================================================= */
 
 .specialisation-copy p {
-  margin: 0 0 5px;
+  margin: 0 0 7px;
 
   color: #245964;
 
-  font-size: 11px;
+  font-family: "Outfit", sans-serif;
 
+  font-size: 15px !important;
   font-weight: 500;
 
-  line-height: 1.35;
+  line-height: 1.5;
 }
-
 
 .specialisation-copy strong {
   color: #075c55;
@@ -193,16 +185,14 @@
   font-weight: 900;
 }
 
-
 /* =========================================================
-   CAT IMAGE
+   SPECIALISATION IMAGE
 ========================================================= */
 
 .specialisation-image-wrap {
   position: relative;
 
   width: 100%;
-
   height: 125px;
 
   overflow: hidden;
@@ -212,7 +202,6 @@
   background: #dfeee5;
 }
 
-
 .specialisation-image {
   display: block;
 
@@ -220,12 +209,10 @@
   height: 100%;
 
   object-fit: cover;
-
   object-position: center;
 
   margin: 0;
 }
-
 
 .image-heart {
   position: absolute;
@@ -240,15 +227,15 @@
   line-height: 1;
 }
 
-
 /* =========================================================
-   SPECIALISATION SERVICE STRIP
+   SERVICES / HIGHLIGHT POINTS
 ========================================================= */
 
 .specialisation-services {
   display: grid;
 
-  grid-template-columns: repeat(7, minmax(0, 1fr));
+  grid-template-columns:
+    repeat(7, minmax(0, 1fr));
 
   margin-top: 7px;
 
@@ -259,20 +246,16 @@
   border-radius: 5px;
 }
 
-
 .specialisation-service {
   min-width: 0;
-
   min-height: 57px;
 
-  padding: 3px 3px;
+  padding: 5px 3px;
 
   display: flex;
-
   flex-direction: column;
 
   align-items: center;
-
   justify-content: center;
 
   text-align: center;
@@ -284,91 +267,195 @@
   box-sizing: border-box;
 }
 
-
 .specialisation-service:last-child {
   border-right: 0;
 }
 
-
 .specialisation-service svg {
-  margin-bottom: 2px;
+  margin-bottom: 4px;
 
   color: #075c55;
 
   flex: 0 0 auto;
 }
 
+/* =========================================================
+   HIGHLIGHT POINT TITLES
+   EXACTLY 18PX
+========================================================= */
 
 .specialisation-service span {
   display: block;
 
-  font-size: 9px;
-
+  font-size: 18px !important;
   font-weight: 900;
 
-  line-height: 1.05;
+  line-height: 1.1;
 }
-
 
 .specialisation-service small {
   display: block;
 
-  margin-top: 1px;
+  margin-top: 2px;
 
-  font-size: 8px;
-
+  font-size: 15px !important;
   font-weight: 600;
 
-  line-height: 1.05;
+  line-height: 1.15;
 }
-
 
 /* =========================================================
    MISSION CARD
 ========================================================= */
 
 .mission-card {
-  padding: 9px 12px 8px;
+  padding: 11px 12px 10px;
 
   overflow: hidden;
+
+  box-sizing: border-box;
 }
 
+/* =========================================================
+   MISSION HEADING
+========================================================= */
+
+.mission-heading {
+  width: 100%;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 9px;
+
+  color: #075c55;
+
+  box-sizing: border-box;
+}
+
+.mission-heading > svg {
+  flex: 0 0 auto;
+
+  margin-top: 1px;
+
+  color: #075c55;
+}
+
+/* =========================================================
+   MISSION HEADING WRAPPER
+========================================================= */
+
+.mission-heading > div {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* =========================================================
+   MISSION TITLE
+   FORCE = 18PX
+========================================================= */
+
+.mission-card .mission-heading h2 {
+  margin: 0 !important;
+
+  color: #075c55;
+
+  font-family: "Outfit", sans-serif;
+
+  font-size: 18px !important;
+  font-weight: 900;
+
+  line-height: 1.15;
+}
+
+/* =========================================================
+   MISSION SUBTITLE
+   FORCE = 15PX
+========================================================= */
+
+.mission-card .mission-heading p {
+  margin: 3px 0 0 !important;
+
+  color: #08746c;
+
+  font-family: "Kalam", cursive;
+
+  font-size: 15px !important;
+  font-weight: 600;
+
+  line-height: 1.25;
+}
+
+/* =========================================================
+   MISSION CONTENT
+========================================================= */
 
 .mission-content {
+  width: 100%;
+
   display: grid;
 
-  grid-template-columns: minmax(0, 1fr) 145px;
+  grid-template-columns:
+    minmax(0, 1fr)
+    145px;
 
   gap: 10px;
 
   align-items: center;
 
-  margin-top: 5px;
+  margin-top: 8px;
+
+  box-sizing: border-box;
 }
 
+/* =========================================================
+   MISSION COPY
+========================================================= */
 
-.mission-copy p {
-  margin: 0 0 5px;
+.mission-copy {
+  min-width: 0;
+  width: 100%;
+}
+
+/* =========================================================
+   MISSION PARAGRAPHS
+   FORCE = 15PX
+========================================================= */
+
+.mission-card .mission-copy p {
+  margin: 0 0 8px !important;
 
   color: #245964;
 
-  font-size: 10.5px;
+  font-family: "Outfit", sans-serif;
 
+  font-size: 15px !important;
   font-weight: 500;
 
-  line-height: 1.35;
+  line-height: 1.5 !important;
+
+  overflow-wrap: break-word;
+  word-break: normal;
 }
 
+.mission-card .mission-copy p:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* =========================================================
+   MISSION DOODLE
+========================================================= */
 
 .mission-doodle {
+  min-width: 0;
   min-height: 70px;
 
   display: flex;
-
   flex-direction: column;
 
   align-items: center;
-
   justify-content: center;
 
   color: #075c55;
@@ -376,19 +463,18 @@
   font-family: "Kalam", cursive;
 
   font-size: 17px;
-
   font-weight: 700;
 
   line-height: 0.95;
 
+  text-align: center;
+
   transform: rotate(-3deg);
 }
-
 
 .mission-doodle svg {
   margin-top: 4px;
 }
-
 
 /* =========================================================
    WHY CHOOSE US
@@ -402,83 +488,81 @@
   overflow: hidden;
 }
 
-
 .why-heading {
   margin-bottom: 8px;
 }
-
 
 .why-heading > svg {
   color: #075c55;
 }
 
-
 .why-list {
   display: flex;
-
   flex-direction: column;
 
-  gap: 5px;
+  gap: 7px;
 }
-
 
 .why-item {
   display: grid;
 
-  grid-template-columns: 35px minmax(0, 1fr);
+  grid-template-columns:
+    35px
+    minmax(0, 1fr);
 
   gap: 7px;
 
   align-items: center;
 }
 
-
 .why-icon {
   width: 34px;
   height: 34px;
 
   display: grid;
-
   place-items: center;
 
   border-radius: 50%;
 
   background: #08746c;
-
   color: #ffffff;
 }
-
 
 .why-item-content {
   min-width: 0;
 }
 
+/* =========================================================
+   WHY HIGHLIGHT HEADING
+   18PX
+========================================================= */
 
 .why-item-content h3 {
   margin: 0;
 
   color: #075c55;
 
-  font-size: 10.5px;
-
+  font-size: 18px !important;
   font-weight: 900;
 
-  line-height: 1.1;
+  line-height: 1.15;
 }
 
+/* =========================================================
+   WHY PARAGRAPH
+   15PX
+========================================================= */
 
 .why-item-content p {
-  margin: 2px 0 0;
+  margin: 3px 0 0;
 
   color: #37636a;
 
-  font-size: 8.5px;
-
+  font-size: 15px !important;
   font-weight: 500;
 
-  line-height: 1.2;
+  line-height: 1.45;
 }
-
 
 /* =========================================================
    WHY DOODLE
@@ -490,11 +574,9 @@
   padding-right: 8px;
 
   display: flex;
-
   flex-wrap: wrap;
 
   justify-content: flex-end;
-
   align-items: center;
 
   gap: 3px;
@@ -504,7 +586,6 @@
   font-family: "Kalam", cursive;
 
   font-size: 16px;
-
   font-weight: 700;
 
   line-height: 0.9;
@@ -512,30 +593,25 @@
   transform: rotate(-3deg);
 }
 
-
 .why-doodle span:first-child {
   width: 100%;
 
   text-align: right;
 }
 
-
 .why-doodle span:nth-child(2) {
   text-align: right;
 }
 
-
 .why-doodle svg {
   margin-left: 2px;
 }
-
 
 .why-doodle b {
   color: #ef7f8d;
 
   font-size: 19px;
 }
-
 
 /* =========================================================
    ENQUIRY CARD
@@ -549,53 +625,43 @@
   overflow: hidden;
 }
 
-
 .enquiry-heading {
   margin-bottom: 8px;
 }
 
+/* =========================================================
+   ENQUIRY FORM
+========================================================= */
 
 .enquiry-form {
   display: flex;
-
   flex-direction: column;
 
   gap: 5px;
 }
 
-
-/* =========================================================
-   FORM FIELD
-========================================================= */
-
 .form-field {
   position: relative;
 
   width: 100%;
-
   min-height: 30px;
 
   display: flex;
-
   align-items: center;
 
   box-sizing: border-box;
 }
 
-
 .field-icon {
   position: absolute;
 
   left: 8px;
-
   top: 50%;
 
   z-index: 2;
 
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 
   color: #075c55;
@@ -605,6 +671,10 @@
   pointer-events: none;
 }
 
+/* =========================================================
+   FORM TEXT
+   15PX
+========================================================= */
 
 .form-field input,
 .form-field select,
@@ -621,8 +691,7 @@
 
   font-family: "Outfit", sans-serif;
 
-  font-size: 9px;
-
+  font-size: 15px !important;
   font-weight: 500;
 
   outline: none;
@@ -634,37 +703,40 @@
     box-shadow 0.2s ease;
 }
 
-
 .form-field input,
 .form-field select {
-  height: 30px;
+  height: 38px;
 
   padding: 0 9px 0 29px;
 }
 
-
 .form-field textarea {
-  min-height: 54px;
+  min-height: 90px;
 
   padding: 8px 9px 8px 29px;
 
   resize: vertical;
 
-  line-height: 1.35;
+  line-height: 1.45;
 }
 
+/* =========================================================
+   FORM PLACEHOLDER
+   15PX
+========================================================= */
 
 .form-field input::placeholder,
 .form-field textarea::placeholder {
   color: #80969a;
 
   opacity: 1;
-}
 
+  font-size: 15px !important;
+  font-weight: 500;
+}
 
 .form-field select {
   appearance: none;
-
   -webkit-appearance: none;
 
   cursor: pointer;
@@ -672,11 +744,9 @@
   padding-right: 28px;
 }
 
-
 .form-field select:invalid {
   color: #80969a;
 }
-
 
 .form-field input:focus,
 .form-field select:focus,
@@ -687,16 +757,10 @@
     0 0 0 2px rgba(8, 116, 108, 0.08);
 }
 
-
-/* =========================================================
-   SELECT ARROW
-========================================================= */
-
 .select-arrow {
   position: absolute;
 
   right: 8px;
-
   top: 50%;
 
   color: #075c55;
@@ -706,15 +770,9 @@
   pointer-events: none;
 }
 
-
-/* =========================================================
-   MESSAGE FIELD
-========================================================= */
-
 .message-field {
   align-items: flex-start;
 }
-
 
 .message-field .field-icon {
   top: 13px;
@@ -722,22 +780,18 @@
   transform: none;
 }
 
-
 /* =========================================================
    SUBMIT BUTTON
 ========================================================= */
 
 .enquiry-submit {
   width: 100%;
-
-  min-height: 30px;
+  min-height: 40px;
 
   margin-top: 1px;
 
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 
   gap: 7px;
@@ -745,17 +799,14 @@
   padding: 7px 12px;
 
   border: 0;
-
   border-radius: 999px;
 
   background: #075c55;
-
   color: #ffffff;
 
   font-family: "Outfit", sans-serif;
 
-  font-size: 10px;
-
+  font-size: 15px;
   font-weight: 900;
 
   cursor: pointer;
@@ -765,41 +816,34 @@
     transform 0.2s ease;
 }
 
-
 .enquiry-submit:hover {
   background: #064b45;
 
   transform: translateY(-1px);
 }
 
-
 .enquiry-submit:active {
   transform: translateY(0);
 }
 
-
 /* =========================================================
-   SECURITY
+   FORM SECURITY
 ========================================================= */
 
 .form-security {
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 
   gap: 4px;
 
   color: #4e7773;
 
-  font-size: 8px;
-
+  font-size: 15px;
   font-weight: 600;
 
   text-align: center;
 }
-
 
 .form-security svg {
   color: #075c55;
@@ -807,14 +851,12 @@
   flex: 0 0 auto;
 }
 
-
 /* =========================================================
-   BOTTOM PAW
+   ENQUIRY PAW
 ========================================================= */
 
 .enquiry-paw {
   display: flex;
-
   justify-content: center;
 
   margin-top: 3px;
@@ -822,189 +864,287 @@
   color: #075c55;
 }
 
-
 /* =========================================================
-   1200px
+   RESPONSIVE — 1200PX
 ========================================================= */
 
 @media (max-width: 1200px) {
-
   .cat-care-container {
     grid-template-columns:
       minmax(0, 1.8fr)
       minmax(230px, 0.9fr)
-      minmax(260px, 1fr);
+      minmax(250px, 1fr);
 
     gap: 8px;
   }
-
 
   .specialisation-heading h2,
   .mission-heading h2,
   .why-heading h2,
   .enquiry-heading h2 {
-    font-size: 19px;
+    font-size: 18px !important;
   }
 
+  .specialisation-heading p,
+  .mission-heading p,
+  .why-heading p,
+  .enquiry-heading p,
+  .specialisation-copy p,
+  .mission-copy p,
+  .why-item-content p {
+    font-size: 15px !important;
+  }
 
   .specialisation-intro {
     grid-template-columns:
       minmax(0, 1.3fr)
-      minmax(130px, 0.7fr);
+      minmax(140px, 0.7fr);
   }
-
 
   .specialisation-image-wrap {
     height: 110px;
   }
 
-
   .mission-content {
-    grid-template-columns: minmax(0, 1fr) 115px;
+    grid-template-columns:
+      minmax(0, 1fr)
+      115px;
   }
 
+  .mission-card .mission-heading h2 {
+    font-size: 18px !important;
+  }
+
+  .mission-card .mission-heading p {
+    font-size: 15px !important;
+  }
+
+  .mission-card .mission-copy p {
+    font-size: 15px !important;
+  }
 
   .mission-doodle {
     font-size: 15px;
   }
 }
 
-
 /* =========================================================
-   TABLET
-   <= 1000px
+   RESPONSIVE — 1000PX
 ========================================================= */
 
 @media (max-width: 1000px) {
-
   .cat-care-container {
     width: min(760px, calc(100% - 24px));
 
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(0, 1fr);
 
-    gap: 10px;
+    gap: 9px;
   }
-
 
   .cat-care-left {
     grid-column: 1 / -1;
 
     display: grid;
 
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(0, 1fr);
 
-    gap: 10px;
+    gap: 9px;
   }
-
 
   .specialisation-card,
   .mission-card {
     min-width: 0;
   }
 
-
   .why-card {
     grid-column: 1;
-
-    min-width: 0;
   }
-
 
   .enquiry-card {
     grid-column: 2;
+  }
 
-    min-width: 0;
+  /* Main headings */
+  .specialisation-heading h2,
+  .mission-heading h2,
+  .why-heading h2,
+  .enquiry-heading h2 {
+    font-size: 18px !important;
+  }
+
+  /* Paragraphs */
+  .specialisation-heading p,
+  .mission-heading p,
+  .why-heading p,
+  .enquiry-heading p,
+  .specialisation-copy p,
+  .mission-copy p,
+  .why-item-content p {
+    font-size: 15px !important;
+  }
+
+  /* Highlight points */
+  .specialisation-service span {
+    font-size: 18px !important;
+  }
+
+  .specialisation-service small {
+    font-size: 15px !important;
+  }
+
+  .why-item-content h3 {
+    font-size: 18px !important;
+  }
+
+  /* Mission specifically */
+  .mission-card .mission-heading h2 {
+    font-size: 18px !important;
+  }
+
+  .mission-card .mission-heading p {
+    font-size: 15px !important;
+  }
+
+  .mission-card .mission-copy p {
+    font-size: 15px !important;
   }
 }
 
-
 /* =========================================================
-   TABLET / LARGE MOBILE
-   <= 760px
+   RESPONSIVE — 760PX
 ========================================================= */
 
 @media (max-width: 760px) {
-
   .cat-care-container {
     width: min(620px, calc(100% - 22px));
 
     display: flex;
-
     flex-direction: column;
 
-    gap: 10px;
+    gap: 9px;
   }
-
 
   .cat-care-left {
     display: flex;
-
     flex-direction: column;
 
-    gap: 10px;
+    gap: 9px;
   }
-
-
-  .why-card,
-  .enquiry-card {
-    width: 100%;
-  }
-
 
   .specialisation-intro {
-    grid-template-columns: 1fr 190px;
+    grid-template-columns:
+      minmax(0, 1fr)
+      190px;
   }
-
 
   .specialisation-image-wrap {
     height: 125px;
   }
 
-
   .specialisation-services {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns:
+      repeat(4, minmax(0, 1fr));
   }
-
 
   .specialisation-service {
-    border-bottom: 1px solid #b8ddc5;
+    border-right: 1px solid #b8ddc5;
   }
 
-
-  .specialisation-service:nth-child(4) {
+  .specialisation-service:nth-child(4n) {
     border-right: 0;
   }
 
-
   .specialisation-service:nth-child(n + 5) {
-    border-bottom: 0;
+    border-top: 1px solid #b8ddc5;
   }
 
-
   .mission-content {
-    grid-template-columns: 1fr 140px;
+    grid-template-columns:
+      minmax(0, 1fr)
+      140px;
+  }
+
+  .specialisation-heading h2,
+  .mission-heading h2,
+  .why-heading h2,
+  .enquiry-heading h2 {
+    font-size: 18px !important;
+  }
+
+  .specialisation-heading p,
+  .mission-heading p,
+  .why-heading p,
+  .enquiry-heading p,
+  .specialisation-copy p,
+  .mission-copy p,
+  .why-item-content p {
+    font-size: 15px !important;
+  }
+
+  .specialisation-service span {
+    font-size: 18px !important;
+  }
+
+  .specialisation-service small {
+    font-size: 15px !important;
+  }
+
+  .why-item-content h3 {
+    font-size: 18px !important;
+  }
+
+  /* Mission LOCK */
+  .mission-card .mission-heading h2 {
+    font-size: 18px !important;
+  }
+
+  .mission-card .mission-heading p {
+    font-size: 15px !important;
+  }
+
+  .mission-card .mission-copy p {
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+  }
+
+  .form-field input,
+  .form-field select,
+  .form-field textarea {
+    font-size: 15px !important;
+  }
+
+  .form-field input::placeholder,
+  .form-field textarea::placeholder {
+    font-size: 15px !important;
+  }
+
+  .enquiry-submit {
+    font-size: 15px;
+  }
+
+  .form-security {
+    font-size: 15px;
   }
 }
 
-
 /* =========================================================
-   MOBILE
-   <= 600px
+   RESPONSIVE — 600PX
 ========================================================= */
 
 @media (max-width: 600px) {
-
   .cat-care-section {
     padding: 18px 0 25px;
   }
-
 
   .cat-care-container {
     width: calc(100% - 20px);
 
     gap: 9px;
   }
-
 
   .specialisation-card,
   .mission-card,
@@ -1013,287 +1153,355 @@
     border-radius: 9px;
   }
 
-
-  .specialisation-card {
-    padding: 11px;
-  }
-
-
-  .specialisation-heading h2,
-  .mission-heading h2,
-  .why-heading h2,
-  .enquiry-heading h2 {
-    font-size: 20px;
-  }
-
-
-  .specialisation-heading p,
-  .mission-heading p,
-  .why-heading p,
-  .enquiry-heading p {
-    font-size: 13px;
-  }
-
-
-  .specialisation-intro {
-    grid-template-columns: 1fr;
-
-    gap: 8px;
-  }
-
-
-  .specialisation-copy p {
-    font-size: 11px;
-
-    line-height: 1.4;
-  }
-
-
-  .specialisation-image-wrap {
-    width: 100%;
-
-    height: 190px;
-  }
-
-
-  .specialisation-services {
-    grid-template-columns: repeat(2, 1fr);
-
-    padding: 4px;
-  }
-
-
-  .specialisation-service {
-    min-height: 62px;
-
-    border-right: 1px solid #b8ddc5;
-
-    border-bottom: 1px solid #b8ddc5;
-  }
-
-
-  .specialisation-service:nth-child(2n) {
-    border-right: 0;
-  }
-
-
-  .specialisation-service:nth-last-child(-n + 1) {
-    border-bottom: 0;
-  }
-
-
-  .specialisation-service span {
-    font-size: 10px;
-  }
-
-
-  .specialisation-service small {
-    font-size: 8px;
-  }
-
-
-  .mission-card {
-    padding: 11px;
-  }
-
-
-  .mission-content {
-    grid-template-columns: 1fr;
-  }
-
-
-  .mission-copy p {
-    font-size: 10.5px;
-
-    line-height: 1.4;
-  }
-
-
-  .mission-doodle {
-    min-height: 55px;
-
-    justify-self: end;
-
-    font-size: 17px;
-  }
-
-
+  .specialisation-card,
+  .mission-card,
   .why-card,
   .enquiry-card {
     padding: 11px;
   }
 
-
-  .why-list {
-    gap: 7px;
+  /* Main headings */
+  .specialisation-heading h2,
+  .mission-heading h2,
+  .why-heading h2,
+  .enquiry-heading h2 {
+    font-size: 18px !important;
   }
 
+  /* Paragraphs */
+  .specialisation-heading p,
+  .mission-heading p,
+  .why-heading p,
+  .enquiry-heading p,
+  .specialisation-copy p,
+  .mission-copy p,
+  .why-item-content p {
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+  }
 
-  .why-item {
-    grid-template-columns: 38px 1fr;
+  .specialisation-intro {
+    grid-template-columns: 1fr;
+  }
 
+  .specialisation-image-wrap {
+    height: 190px;
+  }
+
+  /* Highlight services */
+  .specialisation-services {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 0;
+  }
+
+  .specialisation-service {
+    min-height: 75px;
+  }
+
+  .specialisation-service:nth-child(4n) {
+    border-right: 1px solid #b8ddc5;
+  }
+
+  .specialisation-service:nth-child(2n) {
+    border-right: 0;
+  }
+
+  .specialisation-service:nth-child(n + 3) {
+    border-top: 1px solid #b8ddc5;
+  }
+
+  .specialisation-service span {
+    font-size: 18px !important;
+  }
+
+  .specialisation-service small {
+    font-size: 15px !important;
+  }
+
+  /* =====================================================
+     MISSION MOBILE
+  ===================================================== */
+
+  .mission-card {
+    padding: 12px;
+  }
+
+  .mission-heading {
     gap: 8px;
   }
 
-
-  .why-icon {
-    width: 36px;
-    height: 36px;
+  .mission-heading > svg {
+    width: 23px;
+    height: 23px;
   }
 
+  .mission-card .mission-heading h2 {
+    font-size: 18px !important;
+  }
 
+  .mission-card .mission-heading p {
+    font-size: 15px !important;
+  }
+
+  .mission-content {
+    grid-template-columns: 1fr;
+
+    gap: 9px;
+
+    margin-top: 10px;
+  }
+
+  .mission-card .mission-copy p {
+    margin-bottom: 9px !important;
+
+    font-size: 15px !important;
+
+    line-height: 1.5 !important;
+  }
+
+  .mission-doodle {
+    min-height: 58px;
+
+    font-size: 17px;
+  }
+
+  /* Why */
   .why-item-content h3 {
-    font-size: 11px;
+    font-size: 18px !important;
   }
-
 
   .why-item-content p {
-    font-size: 9px;
-
-    line-height: 1.3;
+    font-size: 15px !important;
+    line-height: 1.5 !important;
   }
 
-
-  .why-doodle {
-    margin-top: 12px;
-  }
-
-
+  /* Form */
   .form-field input,
   .form-field select {
-    height: 38px;
+    height: 42px;
 
-    font-size: 11px;
+    font-size: 15px !important;
   }
-
 
   .form-field textarea {
-    min-height: 90px;
+    min-height: 100px;
 
-    font-size: 11px;
+    font-size: 15px !important;
   }
 
+  .form-field input::placeholder,
+  .form-field textarea::placeholder {
+    font-size: 15px !important;
+  }
 
   .enquiry-submit {
-    min-height: 40px;
+    min-height: 42px;
 
-    font-size: 12px;
+    font-size: 15px;
   }
 
-
   .form-security {
-    font-size: 9px;
+    font-size: 15px;
   }
 }
 
-
 /* =========================================================
-   SMALL MOBILE
-   <= 400px
+   RESPONSIVE — 400PX
 ========================================================= */
 
 @media (max-width: 400px) {
-
   .cat-care-container {
     width: calc(100% - 14px);
   }
-
-
-  .specialisation-heading > svg,
-  .mission-heading > svg,
-  .why-heading > svg,
-  .enquiry-heading > svg {
-    width: 32px;
-    height: 32px;
-  }
-
 
   .specialisation-heading h2,
   .mission-heading h2,
   .why-heading h2,
   .enquiry-heading h2 {
-    font-size: 18px;
+    font-size: 18px !important;
   }
-
 
   .specialisation-heading p,
   .mission-heading p,
   .why-heading p,
-  .enquiry-heading p {
-    font-size: 12px;
+  .enquiry-heading p,
+  .specialisation-copy p,
+  .mission-copy p,
+  .why-item-content p {
+    font-size: 15px !important;
+    line-height: 1.5 !important;
   }
-
 
   .specialisation-image-wrap {
     height: 170px;
   }
 
-
   .specialisation-service {
-    min-height: 60px;
+    min-height: 72px;
   }
-
 
   .specialisation-service svg {
     width: 21px;
     height: 21px;
   }
 
-
   .specialisation-service span {
-    font-size: 9px;
+    font-size: 18px !important;
   }
 
-
   .specialisation-service small {
-    font-size: 7.5px;
+    font-size: 15px !important;
+  }
+
+  .why-item-content h3 {
+    font-size: 18px !important;
+  }
+
+  .why-item-content p {
+    font-size: 15px !important;
+  }
+
+  /* =====================================================
+     MISSION — FORCE FINAL SIZE
+  ===================================================== */
+
+  .mission-card .mission-heading h2 {
+    font-size: 18px !important;
+  }
+
+  .mission-card .mission-heading p {
+    font-size: 15px !important;
+  }
+
+  .mission-card .mission-copy p {
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+  }
+
+  .form-field input,
+  .form-field select,
+  .form-field textarea {
+    font-size: 15px !important;
+  }
+
+  .form-field input::placeholder,
+  .form-field textarea::placeholder {
+    font-size: 15px !important;
   }
 }
 
-
 /* =========================================================
-   VERY SMALL MOBILE
-   <= 350px
+   RESPONSIVE — 350PX
 ========================================================= */
 
 @media (max-width: 350px) {
-
   .cat-care-container {
     width: calc(100% - 10px);
   }
-
 
   .specialisation-image-wrap {
     height: 150px;
   }
 
-
   .specialisation-services {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
   }
 
+  .specialisation-heading h2,
+  .mission-heading h2,
+  .why-heading h2,
+  .enquiry-heading h2 {
+    font-size: 18px !important;
+  }
+
+  .specialisation-heading p,
+  .mission-heading p,
+  .why-heading p,
+  .enquiry-heading p,
+  .specialisation-copy p,
+  .mission-copy p,
+  .why-item-content p {
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+  }
+
+  .specialisation-service span {
+    font-size: 18px !important;
+  }
+
+  .specialisation-service small {
+    font-size: 15px !important;
+  }
 
   .why-item-content h3 {
-    font-size: 10px;
+    font-size: 18px !important;
   }
-
 
   .why-item-content p {
-    font-size: 8.5px;
+    font-size: 15px !important;
+  }
+
+  /* =====================================================
+     MISSION — FINAL MOBILE LOCK
+  ===================================================== */
+
+  .mission-card .mission-heading h2 {
+    font-size: 18px !important;
+  }
+
+  .mission-card .mission-heading p {
+    font-size: 15px !important;
+  }
+
+  .mission-card .mission-copy p {
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+  }
+
+  .mission-content {
+    grid-template-columns: 1fr;
+
+    gap: 7px;
+  }
+
+  .mission-doodle {
+    min-height: 50px;
+
+    font-size: 15px;
+  }
+
+  .form-field input,
+  .form-field select,
+  .form-field textarea {
+    font-size: 15px !important;
+  }
+
+  .form-field input::placeholder,
+  .form-field textarea::placeholder {
+    font-size: 15px !important;
+  }
+
+  .enquiry-submit {
+    font-size: 15px;
+  }
+
+  .form-security {
+    font-size: 15px;
   }
 }
-
 
 /* =========================================================
    REDUCED MOTION
 ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
-
-  .enquiry-submit,
   .form-field input,
   .form-field select,
-  .form-field textarea {
+  .form-field textarea,
+  .enquiry-submit {
     transition: none;
   }
 }

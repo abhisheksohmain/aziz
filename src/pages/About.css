@@ -1,7 +1,12 @@
 /* =========================================================
    AZIZ FELINES CATTERY
    ABOUT PAGE
-   FIXED HEADER SAFE + RESPONSIVE
+   FIXED HEADER SAFE + FULL RESPONSIVE
+   TYPOGRAPHY:
+   Main Headings      = 18px
+   Paragraphs         = 15px
+   Highlight Headings = 18px
+   Form Text          = 15px
 ========================================================= */
 
 .about-page {
@@ -44,9 +49,8 @@
     sans-serif;
 
   /*
-    IMPORTANT:
-    Existing Header is fixed.
-    Desktop header height is approximately 120px.
+    Header is fixed.
+    Desktop header safe spacing.
   */
   padding-top: 120px;
 }
@@ -65,7 +69,6 @@
   position: relative;
 
   width: 100%;
-
   min-height: 175px;
 
   display: grid;
@@ -89,11 +92,9 @@
   min-height: 175px;
 
   display: flex;
-
   flex-direction: column;
 
   align-items: center;
-
   justify-content: center;
 
   padding: 18px 25px 14px;
@@ -137,7 +138,7 @@
     "Times New Roman",
     serif;
 
-  font-size: clamp(14px, 1.5vw, 20px);
+  font-size: 15px;
 
   font-style: italic;
 
@@ -173,7 +174,7 @@
 }
 
 /* =========================================================
-   IMAGE
+   HERO IMAGE
 ========================================================= */
 
 .about-image {
@@ -208,11 +209,9 @@
   inset: 0;
 
   display: flex;
-
   flex-direction: column;
 
   align-items: center;
-
   justify-content: center;
 
   gap: 5px;
@@ -246,9 +245,6 @@
 }
 
 .hero-image img {
-  /*
-    Don't let the cat disappear behind the header.
-  */
   object-position: center center;
 }
 
@@ -258,7 +254,6 @@
 
 .about-main {
   width: 100%;
-
   max-width: 1500px;
 
   margin: 0 auto;
@@ -307,7 +302,8 @@
 }
 
 /* =========================================================
-   HEADINGS
+   COMMON CARD HEADINGS
+   MAIN HEADING = 18PX
 ========================================================= */
 
 .card-heading {
@@ -336,14 +332,16 @@
 .card-heading h2 {
   margin: 0;
 
+  color: var(--green-dark);
+
   font-family:
     Georgia,
     "Times New Roman",
     serif;
 
-  font-size: clamp(21px, 2vw, 29px);
+  font-size: 18px !important;
 
-  line-height: 1;
+  line-height: 1.15;
 
   font-weight: 800;
 }
@@ -351,20 +349,23 @@
 .card-heading p {
   margin: 4px 0 0;
 
+  color: var(--green-mid);
+
   font-family:
     Georgia,
     "Times New Roman",
     serif;
 
-  font-size: 14px;
+  font-size: 15px !important;
 
   font-style: italic;
 
-  line-height: 1.15;
+  line-height: 1.3;
 }
 
 /* =========================================================
    LEFT TEXT
+   PARAGRAPH = 15PX
 ========================================================= */
 
 .card-copy {
@@ -376,7 +377,7 @@
 
   color: var(--text);
 
-  font-size: 13px;
+  font-size: 15px !important;
 
   line-height: 1.55;
 }
@@ -423,12 +424,18 @@
 .section-mini-title h3 {
   margin: 0;
 
+  color: var(--green-dark);
+
   font-family:
     Georgia,
     "Times New Roman",
     serif;
 
-  font-size: 17px;
+  font-size: 18px !important;
+
+  line-height: 1.15;
+
+  font-weight: 800;
 }
 
 .approach-grid {
@@ -438,7 +445,9 @@
 
   grid-template-columns: repeat(5, 1fr);
 
-  border-top: 1px solid rgba(15, 78, 65, 0.1);
+  border-top:
+    1px solid
+    rgba(15, 78, 65, 0.1);
 }
 
 .approach-item {
@@ -451,7 +460,6 @@
   flex-direction: column;
 
   align-items: center;
-
   justify-content: center;
 
   text-align: center;
@@ -462,23 +470,31 @@
 }
 
 .approach-item + .approach-item {
-  border-left: 1px solid rgba(15, 78, 65, 0.12);
+  border-left:
+    1px solid
+    rgba(15, 78, 65, 0.12);
 }
 
 .approach-item strong {
   margin-top: 4px;
 
-  font-size: 10px;
+  color: var(--green-dark);
+
+  font-size: 18px !important;
 
   line-height: 1.15;
+
+  font-weight: 900;
 }
 
 .approach-item span {
   margin-top: 2px;
 
-  font-size: 9px;
+  color: var(--text-soft);
 
-  line-height: 1.15;
+  font-size: 15px !important;
+
+  line-height: 1.25;
 }
 
 /* =========================================================
@@ -504,18 +520,24 @@
 .promise-heading h3 {
   margin: 0;
 
+  color: var(--green-dark);
+
   font-family:
     Georgia,
     "Times New Roman",
     serif;
 
-  font-size: 17px;
+  font-size: 18px !important;
+
+  line-height: 1.15;
 }
 
 .promise-box p {
-  margin: 4px 0 0 27px;
+  margin: 5px 0 0 27px;
 
-  font-size: 12px;
+  color: var(--text);
+
+  font-size: 15px !important;
 
   line-height: 1.45;
 }
@@ -528,7 +550,6 @@
   position: relative;
 
   width: 100%;
-
   height: 175px;
 
   margin-top: 5px;
@@ -544,6 +565,10 @@
 }
 
 .cats-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
   object-position: center;
 }
 
@@ -631,10 +656,9 @@
   flex-direction: column !important;
 
   align-items: center !important;
-
   justify-content: center !important;
 
-  gap: 2px;
+  gap: 3px;
 
   margin: 0;
 
@@ -672,7 +696,7 @@
 
   color: #fff !important;
 
-  font-size: 9px !important;
+  font-size: 18px !important;
 
   line-height: 1.1 !important;
 
@@ -684,15 +708,13 @@
 
   color: #fff !important;
 
-  font-size: 8px !important;
+  font-size: 15px !important;
 
-  line-height: 1 !important;
+  line-height: 1.2 !important;
 }
 
 /* =========================================================
    OUR MISSION
-   ADDED BELOW SERVICE STRIP
-   FILLS THE PREVIOUS EMPTY AREA
 ========================================================= */
 
 .mission-box {
@@ -734,11 +756,6 @@
     0 2px 8px
     rgba(8, 60, 50, 0.05);
 }
-
-/*
-  Very subtle decorative glow.
-  It does not cover the text.
-*/
 
 .mission-box::before {
   content: "";
@@ -793,9 +810,9 @@
     "Times New Roman",
     serif;
 
-  font-size: 18px;
+  font-size: 18px !important;
 
-  line-height: 1;
+  line-height: 1.15;
 
   font-weight: 800;
 }
@@ -810,9 +827,9 @@
     "Times New Roman",
     serif;
 
-  font-size: 12px;
+  font-size: 15px !important;
 
-  line-height: 1.15;
+  line-height: 1.3;
 
   font-style: italic;
 
@@ -826,13 +843,13 @@
 }
 
 .mission-copy p {
-  margin: 0 0 6px;
+  margin: 0 0 7px;
 
   color: #28504b;
 
-  font-size: 11px;
+  font-size: 15px !important;
 
-  line-height: 1.45;
+  line-height: 1.5;
 }
 
 .mission-copy p:last-child {
@@ -859,7 +876,6 @@
   flex-direction: column;
 
   align-items: center;
-
   justify-content: center;
 
   text-align: center;
@@ -880,14 +896,14 @@
   position: absolute;
 
   left: 8%;
-
   right: 8%;
 
   top: 12%;
-
   bottom: 12%;
 
-  border: 1px solid rgba(6, 63, 53, 0.08);
+  border:
+    1px solid
+    rgba(6, 63, 53, 0.08);
 
   border-radius: 50%;
 
@@ -904,17 +920,17 @@
 }
 
 .mission-side span {
-  font-size: 16px;
+  font-size: 18px !important;
 
-  line-height: 1.05;
+  line-height: 1.1;
 }
 
 .mission-side strong {
   margin-top: 3px;
 
-  font-size: 16px;
+  font-size: 18px !important;
 
-  line-height: 1.05;
+  line-height: 1.1;
 }
 
 .mission-heart {
@@ -962,6 +978,11 @@
 }
 
 .owner-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
   object-position: center 35%;
 }
 
@@ -976,9 +997,9 @@
 
   color: var(--green-dark);
 
-  font-size: 14px;
+  font-size: 18px !important;
 
-  line-height: 1.1;
+  line-height: 1.15;
 
   font-weight: 900;
 }
@@ -988,11 +1009,11 @@
 
   color: #234947;
 
-  font-size: 10px;
+  font-size: 15px !important;
 
   font-weight: 700;
 
-  line-height: 1.2;
+  line-height: 1.3;
 }
 
 /* =========================================================
@@ -1037,9 +1058,9 @@
     "Times New Roman",
     serif;
 
-  font-size: 12px;
+  font-size: 18px !important;
 
-  line-height: 1.15;
+  line-height: 1.2;
 
   font-weight: 800;
 }
@@ -1049,9 +1070,9 @@
 
   color: #244746;
 
-  font-size: 10px;
+  font-size: 15px !important;
 
-  line-height: 1.45;
+  line-height: 1.5;
 }
 
 .owner-story .italic-copy {
@@ -1110,7 +1131,7 @@
     "Times New Roman",
     serif;
 
-  font-size: 11px;
+  font-size: 18px !important;
 
   line-height: 1.2;
 }
@@ -1125,9 +1146,9 @@
     "Times New Roman",
     serif;
 
-  font-size: 10px;
+  font-size: 15px !important;
 
-  line-height: 1.4;
+  line-height: 1.45;
 
   font-style: italic;
 
@@ -1143,19 +1164,19 @@
 }
 
 .understanding-box ul {
-  margin: 5px 0 0;
+  margin: 6px 0 0;
 
-  padding-left: 17px;
+  padding-left: 20px;
 }
 
 .understanding-box li {
-  margin: 0 0 2px;
+  margin: 0 0 4px;
 
   color: #294c49;
 
-  font-size: 9px;
+  font-size: 15px !important;
 
-  line-height: 1.35;
+  line-height: 1.4;
 }
 
 /* =========================================================
@@ -1167,10 +1188,6 @@
 
   margin-top: 10px;
 
-  /*
-    IMPORTANT:
-    Prevent global CSS from changing timeline.
-  */
   isolation: isolate;
 }
 
@@ -1198,9 +1215,9 @@
     "Times New Roman",
     serif;
 
-  font-size: 17px;
+  font-size: 18px !important;
 
-  line-height: 1;
+  line-height: 1.15;
 
   font-weight: 800;
 }
@@ -1228,9 +1245,7 @@
   border-top: 1px solid #b8cec4;
 
   border-left: 0;
-
   border-right: 0;
-
   border-bottom: 0;
 
   overflow: visible;
@@ -1283,7 +1298,6 @@
   position: absolute;
 
   top: -8px;
-
   left: 50%;
 
   width: 16px;
@@ -1306,7 +1320,6 @@
   z-index: 5;
 
   padding: 0;
-
   margin: 0;
 }
 
@@ -1320,7 +1333,6 @@
   display: flex;
 
   justify-content: center;
-
   align-items: center;
 
   min-height: 27px;
@@ -1336,7 +1348,6 @@
   display: inline-flex;
 
   align-items: center;
-
   justify-content: center;
 
   min-height: 22px;
@@ -1349,7 +1360,7 @@
 
   color: var(--green-dark) !important;
 
-  font-size: 10px;
+  font-size: 15px !important;
 
   line-height: 1;
 
@@ -1385,7 +1396,7 @@
 
   color: var(--green-dark) !important;
 
-  font-size: 11px;
+  font-size: 18px !important;
 
   line-height: 1.2;
 
@@ -1397,7 +1408,7 @@
 .about-page .timeline-content p {
   width: 100%;
 
-  max-width: 150px;
+  max-width: 180px;
 
   margin: 6px auto 0;
 
@@ -1407,9 +1418,9 @@
 
   background: transparent !important;
 
-  font-size: 9px;
+  font-size: 15px !important;
 
-  line-height: 1.4;
+  line-height: 1.45;
 
   font-weight: 400;
 
@@ -1453,9 +1464,9 @@
     "Times New Roman",
     serif;
 
-  font-size: 13px;
+  font-size: 18px !important;
 
-  line-height: 1.1;
+  line-height: 1.15;
 }
 
 .founder-promise p {
@@ -1463,9 +1474,9 @@
 
   color: #2b504c;
 
-  font-size: 9px;
+  font-size: 15px !important;
 
-  line-height: 1.4;
+  line-height: 1.45;
 }
 
 /* =========================================================
@@ -1473,7 +1484,6 @@
 ========================================================= */
 
 @media (max-width: 1100px) {
-
   .about-page {
     padding-top: 120px;
   }
@@ -1484,22 +1494,28 @@
     max-width: 900px;
   }
 
+  /* Keep typography unchanged */
+  .card-heading h2 {
+    font-size: 18px !important;
+  }
+
+  .card-heading p {
+    font-size: 15px !important;
+  }
+
   .card-copy p {
-    font-size: 13px;
+    font-size: 15px !important;
   }
 
   .owner-story p {
-    font-size: 10px;
+    font-size: 15px !important;
   }
 
   .owner-story h4 {
-    font-size: 12px;
+    font-size: 18px !important;
   }
 
-  /* ==========================================
-     MISSION
-  =========================================== */
-
+  /* Mission */
   .mission-box {
     grid-template-columns:
       minmax(0, 1fr)
@@ -1510,13 +1526,21 @@
     padding: 14px;
   }
 
+  .mission-heading h3 {
+    font-size: 18px !important;
+  }
+
+  .mission-heading p {
+    font-size: 15px !important;
+  }
+
   .mission-copy p {
-    font-size: 11px;
+    font-size: 15px !important;
   }
 
   .mission-side span,
   .mission-side strong {
-    font-size: 15px;
+    font-size: 18px !important;
   }
 }
 
@@ -1525,7 +1549,6 @@
 ========================================================= */
 
 @media (max-width: 800px) {
-
   .about-page {
     padding-top: 90px;
   }
@@ -1577,22 +1600,22 @@
   }
 
   .owner-story p {
-    font-size: 11px;
+    font-size: 15px !important;
 
     line-height: 1.5;
   }
 
   .owner-story h4 {
-    font-size: 13px;
+    font-size: 18px !important;
   }
 
   .philosophy-grid {
     grid-template-columns: 1fr;
   }
 
-  /* ==========================================
+  /* =====================================================
      MISSION
-  =========================================== */
+  ===================================================== */
 
   .mission-box {
     grid-template-columns: 1fr;
@@ -1608,6 +1631,20 @@
     max-width: none;
   }
 
+  .mission-heading h3 {
+    font-size: 18px !important;
+  }
+
+  .mission-heading p {
+    font-size: 15px !important;
+  }
+
+  .mission-copy p {
+    font-size: 15px !important;
+
+    line-height: 1.5;
+  }
+
   .mission-side {
     min-height: 95px;
 
@@ -1616,9 +1653,14 @@
     margin-top: 2px;
   }
 
-  /* ==========================================
-     MOBILE/TABLET TIMELINE
-  =========================================== */
+  .mission-side span,
+  .mission-side strong {
+    font-size: 18px !important;
+  }
+
+  /* =====================================================
+     TIMELINE
+  ===================================================== */
 
   .about-page .timeline {
     display: flex;
@@ -1684,7 +1726,6 @@
     left: -1px;
 
     width: 16px;
-
     height: 16px;
 
     transform:
@@ -1699,7 +1740,6 @@
     display: flex;
 
     justify-content: flex-start;
-
     align-items: flex-start;
 
     padding: 0;
@@ -1712,7 +1752,7 @@
 
     padding: 6px 9px;
 
-    font-size: 10px;
+    font-size: 15px !important;
 
     border-radius: 14px;
 
@@ -1730,7 +1770,7 @@
   .about-page .timeline-content strong {
     width: 100%;
 
-    font-size: 12px;
+    font-size: 18px !important;
 
     line-height: 1.25;
 
@@ -1744,7 +1784,7 @@
 
     margin: 5px 0 0;
 
-    font-size: 10px;
+    font-size: 15px !important;
 
     line-height: 1.45;
 
@@ -1752,7 +1792,7 @@
   }
 
   .founder-promise p {
-    font-size: 10px;
+    font-size: 15px !important;
   }
 }
 
@@ -1761,12 +1801,6 @@
 ========================================================= */
 
 @media (max-width: 560px) {
-
-  /*
-    Existing desktop header is replaced/condensed by your
-    responsive Header CSS. This keeps About below it.
-  */
-
   .about-page {
     padding-top: 76px;
   }
@@ -1796,7 +1830,7 @@
   }
 
   .about-hero-title p {
-    font-size: 14px;
+    font-size: 15px;
   }
 
   .hero-image {
@@ -1805,23 +1839,27 @@
     min-height: 180px;
   }
 
+  /* =====================================================
+     CARD TYPOGRAPHY
+  ===================================================== */
+
   .card-heading h2 {
-    font-size: 22px;
+    font-size: 18px !important;
   }
 
   .card-heading p {
-    font-size: 12px;
+    font-size: 15px !important;
   }
 
   .card-copy p {
-    font-size: 12px;
+    font-size: 15px !important;
 
     line-height: 1.55;
   }
 
-  /* ==========================================
+  /* =====================================================
      APPROACH
-  =========================================== */
+  ===================================================== */
 
   .approach-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1850,17 +1888,25 @@
     grid-column: 1 / -1;
   }
 
-  /* ==========================================
+  .approach-item strong {
+    font-size: 18px !important;
+  }
+
+  .approach-item span {
+    font-size: 15px !important;
+  }
+
+  /* =====================================================
      CATS
-  =========================================== */
+  ===================================================== */
 
   .cats-image-wrap {
     height: 180px;
   }
 
-  /* ==========================================
+  /* =====================================================
      SERVICE STRIP
-  =========================================== */
+  ===================================================== */
 
   .about-page .service-strip {
     grid-template-columns: repeat(2, 1fr);
@@ -1884,16 +1930,16 @@
   }
 
   .about-page .service-item strong {
-    font-size: 9px !important;
+    font-size: 18px !important;
   }
 
   .about-page .service-item span {
-    font-size: 8px !important;
+    font-size: 15px !important;
   }
 
-  /* ==========================================
-     OUR MISSION
-  =========================================== */
+  /* =====================================================
+     MISSION
+  ===================================================== */
 
   .mission-box {
     min-height: 0;
@@ -1914,11 +1960,11 @@
   }
 
   .mission-heading h3 {
-    font-size: 18px;
+    font-size: 18px !important;
   }
 
   .mission-heading p {
-    font-size: 11px;
+    font-size: 15px !important;
   }
 
   .mission-copy {
@@ -1926,7 +1972,7 @@
   }
 
   .mission-copy p {
-    font-size: 11px;
+    font-size: 15px !important;
 
     line-height: 1.5;
   }
@@ -1939,12 +1985,12 @@
 
   .mission-side span,
   .mission-side strong {
-    font-size: 15px;
+    font-size: 18px !important;
   }
 
-  /* ==========================================
+  /* =====================================================
      OWNER
-  =========================================== */
+  ===================================================== */
 
   .owner-image {
     height: 200px;
@@ -1953,26 +1999,26 @@
   }
 
   .owner-name h3 {
-    font-size: 15px;
+    font-size: 18px !important;
   }
 
   .owner-name p {
-    font-size: 9px;
+    font-size: 15px !important;
   }
 
   .owner-story p {
-    font-size: 10.5px;
+    font-size: 15px !important;
 
     line-height: 1.5;
   }
 
   .owner-story h4 {
-    font-size: 12px;
+    font-size: 18px !important;
   }
 
-  /* ==========================================
+  /* =====================================================
      PHILOSOPHY
-  =========================================== */
+  ===================================================== */
 
   .philosophy-box,
   .understanding-box {
@@ -1981,24 +2027,29 @@
     padding: 10px;
   }
 
+  .philosophy-box h4,
+  .understanding-box h4 {
+    font-size: 18px !important;
+  }
+
   .philosophy-box p {
-    font-size: 10px;
+    font-size: 15px !important;
 
     line-height: 1.45;
   }
 
   .understanding-box li {
-    font-size: 9px;
+    font-size: 15px !important;
 
     line-height: 1.4;
   }
 
-  /* ==========================================
+  /* =====================================================
      TIMELINE
-  =========================================== */
+  ===================================================== */
 
   .timeline-heading h3 {
-    font-size: 16px;
+    font-size: 18px !important;
   }
 
   .about-page .timeline {
@@ -2024,7 +2075,7 @@
   }
 
   .about-page .timeline-year {
-    font-size: 9px;
+    font-size: 15px !important;
 
     padding:
       6px
@@ -2032,21 +2083,25 @@
   }
 
   .about-page .timeline-content strong {
-    font-size: 11px;
+    font-size: 18px !important;
   }
 
   .about-page .timeline-content p {
-    font-size: 9.5px;
+    font-size: 15px !important;
 
     line-height: 1.45;
   }
 
-  /* ==========================================
+  /* =====================================================
      FOUNDER
-  =========================================== */
+  ===================================================== */
+
+  .founder-promise-heading h3 {
+    font-size: 18px !important;
+  }
 
   .founder-promise p {
-    font-size: 9.5px;
+    font-size: 15px !important;
 
     line-height: 1.45;
   }
@@ -2057,7 +2112,6 @@
 ========================================================= */
 
 @media (max-width: 380px) {
-
   .about-page {
     padding-top: 72px;
   }
@@ -2067,15 +2121,19 @@
   }
 
   .about-hero-title p {
-    font-size: 12px;
+    font-size: 15px;
   }
 
   .card-heading h2 {
-    font-size: 20px;
+    font-size: 18px !important;
+  }
+
+  .card-heading p {
+    font-size: 15px !important;
   }
 
   .card-copy p {
-    font-size: 11px;
+    font-size: 15px !important;
   }
 
   .cats-image-wrap {
@@ -2083,16 +2141,16 @@
   }
 
   .about-page .service-item strong {
-    font-size: 8px !important;
+    font-size: 18px !important;
   }
 
   .about-page .service-item span {
-    font-size: 7px !important;
+    font-size: 15px !important;
   }
 
-  /* ==========================================
+  /* =====================================================
      VERY SMALL MISSION
-  =========================================== */
+  ===================================================== */
 
   .mission-box {
     padding: 11px 9px;
@@ -2101,15 +2159,15 @@
   }
 
   .mission-heading h3 {
-    font-size: 16px;
+    font-size: 18px !important;
   }
 
   .mission-heading p {
-    font-size: 10px;
+    font-size: 15px !important;
   }
 
   .mission-copy p {
-    font-size: 10px;
+    font-size: 15px !important;
 
     line-height: 1.45;
   }
@@ -2120,11 +2178,11 @@
 
   .mission-side span,
   .mission-side strong {
-    font-size: 14px;
+    font-size: 18px !important;
   }
 
   .owner-story p {
-    font-size: 10px;
+    font-size: 15px !important;
   }
 
   .about-page .timeline-item {
@@ -2140,7 +2198,7 @@
   }
 
   .about-page .timeline-year {
-    font-size: 8px;
+    font-size: 15px !important;
 
     padding:
       6px
@@ -2148,11 +2206,11 @@
   }
 
   .about-page .timeline-content strong {
-    font-size: 10px;
+    font-size: 18px !important;
   }
 
   .about-page .timeline-content p {
-    font-size: 8.5px;
+    font-size: 15px !important;
   }
 }
 
@@ -2161,7 +2219,6 @@
 ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
-
   .about-page *,
   .about-page *::before,
   .about-page *::after {

@@ -8,7 +8,7 @@ export default function FloatingContact() {
 
       {/* LEFT — PHONE */}
       <a
-        href="tel:+919999999999"
+        href="tel:+917700004469"
         className="floating-contact-btn phone-btn"
         aria-label="Call AZIZ FELINES CATTERY"
       >
@@ -17,7 +17,7 @@ export default function FloatingContact() {
 
       {/* RIGHT — WHATSAPP */}
       <a
-        href="https://wa.me/919999999999"
+        href="https://wa.me/7700004469"
         target="_blank"
         rel="noopener noreferrer"
         className="floating-contact-btn whatsapp-btn"

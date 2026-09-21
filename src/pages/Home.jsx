@@ -13,7 +13,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        {/* <ServiceStrip /> */}
+        <ServiceStrip />
         <AboutPreview />
         {/* <WhyChoose />
         <CatteryFacilities />

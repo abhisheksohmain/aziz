@@ -9,7 +9,7 @@ export default function Hero() {
       {/* HERO IMAGE */}
       <img
         className="hero-bg-image"
-        src={`${import.meta.env.BASE_URL}images/home-hero-cat1.png`}
+        src={`${import.meta.env.BASE_URL}images/home_img.png`}
         alt="AZIZ FELINES CATTERY"
       />
 

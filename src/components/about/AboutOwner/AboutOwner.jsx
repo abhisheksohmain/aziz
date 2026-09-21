@@ -9,13 +9,9 @@ import {
   HandHeart,
   CalendarDays,
   UserRound,
-  Target,
-  Cat,
-  Star,
 } from "lucide-react";
 
 import "./AboutOwner.css";
-
 
 /* =========================================================
    IMAGE PATHS
@@ -29,7 +25,6 @@ const images = {
   owner: `${BASE}images/about-owner.jpg`,
   cats: `${BASE}images/about-cats.jpg`,
 };
-
 
 /* =========================================================
    OUR APPROACH
@@ -63,7 +58,6 @@ const approachItems = [
   },
 ];
 
-
 /* =========================================================
    OWNER TIMELINE
 ========================================================= */
@@ -96,7 +90,6 @@ const timeline = [
   },
 ];
 
-
 /* =========================================================
    SERVICE BAR
 ========================================================= */
@@ -124,7 +117,6 @@ const serviceBar = [
   },
 ];
 
-
 /* =========================================================
    ABOUT CATTERY
 ========================================================= */
@@ -140,6 +132,7 @@ function AboutCattery() {
       <header className="about-panel-heading">
 
         <div className="heading-icon">
+
           <Home
             size={34}
             strokeWidth={2.4}
@@ -150,18 +143,20 @@ function AboutCattery() {
             strokeWidth={2.5}
             className="heading-paw"
           />
+
         </div>
 
         <div>
+
           <h2>About the Cattery</h2>
 
           <p>
             A Home Created Exclusively for Cats
           </p>
+
         </div>
 
       </header>
-
 
       {/* =====================================================
           INTRO
@@ -188,7 +183,6 @@ function AboutCattery() {
 
       </div>
 
-
       {/* =====================================================
           OUR APPROACH
       ===================================================== */}
@@ -206,7 +200,6 @@ function AboutCattery() {
           <h3>Our Approach</h3>
 
         </div>
-
 
         <div className="approach-grid">
 
@@ -235,7 +228,6 @@ function AboutCattery() {
 
       </section>
 
-
       {/* =====================================================
           OUR PROMISE
       ===================================================== */}
@@ -261,7 +253,6 @@ function AboutCattery() {
 
       </section>
 
-
       {/* =====================================================
           CATTERY IMAGE
       ===================================================== */}
@@ -273,6 +264,7 @@ function AboutCattery() {
           alt="Cats enjoying a comfortable environment"
           onError={(event) => {
             event.currentTarget.style.display = "none";
+
             event.currentTarget.parentElement.classList.add(
               "image-fallback"
             );
@@ -282,6 +274,7 @@ function AboutCattery() {
         <div className="happy-cats-note">
 
           <span>Happy Cats</span>
+
           <span>Healthy Lives</span>
 
           <Heart
@@ -297,7 +290,6 @@ function AboutCattery() {
         </div>
 
       </div>
-
 
       {/* =====================================================
           SERVICE BAR
@@ -333,7 +325,6 @@ function AboutCattery() {
   );
 }
 
-
 /* =========================================================
    ABOUT OWNER
 ========================================================= */
@@ -368,7 +359,6 @@ function AboutOwner() {
 
       </header>
 
-
       {/* =====================================================
           OWNER TOP CONTENT
       ===================================================== */}
@@ -379,18 +369,13 @@ function AboutOwner() {
 
         <div className="owner-story">
 
-          <OwnerStory
-            title="The Journey"
-          >
+          <OwnerStory title="The Journey">
             What began in 2015 as a passion for cats has grown
             into AZIZ FELINES CATTERY, a dedicated name in cat
             care, boarding and grooming in Mumbra, Thane.
           </OwnerStory>
 
-
-          <OwnerStory
-            title="A Cat-Focused Mission"
-          >
+          <OwnerStory title="A Cat-Focused Mission">
             At the heart of the cattery is its founder and owner,
             Abdul Aziz Mukadam, whose professional journey has
             taken a distinctly feline-focused direction. Over
@@ -399,10 +384,7 @@ function AboutOwner() {
             they are family.
           </OwnerStory>
 
-
-          <OwnerStory
-            title="Personalised Care"
-          >
+          <OwnerStory title="Personalised Care">
             His approach has always been centred around
             understanding cats individually. From grooming and
             boarding to everyday care, handling, transportation
@@ -411,10 +393,7 @@ function AboutOwner() {
             stress-free as possible.
           </OwnerStory>
 
-
-          <OwnerStory
-            title="More Than a Cattery"
-          >
+          <OwnerStory title="More Than a Cattery">
             For Aziz, running a cattery is not simply about
             providing a place where cats can stay. It is about
             understanding their behaviour, recognising when
@@ -426,7 +405,6 @@ function AboutOwner() {
 
         </div>
 
-
         {/* OWNER IMAGE */}
 
         <div className="owner-image-wrap">
@@ -436,6 +414,7 @@ function AboutOwner() {
             alt="Owner with a cat"
             onError={(event) => {
               event.currentTarget.style.display = "none";
+
               event.currentTarget.parentElement.classList.add(
                 "image-fallback"
               );
@@ -443,7 +422,6 @@ function AboutOwner() {
           />
 
         </div>
-
 
         {/* REPUTATION */}
 
@@ -485,13 +463,12 @@ function AboutOwner() {
             their companion for boarding.
             <br />
             And it is the message from a worried pet parent
-            saying, "Thank you for taking care of my cat."
+            saying, Thank you for taking care of my cat.
           </p>
 
         </div>
 
       </div>
-
 
       {/* =====================================================
           PHILOSOPHY + UNDERSTANDING CAT
@@ -499,7 +476,9 @@ function AboutOwner() {
 
       <div className="owner-info-grid">
 
-        {/* PHILOSOPHY */}
+        {/* =====================================================
+            PHILOSOPHY
+        ===================================================== */}
 
         <div className="philosophy-box">
 
@@ -507,11 +486,16 @@ function AboutOwner() {
             The Philosophy Behind AZIZ FELINES CATTERY
           </h3>
 
-          <blockquote>
-            “Every cat deserves to be treated with patience,
+          {/* NO BLOCKQUOTE
+              NO QUOTATION MARKS
+              NORMAL PARAGRAPH ONLY
+          */}
+
+          <p className="philosophy-text">
+            Every cat deserves to be treated with patience,
             respect and genuine care—not simply as a pet,
-            but as a member of the family.”
-          </blockquote>
+            but as a member of the family.
+          </p>
 
           <PawPrint
             size={18}
@@ -521,8 +505,9 @@ function AboutOwner() {
 
         </div>
 
-
-        {/* UNDERSTANDING EVERY CAT */}
+        {/* =====================================================
+            UNDERSTANDING EVERY CAT
+        ===================================================== */}
 
         <div className="understanding-box">
 
@@ -548,7 +533,6 @@ function AboutOwner() {
 
       </div>
 
-
       {/* =====================================================
           TIMELINE
       ===================================================== */}
@@ -565,7 +549,6 @@ function AboutOwner() {
           <h3>2015 → Today</h3>
 
         </div>
-
 
         <div className="timeline-track">
 
@@ -591,7 +574,6 @@ function AboutOwner() {
         </div>
 
       </section>
-
 
       {/* =====================================================
           FOUNDER PROMISE
@@ -628,7 +610,6 @@ function AboutOwner() {
   );
 }
 
-
 /* =========================================================
    SMALL STORY COMPONENT
 ========================================================= */
@@ -644,7 +625,6 @@ function OwnerStory({ title, children }) {
     </section>
   );
 }
-
 
 /* =========================================================
    MAIN COMPONENT
