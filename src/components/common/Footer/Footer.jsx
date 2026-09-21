@@ -191,7 +191,7 @@ export default function Footer() {
             >
 
               <img
-                src={`${import.meta.env.BASE_URL}images/logo.png`}
+                src={`${import.meta.env.BASE_URL}images/logo1.png`}
                 alt="AZIZ FELINES CATTERY"
                 className="footer-logo"
               />
@@ -410,8 +410,8 @@ export default function Footer() {
 
                 <div>
 
-                  <a href="tel:+919876543210">
-                    +91 98765 43210
+                  <a href="tel:+917700004469">
+                    +91 7700004469
                   </a>
 
                   <span>
@@ -435,8 +435,9 @@ export default function Footer() {
 
                 <div>
 
-                  <a href="mailto:info@azizfelinescattery.com">
-                    info@azizfelinescattery.com
+                  <a href="mailto:azizfelinescattery@gmail.com
+                  </a>">
+                    azizfelinescattery@gmail.com
                   </a>
 
                 </div>
@@ -576,7 +577,7 @@ export default function Footer() {
 
           <p className="footer-copyright">
 
-            © {currentYear} AZIZ FELINES CATTERY.
+            © {currentYear} WEBINFOTECH.
             All rights reserved.
 
           </p>

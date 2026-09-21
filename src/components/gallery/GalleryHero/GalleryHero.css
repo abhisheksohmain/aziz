@@ -1,7 +1,9 @@
 /* =========================================================
    AZIZ FELINES CATTERY
    GALLERY HERO
-   RESPONSIVE - NO CROPPING
+   FULL RESPONSIVE
+   NO CROPPING
+   FIXED HEADER SAFE
 ========================================================= */
 
 
@@ -20,14 +22,17 @@
 
   height: auto;
   min-height: 0;
+  max-height: none;
 
-  overflow: hidden;
+  overflow: visible;
 
   background: #fffdf7;
 
   line-height: 0;
 
   box-sizing: border-box;
+
+  z-index: 1;
 }
 
 
@@ -43,7 +48,9 @@
 
   height: auto;
 
+  min-width: 0;
   min-height: 0;
+
   max-height: none;
 
   margin: 0;
@@ -52,37 +59,46 @@
   border: 0;
 
   object-fit: contain;
-
   object-position: center center;
 
   vertical-align: top;
+
+  transform: none;
 
   box-sizing: border-box;
 }
 
 
 /* =========================================================
-   EXTRA SAFETY
-   Prevent global img CSS from cropping this image
+   GLOBAL IMG SAFETY
 ========================================================= */
 
 .gallery-hero img.gallery-hero-image {
-  display: block;
+  display: block !important;
 
   width: 100% !important;
   max-width: 100% !important;
 
   height: auto !important;
 
+  min-width: 0 !important;
   min-height: 0 !important;
+
   max-height: none !important;
-
-  object-fit: contain !important;
-
-  object-position: center center !important;
 
   margin: 0 !important;
   padding: 0 !important;
+
+  border: 0 !important;
+
+  object-fit: contain !important;
+  object-position: center center !important;
+
+  transform: none !important;
+
+  vertical-align: top !important;
+
+  box-sizing: border-box !important;
 }
 
 
@@ -91,14 +107,21 @@
    1400px+
 ========================================================= */
 
-@media (min-width: 1400px) {
+@media screen and (min-width: 1400px) {
 
   .gallery-hero {
     width: 100%;
+
+    height: auto;
+
+    min-height: 0;
+
+    overflow: visible;
   }
 
   .gallery-hero-image {
     width: 100%;
+
     height: auto !important;
   }
 }
@@ -109,19 +132,34 @@
    901px - 1399px
 ========================================================= */
 
-@media (min-width: 901px) and (max-width: 1399px) {
+@media screen and (min-width: 901px) and (max-width: 1399px) {
 
   .gallery-hero {
+    width: 100%;
+
     height: auto !important;
+
     min-height: 0 !important;
+
+    max-height: none !important;
+
+    overflow: visible;
   }
 
   .gallery-hero-image {
+    display: block;
+
     width: 100%;
+    max-width: 100%;
+
     height: auto !important;
 
-    object-fit: contain;
-    object-position: center center;
+    min-height: 0 !important;
+    max-height: none !important;
+
+    object-fit: contain !important;
+
+    object-position: center center !important;
   }
 }
 
@@ -131,7 +169,7 @@
    601px - 900px
 ========================================================= */
 
-@media (min-width: 601px) and (max-width: 900px) {
+@media screen and (min-width: 601px) and (max-width: 900px) {
 
   .gallery-hero {
     width: 100%;
@@ -139,19 +177,34 @@
     height: auto !important;
 
     min-height: 0 !important;
+
+    max-height: none !important;
+
+    margin: 0;
+    padding: 0;
+
+    overflow: visible;
   }
 
   .gallery-hero-image {
     display: block;
 
     width: 100%;
+    max-width: 100%;
+
     height: auto !important;
 
+    min-width: 0 !important;
     min-height: 0 !important;
+
     max-height: none !important;
 
-    object-fit: contain;
-    object-position: center center;
+    object-fit: contain !important;
+
+    object-position: center center !important;
+
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -161,16 +214,30 @@
    401px - 600px
 ========================================================= */
 
-@media (min-width: 401px) and (max-width: 600px) {
+@media screen and (min-width: 401px) and (max-width: 600px) {
 
   .gallery-hero {
+    position: relative;
+
     width: 100%;
 
     height: auto !important;
 
     min-height: 0 !important;
 
-    overflow: hidden;
+    max-height: none !important;
+
+    /*
+      Header is fixed.
+      Keep hero content below the header.
+    */
+    padding-top: 56px;
+
+    margin: 0;
+
+    overflow: visible;
+
+    box-sizing: border-box;
   }
 
   .gallery-hero-image {
@@ -181,12 +248,19 @@
 
     height: auto !important;
 
+    min-width: 0 !important;
     min-height: 0 !important;
+
     max-height: none !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
 
     object-fit: contain !important;
 
     object-position: center center !important;
+
+    transform: none !important;
   }
 }
 
@@ -196,9 +270,11 @@
    321px - 400px
 ========================================================= */
 
-@media (min-width: 321px) and (max-width: 400px) {
+@media screen and (min-width: 321px) and (max-width: 400px) {
 
   .gallery-hero {
+    position: relative;
+
     width: 100%;
 
     height: auto !important;
@@ -207,10 +283,16 @@
 
     max-height: none !important;
 
-    margin: 0;
-    padding: 0;
+    /*
+      Header mobile height
+    */
+    padding-top: 54px;
 
-    overflow: hidden;
+    margin: 0;
+
+    overflow: visible;
+
+    box-sizing: border-box;
   }
 
   .gallery-hero-image {
@@ -221,15 +303,19 @@
 
     height: auto !important;
 
+    min-width: 0 !important;
     min-height: 0 !important;
+
     max-height: none !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
 
     object-fit: contain !important;
 
     object-position: center center !important;
 
-    margin: 0;
-    padding: 0;
+    transform: none !important;
   }
 }
 
@@ -239,9 +325,11 @@
    <= 320px
 ========================================================= */
 
-@media (max-width: 320px) {
+@media screen and (max-width: 320px) {
 
   .gallery-hero {
+    position: relative;
+
     width: 100%;
 
     height: auto !important;
@@ -250,10 +338,16 @@
 
     max-height: none !important;
 
-    margin: 0;
-    padding: 0;
+    /*
+      Keep full hero below fixed header
+    */
+    padding-top: 54px;
 
-    overflow: hidden;
+    margin: 0;
+
+    overflow: visible;
+
+    box-sizing: border-box;
   }
 
   .gallery-hero-image {
@@ -264,15 +358,40 @@
 
     height: auto !important;
 
+    min-width: 0 !important;
     min-height: 0 !important;
+
     max-height: none !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
 
     object-fit: contain !important;
 
     object-position: center center !important;
 
-    margin: 0;
-    padding: 0;
+    transform: none !important;
+  }
+}
+
+
+/* =========================================================
+   EXTRA MOBILE SAFETY
+========================================================= */
+
+@media screen and (max-width: 600px) {
+
+  .gallery-hero,
+  .gallery-hero-image {
+    box-sizing: border-box;
+  }
+
+  .gallery-hero {
+    aspect-ratio: auto !important;
+  }
+
+  .gallery-hero-image {
+    aspect-ratio: auto !important;
   }
 }
 
@@ -283,7 +402,9 @@
 
 @media (prefers-reduced-motion: reduce) {
 
+  .gallery-hero,
   .gallery-hero-image {
-    scroll-behavior: auto;
+    transition: none !important;
+    animation: none !important;
   }
 }

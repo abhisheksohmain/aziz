@@ -1,6 +1,6 @@
 /* =========================================================
    AZIZ FELINES CATTERY
-   PREMIUM FOOTER
+   PREMIUM COMPACT FOOTER
 ========================================================= */
 
 
@@ -24,86 +24,78 @@
       #005b56 48%,
       #004540 100%
     );
+
+  isolation: isolate;
 }
 
 
 /* =========================================================
-   TOP CURVES
-   LEFT = WHITE
-   RIGHT = MINT
+   PREMIUM TOP ACCENT
+   - OLD CURVES REMOVED
 ========================================================= */
 
 .footer-top-curves {
+  display: none;
+}
+
+
+/* =========================================================
+   SUBTLE TOP GLOW
+========================================================= */
+
+.site-footer::before {
+  content: "";
+
   position: absolute;
 
   top: 0;
+  left: 50%;
 
-  left: 0;
+  width: 70%;
+  height: 2px;
 
-  width: 100%;
+  transform: translateX(-50%);
 
-  height: 115px;
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #a8e9de,
+      transparent
+    );
 
-  z-index: 5;
+  opacity: 0.8;
+
+  z-index: 10;
+
+  pointer-events: none;
+}
+
+
+.site-footer::after {
+  content: "";
+
+  position: absolute;
+
+  top: -120px;
+  left: 50%;
+
+  width: 500px;
+  height: 250px;
+
+  transform: translateX(-50%);
+
+  background:
+    radial-gradient(
+      ellipse,
+      rgba(168, 233, 222, 0.10) 0%,
+      rgba(168, 233, 222, 0.03) 45%,
+      transparent 72%
+    );
 
   pointer-events: none;
 
-  overflow: hidden;
-}
-
-
-/* ---------------------------------------------------------
-   LEFT WHITE CURVE
---------------------------------------------------------- */
-
-.footer-white-curve {
-  position: absolute;
-
-  top: -78px;
-
-  left: -8%;
-
-  width: 66%;
-
-  height: 125px;
-
-  background: #ffffff;
-
-  border-radius:
-    0 0 65% 0;
-
-  transform:
-    rotate(-3deg);
-
-  box-shadow:
-    10px 10px 0 rgba(255, 255, 255, 0.03);
-}
-
-
-/* ---------------------------------------------------------
-   RIGHT MINT CURVE
---------------------------------------------------------- */
-
-.footer-mint-curve {
-  position: absolute;
-
-  top: -83px;
-
-  right: -8%;
-
-  width: 64%;
-
-  height: 125px;
-
-  background: #a8e9de;
-
-  border-radius:
-    0 0 0 65%;
-
-  transform:
-    rotate(3deg);
-
-  opacity: 0.95;
+  z-index: 0;
 }
 
 
@@ -127,30 +119,30 @@
 .footer-paw {
   position: absolute;
 
-  color: rgba(168, 233, 222, 0.07);
+  color: rgba(168, 233, 222, 0.055);
 }
 
 
 .footer-paw svg {
-  width: 100px;
+  width: 90px;
 
-  height: 100px;
+  height: 90px;
 }
 
 
 .footer-paw-one {
   left: 1%;
 
-  bottom: 19%;
+  bottom: 18%;
 
   transform: rotate(-18deg);
 }
 
 
 .footer-paw-two {
-  right: 3%;
+  right: 2%;
 
-  top: 18%;
+  top: 17%;
 
   transform: rotate(18deg);
 }
@@ -159,11 +151,11 @@
 .footer-paw-three {
   right: 32%;
 
-  bottom: 5%;
+  bottom: 4%;
 
   transform: rotate(-12deg);
 
-  opacity: 0.5;
+  opacity: 0.45;
 }
 
 
@@ -177,10 +169,10 @@
   z-index: 2;
 
   padding:
-    105px 20px 48px;
+    52px 20px 32px;
 
   border-bottom:
-    1px solid rgba(168, 233, 222, 0.14);
+    1px solid rgba(168, 233, 222, 0.13);
 }
 
 
@@ -197,7 +189,7 @@
     0.95fr
     1fr;
 
-  gap: 48px;
+  gap: 38px;
 }
 
 
@@ -224,9 +216,9 @@
 
   width: auto;
 
-  max-width: 210px;
+  max-width: 190px;
 
-  height: 70px;
+  height: 58px;
 
   object-fit: contain;
 
@@ -235,15 +227,15 @@
 
 
 .footer-brand-text {
-  max-width: 330px;
+  max-width: 320px;
 
-  margin: 17px 0 21px;
+  margin: 12px 0 17px;
 
-  color: rgba(255, 255, 255, 0.76);
+  color: rgba(255, 255, 255, 0.74);
 
-  font-size: 11px;
+  font-size: 10.5px;
 
-  line-height: 1.75;
+  line-height: 1.65;
 }
 
 
@@ -256,14 +248,14 @@
 
   align-items: center;
 
-  gap: 9px;
+  gap: 8px;
 }
 
 
 .footer-social-link {
-  width: 36px;
+  width: 34px;
 
-  height: 36px;
+  height: 34px;
 
   display: flex;
 
@@ -292,10 +284,10 @@
 
   background: #ffffff;
 
-  transform: translateY(-4px);
+  transform: translateY(-3px);
 
   box-shadow:
-    0 8px 18px rgba(0, 0, 0, 0.18);
+    0 7px 16px rgba(0, 0, 0, 0.18);
 }
 
 
@@ -304,7 +296,7 @@
 ========================================================= */
 
 .footer-happy-message {
-  margin-top: 25px;
+  margin-top: 18px;
 
   color: #b5eee4;
 
@@ -313,7 +305,7 @@
     "Segoe Print",
     cursive;
 
-  font-size: 19px;
+  font-size: 17px;
 
   line-height: 1.05;
 }
@@ -331,7 +323,7 @@
 
   gap: 5px;
 
-  margin-left: 40px;
+  margin-left: 34px;
 }
 
 
@@ -341,11 +333,11 @@
 
 
 .footer-happy-line {
-  width: 115px;
+  width: 105px;
 
   height: 2px;
 
-  margin: 8px 0 0 65px;
+  margin: 7px 0 0 57px;
 
   background: #a8e9de;
 
@@ -364,9 +356,9 @@
 
   align-items: center;
 
-  gap: 9px;
+  gap: 8px;
 
-  margin-bottom: 19px;
+  margin-bottom: 14px;
 
   color: #a8e9de;
 }
@@ -387,7 +379,7 @@
     "Segoe Print",
     cursive;
 
-  font-size: 22px;
+  font-size: 20px;
 
   line-height: 1;
 
@@ -409,7 +401,7 @@
 
 
 .footer-links li {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 
@@ -418,13 +410,13 @@
 
   align-items: center;
 
-  gap: 7px;
+  gap: 6px;
 
-  color: rgba(255, 255, 255, 0.80);
+  color: rgba(255, 255, 255, 0.78);
 
   text-decoration: none;
 
-  font-size: 11px;
+  font-size: 10.5px;
 
   line-height: 1.4;
 
@@ -445,7 +437,7 @@
 .footer-links a:hover {
   color: #a8e9de;
 
-  transform: translateX(4px);
+  transform: translateX(3px);
 }
 
 
@@ -469,7 +461,7 @@
 
   flex-direction: column;
 
-  gap: 8px;
+  gap: 7px;
 }
 
 
@@ -478,7 +470,7 @@
 
   align-items: center;
 
-  gap: 9px;
+  gap: 8px;
 
   color: inherit;
 
@@ -497,9 +489,9 @@
 .footer-service-icon {
   flex: 0 0 auto;
 
-  width: 34px;
+  width: 31px;
 
-  height: 34px;
+  height: 31px;
 
   display: flex;
 
@@ -511,7 +503,7 @@
 
   background: #a8e9de;
 
-  border-radius: 9px;
+  border-radius: 8px;
 
   transition:
     background 0.2s ease,
@@ -531,7 +523,7 @@
 
   color: rgba(255, 255, 255, 0.80);
 
-  font-size: 10.5px;
+  font-size: 10px;
 
   line-height: 1.3;
 }
@@ -551,7 +543,7 @@
 
   flex-direction: column;
 
-  gap: 15px;
+  gap: 11px;
 }
 
 
@@ -560,16 +552,16 @@
 
   align-items: flex-start;
 
-  gap: 10px;
+  gap: 9px;
 }
 
 
 .footer-contact-icon {
   flex: 0 0 auto;
 
-  width: 35px;
+  width: 32px;
 
-  height: 35px;
+  height: 32px;
 
   display: flex;
 
@@ -611,11 +603,11 @@
 
 .footer-contact-item span,
 .footer-contact-item a {
-  color: rgba(255, 255, 255, 0.78);
+  color: rgba(255, 255, 255, 0.76);
 
-  font-size: 10px;
+  font-size: 9.5px;
 
-  line-height: 1.5;
+  line-height: 1.45;
 
   text-decoration: none;
 
@@ -635,7 +627,7 @@
 .footer-contact-button {
   width: fit-content;
 
-  margin-top: 21px;
+  margin-top: 15px;
 
   display: inline-flex;
 
@@ -645,17 +637,17 @@
 
   gap: 5px;
 
-  padding: 9px 16px;
+  padding: 8px 14px;
 
   color: #075b56;
 
   background: #a8e9de;
 
-  border-radius: 20px;
+  border-radius: 18px;
 
   text-decoration: none;
 
-  font-size: 10px;
+  font-size: 9.5px;
 
   font-weight: 700;
 
@@ -687,10 +679,10 @@
 
   z-index: 2;
 
-  padding: 26px 20px;
+  padding: 20px;
 
   border-bottom:
-    1px solid rgba(168, 233, 222, 0.14);
+    1px solid rgba(168, 233, 222, 0.13);
 }
 
 
@@ -705,7 +697,7 @@
 
   justify-content: space-between;
 
-  gap: 30px;
+  gap: 24px;
 }
 
 
@@ -718,16 +710,16 @@
 
   align-items: center;
 
-  gap: 12px;
+  gap: 10px;
 }
 
 
 .newsletter-icon {
   flex: 0 0 auto;
 
-  width: 44px;
+  width: 39px;
 
-  height: 44px;
+  height: 39px;
 
   display: flex;
 
@@ -744,7 +736,7 @@
 
 
 .newsletter-content h3 {
-  margin: 0 0 4px;
+  margin: 0 0 3px;
 
   color: #ffffff;
 
@@ -753,7 +745,7 @@
     "Segoe Print",
     cursive;
 
-  font-size: 20px;
+  font-size: 18px;
 
   line-height: 1;
 }
@@ -762,11 +754,11 @@
 .newsletter-content p {
   margin: 0;
 
-  color: rgba(255, 255, 255, 0.68);
+  color: rgba(255, 255, 255, 0.65);
 
-  font-size: 10px;
+  font-size: 9.5px;
 
-  line-height: 1.4;
+  line-height: 1.35;
 }
 
 
@@ -781,29 +773,29 @@
 
   align-items: center;
 
-  gap: 9px;
+  gap: 7px;
 }
 
 
 .newsletter-input {
-  width: 290px;
+  width: 270px;
 
-  height: 44px;
+  height: 40px;
 
   display: flex;
 
   align-items: center;
 
-  gap: 8px;
+  gap: 7px;
 
-  padding: 0 14px;
+  padding: 0 13px;
 
   border:
-    1px solid rgba(168, 233, 222, 0.48);
+    1px solid rgba(168, 233, 222, 0.42);
 
-  border-radius: 23px;
+  border-radius: 21px;
 
-  background: rgba(0, 45, 42, 0.25);
+  background: rgba(0, 45, 42, 0.22);
 }
 
 
@@ -829,19 +821,19 @@
 
   font-family: inherit;
 
-  font-size: 10.5px;
+  font-size: 10px;
 }
 
 
 .newsletter-input input::placeholder {
-  color: rgba(255, 255, 255, 0.52);
+  color: rgba(255, 255, 255, 0.50);
 }
 
 
 .newsletter-button {
-  height: 44px;
+  height: 40px;
 
-  min-width: 125px;
+  min-width: 112px;
 
   display: flex;
 
@@ -849,9 +841,9 @@
 
   justify-content: center;
 
-  gap: 6px;
+  gap: 5px;
 
-  padding: 0 17px;
+  padding: 0 15px;
 
   color: #075b56;
 
@@ -859,13 +851,13 @@
 
   border: none;
 
-  border-radius: 23px;
+  border-radius: 21px;
 
   cursor: pointer;
 
   font-family: inherit;
 
-  font-size: 10.5px;
+  font-size: 10px;
 
   font-weight: 700;
 
@@ -895,9 +887,9 @@
 
   z-index: 2;
 
-  min-height: 125px;
+  min-height: 78px;
 
-  padding: 24px 20px 60px;
+  padding: 18px 20px;
 
   overflow: hidden;
 
@@ -921,16 +913,16 @@
 
   justify-content: space-between;
 
-  gap: 20px;
+  gap: 18px;
 }
 
 
 .footer-copyright {
   margin: 0;
 
-  color: rgba(255, 255, 255, 0.67);
+  color: rgba(255, 255, 255, 0.62);
 
-  font-size: 10px;
+  font-size: 9.5px;
 
   line-height: 1.4;
 }
@@ -945,11 +937,11 @@
 
   align-items: center;
 
-  gap: 8px;
+  gap: 7px;
 
   color: #b5eee4;
 
-  font-size: 10px;
+  font-size: 9.5px;
 }
 
 
@@ -959,11 +951,11 @@
 
 
 .tagline-line {
-  width: 30px;
+  width: 25px;
 
   height: 1px;
 
-  background: rgba(168, 233, 222, 0.58);
+  background: rgba(168, 233, 222, 0.55);
 }
 
 
@@ -978,17 +970,17 @@
 
   justify-content: center;
 
-  padding: 7px 13px;
+  padding: 6px 12px;
 
   color: #075b56;
 
   background: #a8e9de;
 
-  border-radius: 16px;
+  border-radius: 15px;
 
   text-decoration: none;
 
-  font-size: 9.5px;
+  font-size: 9px;
 
   font-weight: 700;
 
@@ -1008,66 +1000,12 @@
 
 
 /* =========================================================
-   BOTTOM WAVES
+   BOTTOM DECORATIVE GLOW
+   - NO WAVES
 ========================================================= */
 
 .footer-waves {
-  position: absolute;
-
-  left: 0;
-
-  right: 0;
-
-  bottom: -2px;
-
-  height: 65px;
-
-  pointer-events: none;
-}
-
-
-.footer-waves span {
-  position: absolute;
-
-  left: -5%;
-
-  width: 110%;
-
-  height: 95px;
-
-  border-radius:
-    50% 50% 0 0;
-}
-
-
-.footer-waves span:nth-child(1) {
-  bottom: -53px;
-
-  background: #76cdbd;
-
-  transform: rotate(-2deg);
-}
-
-
-.footer-waves span:nth-child(2) {
-  bottom: -61px;
-
-  background: #9be2d5;
-
-  opacity: 0.82;
-
-  transform: rotate(2deg);
-}
-
-
-.footer-waves span:nth-child(3) {
-  bottom: -69px;
-
-  background: #b7ece3;
-
-  opacity: 0.58;
-
-  transform: rotate(-1deg);
+  display: none;
 }
 
 
@@ -1077,11 +1015,16 @@
 
 @media (max-width: 1050px) {
 
+  .footer-main {
+    padding-top: 45px;
+  }
+
+
   .footer-container {
     grid-template-columns:
       1fr 1fr;
 
-    gap: 42px 45px;
+    gap: 35px 40px;
   }
 
 
@@ -1090,7 +1033,7 @@
 
     flex-direction: column;
 
-    gap: 18px;
+    gap: 15px;
   }
 
 
@@ -1104,16 +1047,6 @@
 
     width: auto;
   }
-
-
-  .footer-white-curve {
-    width: 68%;
-  }
-
-
-  .footer-mint-curve {
-    width: 66%;
-  }
 }
 
 
@@ -1123,36 +1056,9 @@
 
 @media (max-width: 800px) {
 
-  .footer-top-curves {
-    height: 92px;
-  }
-
-
-  .footer-white-curve {
-    top: -65px;
-
-    left: -14%;
-
-    width: 72%;
-
-    height: 105px;
-  }
-
-
-  .footer-mint-curve {
-    top: -68px;
-
-    right: -14%;
-
-    width: 70%;
-
-    height: 105px;
-  }
-
-
   .footer-main {
     padding:
-      88px 18px 42px;
+      42px 18px 32px;
   }
 
 
@@ -1160,19 +1066,19 @@
     grid-template-columns:
       1fr 1fr;
 
-    gap: 38px 28px;
+    gap: 32px 25px;
   }
 
 
   .footer-logo {
-    max-width: 190px;
+    max-width: 180px;
 
-    height: 65px;
+    height: 60px;
   }
 
 
   .footer-heading h3 {
-    font-size: 20px;
+    font-size: 19px;
   }
 
 
@@ -1190,56 +1096,9 @@
 
 @media (max-width: 600px) {
 
-  .footer-top-curves {
-    height: 75px;
-  }
-
-
-  /* -------------------------------------------------------
-     MOBILE CURVES
-  ------------------------------------------------------- */
-
-  .footer-white-curve {
-    top: -47px;
-
-    left: -30%;
-
-    width: 86%;
-
-    height: 82px;
-
-    border-radius:
-      0 0 75% 0;
-
-    transform:
-      rotate(-4deg);
-  }
-
-
-  .footer-mint-curve {
-    top: -50px;
-
-    right: -30%;
-
-    width: 86%;
-
-    height: 82px;
-
-    border-radius:
-      0 0 0 75%;
-
-    transform:
-      rotate(4deg);
-  }
-
-
-  /* -------------------------------------------------------
-     MAIN
-  ------------------------------------------------------- */
-
   .footer-main {
     padding:
-      72px 16px 38px;
+      38px 16px 30px;
   }
 
 
@@ -1248,7 +1107,7 @@
 
     grid-template-columns: 1fr;
 
-    gap: 36px;
+    gap: 30px;
   }
 
 
@@ -1267,9 +1126,9 @@
 
 
   .footer-logo {
-    max-width: 185px;
+    max-width: 180px;
 
-    height: 63px;
+    height: 60px;
   }
 
 
@@ -1280,7 +1139,7 @@
 
     margin-right: auto;
 
-    font-size: 10.5px;
+    font-size: 10px;
   }
 
 
@@ -1355,7 +1214,7 @@
 
   .footer-newsletter {
     padding:
-      27px 16px;
+      22px 16px;
   }
 
 
@@ -1372,12 +1231,12 @@
 
 
   .newsletter-content h3 {
-    font-size: 19px;
+    font-size: 18px;
   }
 
 
   .newsletter-content p {
-    font-size: 9.5px;
+    font-size: 9px;
   }
 
 
@@ -1386,7 +1245,7 @@
 
     flex-direction: column;
 
-    gap: 8px;
+    gap: 7px;
   }
 
 
@@ -1407,10 +1266,10 @@
   ------------------------------------------------------- */
 
   .footer-bottom {
-    min-height: 175px;
+    min-height: 130px;
 
     padding:
-      23px 16px 68px;
+      20px 16px 28px;
   }
 
 
@@ -1421,36 +1280,36 @@
 
     text-align: center;
 
-    gap: 12px;
+    gap: 10px;
   }
 
 
   .footer-copyright {
-    font-size: 9px;
+    font-size: 8.8px;
   }
 
 
   .footer-bottom-tagline {
-    font-size: 9.5px;
+    font-size: 9px;
   }
 
 
   .footer-bottom-contact {
-    padding: 7px 14px;
+    padding: 6px 13px;
   }
 
 
   .footer-paw-one {
-    left: -15px;
+    left: -18px;
 
-    bottom: 18%;
+    bottom: 16%;
   }
 
 
   .footer-paw-two {
-    right: -15px;
+    right: -18px;
 
-    top: 15%;
+    top: 14%;
   }
 }
 
@@ -1461,98 +1320,76 @@
 
 @media (max-width: 380px) {
 
-  .footer-top-curves {
-    height: 65px;
-  }
-
-
-  .footer-white-curve {
-    top: -40px;
-
-    left: -38%;
-
-    width: 94%;
-
-    height: 72px;
-  }
-
-
-  .footer-mint-curve {
-    top: -42px;
-
-    right: -38%;
-
-    width: 94%;
-
-    height: 72px;
-  }
-
-
   .footer-main {
     padding:
-      62px 12px 35px;
+      34px 12px 27px;
   }
 
 
   .footer-container {
-    gap: 32px;
+    gap: 27px;
   }
 
 
   .footer-logo {
-    max-width: 170px;
+    max-width: 165px;
 
-    height: 58px;
+    height: 55px;
   }
 
 
   .footer-brand-text {
-    font-size: 10px;
+    font-size: 9.5px;
 
-    line-height: 1.65;
+    line-height: 1.6;
   }
 
 
   .footer-heading h3 {
-    font-size: 19px;
+    font-size: 18px;
   }
 
 
   .footer-social-link {
-    width: 34px;
-
-    height: 34px;
-  }
-
-
-  .footer-service-icon {
-    width: 32px;
-
-    height: 32px;
-  }
-
-
-  .footer-contact-icon {
     width: 33px;
 
     height: 33px;
   }
 
 
-  .newsletter-icon {
-    width: 40px;
+  .footer-service-icon {
+    width: 30px;
 
-    height: 40px;
+    height: 30px;
+  }
+
+
+  .footer-contact-icon {
+    width: 31px;
+
+    height: 31px;
+  }
+
+
+  .newsletter-icon {
+    width: 38px;
+
+    height: 38px;
   }
 
 
   .newsletter-content h3 {
-    font-size: 18px;
+    font-size: 17px;
   }
 
 
   .newsletter-content p {
-    font-size: 9px;
+    font-size: 8.5px;
+  }
+
+
+  .footer-bottom {
+    min-height: 125px;
   }
 
 
@@ -1583,28 +1420,28 @@
 
 
   .footer-heading h3 {
-    font-size: 18px;
+    font-size: 17px;
   }
 
 
   .footer-brand-text {
-    font-size: 9.5px;
+    font-size: 9px;
   }
 
 
   .footer-service-name {
-    font-size: 9.5px;
+    font-size: 9px;
   }
 
 
   .footer-contact-item span,
   .footer-contact-item a {
-    font-size: 9px;
+    font-size: 8.5px;
   }
 
 
   .newsletter-content h3 {
-    font-size: 17px;
+    font-size: 16px;
   }
 
 

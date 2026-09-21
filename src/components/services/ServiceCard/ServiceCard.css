@@ -2,6 +2,7 @@
    AZIZ FELINES CATTERY
    SERVICE CARD
    FULL RESPONSIVE VERSION
+   IMAGE - NO CROPPING
 ========================================================= */
 
 
@@ -164,6 +165,7 @@
 
 /* =========================================================
    SERVICE IMAGE
+   DESKTOP
 ========================================================= */
 
 .service-card-head img {
@@ -178,9 +180,13 @@
 
   border-radius: 13px;
 
+  /*
+    Desktop card image can keep its fixed
+    thumbnail size.
+  */
   object-fit: cover;
 
-  object-position: center;
+  object-position: center center;
 
   background: #f4f8f7;
 
@@ -417,7 +423,6 @@
     padding: 15px;
   }
 
-
   .service-card-head {
     grid-template-columns:
       minmax(0, 1fr)
@@ -426,46 +431,37 @@
     gap: 12px;
   }
 
-
   .service-card-head img {
     width: 150px;
     height: 98px;
   }
 
-
   .service-card-title {
     gap: 10px;
   }
 
-
   .service-card-title > span {
     width: 58px;
     height: 58px;
-
     flex-basis: 58px;
   }
-
 
   .service-card-title svg {
     width: 30px;
     height: 30px;
   }
 
-
   .service-card h3 {
     font-size: 23px;
   }
-
 
   .service-card strong {
     font-size: 14px;
   }
 
-
   .service-card > p {
     font-size: 14px;
   }
-
 
   .feature-list div {
     font-size: 12px;
@@ -484,7 +480,6 @@
     padding: 12px;
   }
 
-
   .service-card-head {
     grid-template-columns:
       minmax(0, 1fr)
@@ -493,36 +488,29 @@
     gap: 9px;
   }
 
-
   .service-card-head img {
     width: 125px;
     height: 85px;
   }
 
-
   .service-card-title {
     gap: 8px;
   }
 
-
   .service-card-title > span {
     width: 51px;
     height: 51px;
-
     flex-basis: 51px;
   }
-
 
   .service-card-title svg {
     width: 27px;
     height: 27px;
   }
 
-
   .service-card h3 {
     font-size: 20px;
   }
-
 
   .service-card strong {
     font-size: 13px;
@@ -539,10 +527,8 @@
 
   .service-card {
     padding: 12px;
-
     border-radius: 18px;
   }
-
 
   .service-card-head {
     grid-template-columns:
@@ -552,50 +538,42 @@
     gap: 8px;
   }
 
-
   .service-card-head img {
     width: 110px;
     height: 78px;
 
     border-radius: 11px;
-  }
 
+    object-fit: cover;
+  }
 
   .service-card-title {
     gap: 8px;
   }
 
-
   .service-card-title > span {
     width: 48px;
     height: 48px;
-
     flex-basis: 48px;
   }
-
 
   .service-card-title svg {
     width: 25px;
     height: 25px;
   }
 
-
   .service-card h3 {
     font-size: 18px;
   }
-
 
   .service-card strong {
     font-size: 12px;
   }
 
-
   .service-card > p {
     font-size: 12px;
-
     line-height: 1.5;
   }
-
 
   .feature-list {
     grid-template-columns:
@@ -604,28 +582,21 @@
     gap: 6px;
   }
 
-
   .feature-list div {
     min-height: 43px;
-
     font-size: 10px;
   }
-
 
   .feature-list svg {
     width: 17px;
     height: 17px;
-
     flex-basis: 17px;
   }
 
-
   .service-btn {
     padding: 9px 20px;
-
     font-size: 12px;
   }
-
 
   .service-doodle {
     font-size: 13px;
@@ -642,10 +613,8 @@
 
   .service-card {
     padding: 12px;
-
     border-radius: 18px;
   }
-
 
   .service-card-head {
     grid-template-columns:
@@ -655,70 +624,57 @@
     gap: 8px;
   }
 
-
   .service-card-head img {
     width: 100px;
     height: 72px;
 
     border-radius: 10px;
-  }
 
+    object-fit: cover;
+  }
 
   .service-card-title {
     gap: 8px;
   }
 
-
   .service-card-title > span {
     width: 46px;
     height: 46px;
-
     flex-basis: 46px;
   }
-
 
   .service-card-title svg {
     width: 24px;
     height: 24px;
   }
 
-
   .service-card h3 {
     font-size: 17px;
   }
-
 
   .service-card strong {
     font-size: 11px;
   }
 
-
   .service-card > p {
     font-size: 12px;
-
     line-height: 1.5;
   }
-
 
   .feature-list {
     grid-template-columns:
       repeat(2, minmax(0, 1fr));
   }
 
-
   .feature-list div {
     min-height: 41px;
-
     font-size: 10px;
   }
 
-
   .service-btn {
     padding: 9px 18px;
-
     font-size: 11px;
   }
-
 
   .service-doodle {
     font-size: 12px;
@@ -729,69 +685,75 @@
 /* =========================================================
    MOBILE
    481px - 620px
+   NO IMAGE CROPPING
 ========================================================= */
 
 @media (min-width: 481px) and (max-width: 620px) {
 
   .service-card {
     padding: 12px;
-
     border-radius: 17px;
   }
 
-
   .service-card-head {
     grid-template-columns: 1fr;
-
     gap: 10px;
   }
 
-
+  /*
+    IMPORTANT:
+    Do NOT use fixed height here.
+    The full image must be visible.
+  */
   .service-card-head img {
-    width: 100%;
-    height: 145px;
+    display: block;
+
+    width: 100% !important;
+    max-width: 100% !important;
+
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
 
     border-radius: 12px;
-  }
 
+    object-fit: contain !important;
+    object-position: center center !important;
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+  }
 
   .service-card-title {
     gap: 9px;
   }
 
-
   .service-card-title > span {
     width: 48px;
     height: 48px;
-
     flex-basis: 48px;
   }
-
 
   .service-card-title svg {
     width: 25px;
     height: 25px;
   }
 
-
   .service-card h3 {
     font-size: 18px;
   }
-
 
   .service-card strong {
     font-size: 12px;
   }
 
-
   .service-card > p {
     margin-top: 10px;
-
     font-size: 12px;
-
     line-height: 1.55;
   }
-
 
   .feature-list {
     grid-template-columns:
@@ -800,34 +762,23 @@
     gap: 6px;
   }
 
-
   .feature-list div {
     min-height: 43px;
-
     font-size: 10px;
   }
 
-
   .service-btn {
     margin-top: 10px;
-
     padding: 9px 18px;
-
     font-size: 12px;
   }
 
-
   .service-doodle {
     position: static;
-
     max-width: none;
-
     margin-top: 12px;
-
     text-align: left;
-
     font-size: 12px;
-
     transform: rotate(-3deg);
   }
 }
@@ -836,116 +787,105 @@
 /* =========================================================
    MOBILE
    381px - 480px
+   NO IMAGE CROPPING
 ========================================================= */
 
 @media (min-width: 381px) and (max-width: 480px) {
 
   .service-card {
     padding: 11px;
-
     border-radius: 16px;
   }
 
-
   .service-card-head {
     grid-template-columns: 1fr;
-
     gap: 9px;
   }
 
-
+  /*
+    FULL IMAGE
+    NO FIXED HEIGHT
+  */
   .service-card-head img {
-    width: 100%;
-    height: 135px;
+    display: block;
+
+    width: 100% !important;
+    max-width: 100% !important;
+
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
 
     border-radius: 11px;
-  }
 
+    object-fit: contain !important;
+    object-position: center center !important;
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+  }
 
   .service-card-title {
     gap: 8px;
   }
 
-
   .service-card-title > span {
     width: 45px;
     height: 45px;
-
     flex-basis: 45px;
   }
-
 
   .service-card-title svg {
     width: 23px;
     height: 23px;
   }
 
-
   .service-card h3 {
     font-size: 16px;
   }
-
 
   .service-card strong {
     font-size: 11px;
   }
 
-
   .service-card > p {
     margin: 9px 2px 0;
-
     font-size: 11px;
-
     line-height: 1.5;
   }
 
-
   .feature-list {
     grid-template-columns: 1fr;
-
     gap: 6px;
-
     margin-top: 8px;
   }
 
-
   .feature-list div {
     min-height: 39px;
-
     padding: 5px 7px;
-
     font-size: 10px;
   }
-
 
   .feature-list svg {
     width: 17px;
     height: 17px;
-
     flex-basis: 17px;
   }
 
-
   .service-btn {
     margin-top: 9px;
-
     padding: 9px 16px;
-
     font-size: 11px;
   }
 
-
   .service-doodle {
     position: static;
-
     max-width: none;
-
     margin-top: 11px;
-
     text-align: left;
-
     font-size: 11px;
-
     transform: rotate(-3deg);
   }
 }
@@ -954,123 +894,136 @@
 /* =========================================================
    VERY SMALL MOBILE
    <= 380px
+   NO IMAGE CROPPING
 ========================================================= */
 
 @media (max-width: 380px) {
 
   .service-card {
     padding: 10px;
-
     border-radius: 15px;
   }
 
-
   .service-card-head {
     grid-template-columns: 1fr;
-
     gap: 8px;
   }
 
-
+  /*
+    IMPORTANT:
+    Fixed 120px height REMOVED.
+    Image keeps its original aspect ratio.
+  */
   .service-card-head img {
-    width: 100%;
-    height: 120px;
+    display: block;
+
+    width: 100% !important;
+    max-width: 100% !important;
+
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
 
     border-radius: 10px;
-  }
 
+    object-fit: contain !important;
+    object-position: center center !important;
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+  }
 
   .service-card-title {
     gap: 7px;
   }
 
-
   .service-card-title > span {
     width: 42px;
     height: 42px;
-
     flex-basis: 42px;
   }
-
 
   .service-card-title svg {
     width: 21px;
     height: 21px;
   }
 
-
   .service-card h3 {
     font-size: 15px;
   }
-
 
   .service-card strong {
     font-size: 10px;
   }
 
-
   .service-card > p {
     margin: 8px 2px 0;
-
     font-size: 10px;
-
     line-height: 1.5;
   }
 
-
   .feature-list {
     grid-template-columns: 1fr;
-
     gap: 5px;
-
     margin-top: 7px;
   }
 
-
   .feature-list div {
     min-height: 36px;
-
     padding: 5px 6px;
-
     font-size: 9px;
   }
-
 
   .feature-list svg {
     width: 15px;
     height: 15px;
-
     flex-basis: 15px;
   }
 
-
   .service-btn {
     margin-top: 8px;
-
     padding: 8px 13px;
-
     font-size: 10px;
   }
-
 
   .service-btn svg {
     width: 14px;
     height: 14px;
   }
 
-
   .service-doodle {
     position: static;
-
     max-width: none;
-
     margin-top: 9px;
-
     text-align: left;
-
     font-size: 10px;
-
     transform: rotate(-3deg);
+  }
+}
+
+
+/* =========================================================
+   FINAL MOBILE IMAGE SAFETY
+========================================================= */
+
+@media (max-width: 620px) {
+
+  .service-card-head img {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+
+    object-fit: contain !important;
+    object-position: center center !important;
+
+    display: block !important;
+
+    box-sizing: border-box !important;
   }
 }
 
@@ -1088,18 +1041,14 @@
       0 8px 20px rgba(0, 70, 65, 0.06);
   }
 
-
   .service-card:hover .service-card-head img {
     transform: none;
   }
 
-
   .service-btn:hover {
     transform: none;
-
     opacity: 1;
   }
-
 
   .service-btn:hover svg {
     transform: none;

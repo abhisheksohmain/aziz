@@ -2,6 +2,7 @@
    AZIZ FELINES CATTERY
    HEADER
    FINAL RESPONSIVE VERSION
+   MOBILE HERO OVERLAP FIX
 ========================================================= */
 
 
@@ -489,7 +490,6 @@
     height: 68px;
   }
 
-
   .header-shell {
     width: min(1500px, calc(100% - 50px));
 
@@ -498,11 +498,9 @@
     gap: 30px;
   }
 
-
   .brand {
     padding-left: 15px;
   }
-
 
   .brand img {
     width: 115px;
@@ -515,21 +513,17 @@
     margin-top: 19px;
   }
 
-
   .brand-text strong {
     font-size: 26px;
   }
-
 
   .brand-text span {
     font-size: 16px;
   }
 
-
   .main-nav {
     gap: 5px;
   }
-
 
   .main-nav a,
   .nav-service {
@@ -537,7 +531,6 @@
 
     font-size: 14px;
   }
-
 
   .header-curve {
     height: 82px;
@@ -556,7 +549,6 @@
     height: 62px;
   }
 
-
   .header-shell {
     width: calc(100% - 30px);
 
@@ -565,13 +557,11 @@
     gap: 18px;
   }
 
-
   .brand {
     padding-left: 8px;
 
     gap: 8px;
   }
-
 
   .brand img {
     width: 92px;
@@ -584,21 +574,17 @@
     margin-top: 16px;
   }
 
-
   .brand-text strong {
     font-size: 21px;
   }
-
 
   .brand-text span {
     font-size: 13px;
   }
 
-
   .main-nav {
     gap: 2px;
   }
-
 
   .main-nav a,
   .nav-service {
@@ -606,7 +592,6 @@
 
     font-size: 12px;
   }
-
 
   .header-curve {
     height: 70px;
@@ -625,7 +610,6 @@
     height: 60px;
   }
 
-
   .header-shell {
     width: calc(100% - 24px);
 
@@ -634,7 +618,6 @@
     gap: 12px;
   }
 
-
   .brand {
     padding-left: 5px;
 
@@ -642,7 +625,6 @@
 
     max-width: calc(100% - 55px);
   }
-
 
   .brand img {
     width: 78px;
@@ -655,11 +637,9 @@
     margin-top: 14px;
   }
 
-
   .brand-text {
     min-width: 0;
   }
-
 
   .brand-text strong {
     font-size: 19px;
@@ -668,7 +648,6 @@
 
     text-overflow: ellipsis;
   }
-
 
   .brand-text span {
     font-size: 12px;
@@ -679,9 +658,7 @@
   }
 
 
-  /* ============================================
-     MENU BUTTON
-  ============================================ */
+  /* MENU BUTTON */
 
   .menu-btn {
     display: flex;
@@ -690,9 +667,7 @@
   }
 
 
-  /* ============================================
-     MOBILE NAV
-  ============================================ */
+  /* MOBILE NAV */
 
   .main-nav {
     display: none;
@@ -730,11 +705,9 @@
     pointer-events: auto;
   }
 
-
   .main-nav.is-open {
     display: flex;
   }
-
 
   .main-nav a,
   .nav-service {
@@ -750,14 +723,11 @@
   }
 
 
-  /* ============================================
-     MOBILE SERVICES DROPDOWN
-  ============================================ */
+  /* MOBILE SERVICES DROPDOWN */
 
   .service-nav {
     width: 100%;
   }
-
 
   .service-dropdown {
     position: static;
@@ -773,18 +743,15 @@
     border-radius: 12px;
   }
 
-
   .service-dropdown a {
     padding: 9px 11px;
   }
 
 
-  /* ============================================
-     MOBILE CURVE
-  ============================================ */
+  /* TABLET CURVE */
 
   .header-curve {
-    height: 58px;
+    height: 50px;
   }
 }
 
@@ -800,7 +767,6 @@
     height: 56px;
   }
 
-
   .header-shell {
     width: calc(100% - 14px);
 
@@ -809,7 +775,6 @@
     gap: 7px;
   }
 
-
   .brand {
     padding-left: 2px;
 
@@ -817,7 +782,6 @@
 
     max-width: calc(100% - 50px);
   }
-
 
   .brand img {
     width: 68px;
@@ -830,13 +794,11 @@
     margin-top: 12px;
   }
 
-
   .brand-text strong {
     font-size: 16px;
 
     line-height: 1.05;
   }
-
 
   .brand-text span {
     margin-top: 3px;
@@ -846,14 +808,12 @@
     line-height: 1.05;
   }
 
-
   .menu-btn {
     width: 38px;
     height: 38px;
 
     flex-basis: 38px;
   }
-
 
   .main-nav {
     top: 56px;
@@ -863,16 +823,15 @@
   }
 
 
-  .main-nav a,
-  .nav-service {
-    padding: 11px 12px;
-
-    font-size: 13px;
-  }
-
+  /* IMPORTANT:
+     Smaller curved overlay on mobile
+     so hero image remains visible.
+  */
 
   .header-curve {
-    height: 48px;
+    height: 34px;
+
+    bottom: -1px;
   }
 }
 
@@ -888,7 +847,6 @@
     height: 54px;
   }
 
-
   .header-shell {
     width: calc(100% - 10px);
 
@@ -897,13 +855,11 @@
     gap: 5px;
   }
 
-
   .brand {
     gap: 5px;
 
     max-width: calc(100% - 48px);
   }
-
 
   .brand img {
     width: 62px;
@@ -916,16 +872,13 @@
     margin-top: 10px;
   }
 
-
   .brand-text strong {
     font-size: 14px;
   }
 
-
   .brand-text span {
     font-size: 9px;
   }
-
 
   .menu-btn {
     width: 36px;
@@ -933,7 +886,6 @@
 
     flex-basis: 36px;
   }
-
 
   .main-nav {
     top: 54px;
@@ -943,8 +895,10 @@
   }
 
 
+  /* SMALLER CURVE */
+
   .header-curve {
-    height: 42px;
+    height: 30px;
   }
 }
 
@@ -967,19 +921,19 @@
     margin-top: 9px;
   }
 
-
   .brand-text strong {
     font-size: 13px;
   }
-
 
   .brand-text span {
     font-size: 8px;
   }
 
 
+  /* VERY SMALL CURVE */
+
   .header-curve {
-    height: 38px;
+    height: 27px;
   }
 }
 
@@ -997,14 +951,12 @@
     color: #073b4b;
   }
 
-
   .main-nav a.active,
   .nav-service.active {
     background: var(--teal, #08746c);
 
     color: #ffffff;
   }
-
 
   .menu-btn:hover {
     background: transparent;

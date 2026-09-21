@@ -1,52 +1,291 @@
-
-/* =========================================
+/* =========================================================
+   AZIZ FELINES CATTERY
    CONTACT HERO
    IMAGE ONLY
-========================================= */
+   RESPONSIVE - NO CROPPING
+========================================================= */
 
 .contact-hero {
+  position: relative;
   width: 100%;
+  max-width: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  height: auto;
+  min-height: 0;
+
+  /*
+    IMPORTANT:
+    Do not clip the hero image.
+    The fixed header is handled separately.
+  */
+  overflow: visible;
+
   background: #fffdf7;
   line-height: 0;
+  box-sizing: border-box;
+  z-index: 1;
 }
 
 .contact-hero-image {
   display: block;
+  position: relative;
+
   width: 100%;
-  height: auto;
   max-width: 100%;
+
+  height: auto;
+  min-height: 0;
+  max-height: none;
+
   margin: 0;
   padding: 0;
+  border: 0;
+
+  /*
+    IMPORTANT:
+    Keep complete image visible.
+    No cover/cropping.
+  */
   object-fit: contain;
-  object-position: center;
+  object-position: center center;
+
+  vertical-align: top;
+  box-sizing: border-box;
 }
 
-/* =========================================
-   TABLET
-========================================= */
+/* =========================================================
+   IMAGE SAFETY
+========================================================= */
 
-@media (max-width: 900px) {
+.contact-hero img.contact-hero-image {
+  display: block;
+
+  width: 100% !important;
+  max-width: 100% !important;
+
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+
+  object-fit: contain !important;
+  object-position: center center !important;
+
+  vertical-align: top !important;
+  box-sizing: border-box !important;
+}
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1400px) {
+  .contact-hero {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+  }
+
   .contact-hero-image {
     width: 100%;
+    max-width: 100%;
     height: auto;
+    min-height: 0;
+    max-height: none;
+
+    object-fit: contain;
+    object-position: center center;
   }
 }
 
-/* =========================================
+/* =========================================================
+   DESKTOP
+========================================================= */
+
+@media (min-width: 901px) and (max-width: 1399px) {
+  .contact-hero {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+  }
+
+  .contact-hero-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 0;
+    max-height: none;
+
+    object-fit: contain;
+    object-position: center center;
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .contact-hero {
+    width: 100%;
+    max-width: 100%;
+
+    height: auto;
+    min-height: 0;
+
+    /*
+      Header is fixed.
+      Reserve space so the top of the hero
+      does not disappear behind the header.
+    */
+    padding-top: 60px;
+
+    overflow: visible;
+    box-sizing: border-box;
+  }
+
+  .contact-hero-image {
+    display: block;
+
+    width: 100% !important;
+    max-width: 100% !important;
+
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    object-fit: contain !important;
+    object-position: center center !important;
+
+    box-sizing: border-box !important;
+  }
+}
+
+/* =========================================================
    MOBILE
-========================================= */
+========================================================= */
 
 @media (max-width: 600px) {
   .contact-hero {
+    position: relative;
+
     width: 100%;
+    max-width: 100%;
+
+    height: auto;
+    min-height: 0;
+
+    /*
+      Your Header is fixed and has a curved bottom.
+      Reserve enough space so the hero image
+      does not get hidden underneath it.
+    */
+    padding-top: 80px;
+
+    margin: 0;
+
+    overflow: visible;
+
+    background: #fffdf7;
+    line-height: 0;
+
+    box-sizing: border-box;
   }
 
   .contact-hero-image {
-    width: 100%;
-    height: auto;
+    display: block;
+    position: relative;
+
+    width: 100% !important;
+    max-width: 100% !important;
+
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+
+    object-fit: contain !important;
+    object-position: center center !important;
+
+    vertical-align: top !important;
+    box-sizing: border-box !important;
   }
 }
 
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+  .contact-hero {
+    padding-top: 68px;
+  }
+
+  .contact-hero-image {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+
+    object-fit: contain !important;
+    object-position: center center !important;
+  }
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 350px) {
+  .contact-hero {
+    padding-top: 68px;
+  }
+
+  .contact-hero-image {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+
+    object-fit: contain !important;
+    object-position: center center !important;
+  }
+}
+
+/* =========================================================
+   FINAL ANTI-CROP SAFETY
+========================================================= */
+
+.contact-hero,
+.contact-hero-image {
+  max-height: none !important;
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-hero-image {
+    animation: none !important;
+    transition: none !important;
+  }
+}

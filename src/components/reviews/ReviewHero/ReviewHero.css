@@ -1,52 +1,255 @@
-
-/* =========================================
+/* =========================================================
+   AZIZ FELINES CATTERY
    REVIEW HERO
    IMAGE ONLY
-========================================= */
+   RESPONSIVE - NO CROPPING
+========================================================= */
 
 .review-hero {
+  position: relative;
   width: 100%;
+  max-width: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  height: auto;
+  min-height: 0;
+  overflow: visible;
   background: #fffdf7;
   line-height: 0;
+  box-sizing: border-box;
+  z-index: 1;
 }
 
 .review-hero-image {
   display: block;
+  position: relative;
   width: 100%;
-  height: auto;
   max-width: 100%;
+  height: auto;
+  min-height: 0;
+  max-height: none;
   margin: 0;
   padding: 0;
+  border: 0;
+
+  /* IMPORTANT: never crop the image */
   object-fit: contain;
-  object-position: center;
+  object-position: center center;
+
+  vertical-align: top;
+  box-sizing: border-box;
 }
 
-/* =========================================
-   TABLET
-========================================= */
+/* =========================================================
+   EXTRA IMAGE SAFETY
+========================================================= */
 
-@media (max-width: 900px) {
+.review-hero img.review-hero-image {
+  display: block;
+  width: 100% !important;
+  max-width: 100% !important;
+
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+
+  object-fit: contain !important;
+  object-position: center center !important;
+
+  vertical-align: top !important;
+  box-sizing: border-box !important;
+}
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1400px) {
+  .review-hero {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+  }
+
   .review-hero-image {
     width: 100%;
+    max-width: 100%;
     height: auto;
+    min-height: 0;
+    max-height: none;
+    object-fit: contain;
   }
 }
 
-/* =========================================
+/* =========================================================
+   DESKTOP
+========================================================= */
+
+@media (min-width: 901px) and (max-width: 1399px) {
+  .review-hero {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+  }
+
+  .review-hero-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 0;
+    max-height: none;
+    object-fit: contain;
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .review-hero {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+
+    /*
+      Header is fixed, so reserve its visible top area.
+      Image itself is still NOT cropped.
+    */
+    padding-top: 60px;
+    box-sizing: border-box;
+  }
+
+  .review-hero-image {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+
+    object-fit: contain !important;
+    object-position: center center !important;
+  }
+}
+
+/* =========================================================
    MOBILE
-========================================= */
+========================================================= */
 
 @media (max-width: 600px) {
   .review-hero {
+    position: relative;
     width: 100%;
+    max-width: 100%;
+
+    height: auto;
+    min-height: 0;
+
+    /*
+      Fixed header + curved bottom occupies the top area.
+      Reserve space so the hero image is not hidden behind it.
+    */
+    padding-top: 80px;
+
+    margin: 0;
+    overflow: visible;
+
+    background: #fffdf7;
+    line-height: 0;
+    box-sizing: border-box;
   }
 
   .review-hero-image {
-    width: 100%;
-    height: auto;
+    display: block;
+
+    width: 100% !important;
+    max-width: 100% !important;
+
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+
+    object-fit: contain !important;
+    object-position: center center !important;
+
+    vertical-align: top !important;
+    box-sizing: border-box !important;
   }
 }
 
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+  .review-hero {
+    padding-top: 68px;
+  }
+
+  .review-hero-image {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+
+    object-fit: contain !important;
+    object-position: center center !important;
+  }
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 350px) {
+  .review-hero {
+    padding-top: 68px;
+  }
+
+  .review-hero-image {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+
+    object-fit: contain !important;
+    object-position: center center !important;
+  }
+}
+
+/* =========================================================
+   EXTRA SAFETY
+   Prevent accidental clipping from image itself
+========================================================= */
+
+.review-hero,
+.review-hero-image {
+  max-height: none !important;
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .review-hero-image {
+    transition: none !important;
+    animation: none !important;
+  }
+}
