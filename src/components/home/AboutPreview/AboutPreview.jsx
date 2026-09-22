@@ -1,3 +1,4 @@
+
 import React from "react";
 import {
   PawPrint,
@@ -22,21 +23,22 @@ import {
 
 import "./AboutPreview.css";
 
+
 /* =========================================================
    CAT IMAGE
-   IMPORTANT:
-   Put your image inside:
-
-   public/images/
-
-   Example:
-   public/images/cat-home.jpg
-
-   Then use:
-   /images/cat-home.jpg
 ========================================================= */
 
 const CAT_IMAGE = "images/cat-home.png";
+
+
+/* =========================================================
+   WHATSAPP NUMBER
+   IMPORTANT:
+   Country code for India = 91
+   7700004469 => 917700004469
+========================================================= */
+
+const WHATSAPP_NUMBER = "917700004469";
 
 
 /* =========================================================
@@ -125,15 +127,109 @@ const whyChooseUs = [
 ========================================================= */
 
 export default function CatCareSection() {
+
+
+  /* =======================================================
+     ENQUIRY SUBMIT
+  ======================================================= */
+
+  const handleEnquirySubmit = (event) => {
+    event.preventDefault();
+
+    const form = event.currentTarget;
+
+    const formData = new FormData(form);
+
+    const name = formData.get("name")?.toString().trim() || "";
+    const whatsapp = formData.get("whatsapp")?.toString().trim() || "";
+    const email = formData.get("email")?.toString().trim() || "";
+    const location = formData.get("location")?.toString().trim() || "";
+    const service = formData.get("service")?.toString().trim() || "";
+    const message = formData.get("message")?.toString().trim() || "";
+
+
+    /* =====================================================
+       WHATSAPP MESSAGE
+    ===================================================== */
+
+    const whatsappMessage = `
+🐾 *AZIZ FELINES CATTERY - NEW ENQUIRY*
+
+━━━━━━━━━━━━━━━━━━━━
+
+👤 *Name:*
+${name}
+
+📱 *WhatsApp No.:*
+${whatsapp}
+
+📧 *Email:*
+${email}
+
+📍 *City & Location:*
+${location}
+
+🐱 *Interested Service:*
+${service}
+
+💬 *Requirement / Message:*
+${message || "Not provided"}
+
+━━━━━━━━━━━━━━━━━━━━
+
+Thank you.
+This enquiry was submitted through the AZIZ FELINES CATTERY website.
+`.trim();
+
+
+    /* =====================================================
+       ENCODE MESSAGE
+    ===================================================== */
+
+    const encodedMessage = encodeURIComponent(
+      whatsappMessage
+    );
+
+
+    /* =====================================================
+       WHATSAPP URL
+    ===================================================== */
+
+    const whatsappUrl =
+      `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
+
+
+    /* =====================================================
+       OPEN WHATSAPP
+    ===================================================== */
+
+    window.open(
+      whatsappUrl,
+      "_blank",
+      "noopener,noreferrer"
+    );
+
+
+    /* =====================================================
+       OPTIONAL FORM RESET
+    ===================================================== */
+
+    form.reset();
+  };
+
+
   return (
     <section className="cat-care-section">
+
       <div className="cat-care-container">
+
 
         {/* =====================================================
             LEFT COLUMN
         ===================================================== */}
 
         <div className="cat-care-left">
+
 
           {/* ===================================================
               SPECIALISATION CARD
@@ -150,11 +246,15 @@ export default function CatCareSection() {
               />
 
               <div>
-                <h2>Our Specialisation in Cats</h2>
+
+                <h2>
+                  Our Specialisation in Cats
+                </h2>
 
                 <p>
                   Because Cats Deserve Special Care.
                 </p>
+
               </div>
 
             </div>
@@ -220,6 +320,7 @@ export default function CatCareSection() {
 
               {specialisationItems.map(
                 ({ icon: Icon, title, sub }) => (
+
                   <div
                     className="specialisation-service"
                     key={`${title}-${sub}`}
@@ -231,13 +332,18 @@ export default function CatCareSection() {
                       aria-hidden="true"
                     />
 
-                    <span>{title}</span>
+                    <span>
+                      {title}
+                    </span>
 
                     {sub && (
-                      <small>{sub}</small>
+                      <small>
+                        {sub}
+                      </small>
                     )}
 
                   </div>
+
                 )
               )}
 
@@ -261,11 +367,15 @@ export default function CatCareSection() {
               />
 
               <div>
-                <h2>Our Mission</h2>
+
+                <h2>
+                  Our Mission
+                </h2>
 
                 <p>
                   Happier Cats. Healthier Lives.
                 </p>
+
               </div>
 
             </div>
@@ -335,7 +445,9 @@ export default function CatCareSection() {
 
             <div>
 
-              <h2>Why Choose Us?</h2>
+              <h2>
+                Why Choose Us?
+              </h2>
 
               <p>
                 Your Cat's Happiness is Our Priority.
@@ -350,6 +462,7 @@ export default function CatCareSection() {
 
             {whyChooseUs.map(
               ({ icon: Icon, title, text }) => (
+
                 <div
                   className="why-item"
                   key={title}
@@ -368,13 +481,18 @@ export default function CatCareSection() {
 
                   <div className="why-item-content">
 
-                    <h3>{title}</h3>
+                    <h3>
+                      {title}
+                    </h3>
 
-                    <p>{text}</p>
+                    <p>
+                      {text}
+                    </p>
 
                   </div>
 
                 </div>
+
               )
             )}
 
@@ -399,7 +517,9 @@ export default function CatCareSection() {
               strokeWidth={2}
             />
 
-            <b>♡</b>
+            <b>
+              ♡
+            </b>
 
           </div>
 
@@ -422,7 +542,9 @@ export default function CatCareSection() {
 
             <div>
 
-              <h2>Enquiry Form</h2>
+              <h2>
+                Enquiry Form
+              </h2>
 
               <p>
                 Get in touch with us today!
@@ -439,24 +561,21 @@ export default function CatCareSection() {
 
           <form
             className="enquiry-form"
-            onSubmit={(event) => {
-              event.preventDefault();
-
-              alert(
-                "Thank you! Your enquiry has been received."
-              );
-            }}
+            onSubmit={handleEnquirySubmit}
           >
+
 
             {/* NAME */}
 
             <label className="form-field">
 
               <span className="field-icon">
+
                 <User
                   size={17}
                   aria-hidden="true"
                 />
+
               </span>
 
               <input
@@ -475,10 +594,12 @@ export default function CatCareSection() {
             <label className="form-field">
 
               <span className="field-icon">
+
                 <MessageCircle
                   size={17}
                   aria-hidden="true"
                 />
+
               </span>
 
               <input
@@ -498,10 +619,12 @@ export default function CatCareSection() {
             <label className="form-field">
 
               <span className="field-icon">
+
                 <Mail
                   size={17}
                   aria-hidden="true"
                 />
+
               </span>
 
               <input
@@ -520,10 +643,12 @@ export default function CatCareSection() {
             <label className="form-field">
 
               <span className="field-icon">
+
                 <MapPin
                   size={17}
                   aria-hidden="true"
                 />
+
               </span>
 
               <input
@@ -542,10 +667,12 @@ export default function CatCareSection() {
             <label className="form-field select-field">
 
               <span className="field-icon">
+
                 <PawPrint
                   size={17}
                   aria-hidden="true"
                 />
+
               </span>
 
               <select
@@ -601,10 +728,12 @@ export default function CatCareSection() {
             <label className="form-field message-field">
 
               <span className="field-icon">
+
                 <MessageCircle
                   size={17}
                   aria-hidden="true"
                 />
+
               </span>
 
               <textarea
@@ -672,6 +801,7 @@ export default function CatCareSection() {
         </article>
 
       </div>
+
     </section>
   );
 }

@@ -462,7 +462,7 @@ export default function Footer() {
                   </span>
 
                   <span>
-                    9:00 AM - 8:00 PM
+                    9:00 AM - 9:00 PM
                   </span>
 
                 </div>

@@ -968,7 +968,6 @@
     grid-column: 2;
   }
 
-  /* Main headings */
   .specialisation-heading h2,
   .mission-heading h2,
   .why-heading h2,
@@ -976,7 +975,6 @@
     font-size: 18px !important;
   }
 
-  /* Paragraphs */
   .specialisation-heading p,
   .mission-heading p,
   .why-heading p,
@@ -987,7 +985,6 @@
     font-size: 15px !important;
   }
 
-  /* Highlight points */
   .specialisation-service span {
     font-size: 18px !important;
   }
@@ -1000,7 +997,6 @@
     font-size: 18px !important;
   }
 
-  /* Mission specifically */
   .mission-card .mission-heading h2 {
     font-size: 18px !important;
   }
@@ -1097,7 +1093,6 @@
     font-size: 18px !important;
   }
 
-  /* Mission LOCK */
   .mission-card .mission-heading h2 {
     font-size: 18px !important;
   }
@@ -1160,7 +1155,10 @@
     padding: 11px;
   }
 
-  /* Main headings */
+  /* =====================================================
+     MAIN HEADINGS
+  ===================================================== */
+
   .specialisation-heading h2,
   .mission-heading h2,
   .why-heading h2,
@@ -1168,7 +1166,10 @@
     font-size: 18px !important;
   }
 
-  /* Paragraphs */
+  /* =====================================================
+     PARAGRAPHS
+  ===================================================== */
+
   .specialisation-heading p,
   .mission-heading p,
   .why-heading p,
@@ -1180,6 +1181,10 @@
     line-height: 1.5 !important;
   }
 
+  /* =====================================================
+     SPECIALISATION INTRO
+  ===================================================== */
+
   .specialisation-intro {
     grid-template-columns: 1fr;
   }
@@ -1188,7 +1193,10 @@
     height: 190px;
   }
 
-  /* Highlight services */
+  /* =====================================================
+     HIGHLIGHT SERVICES — MOBILE
+  ===================================================== */
+
   .specialisation-services {
     grid-template-columns:
       repeat(2, minmax(0, 1fr));
@@ -1218,6 +1226,40 @@
 
   .specialisation-service small {
     font-size: 15px !important;
+  }
+
+  /* =====================================================
+     ADOPTIONS — CENTER ON MOBILE
+     "Adoptions (Availability Varies)"
+  ===================================================== */
+
+  .specialisation-service:last-child {
+    grid-column: 1 / -1;
+
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    border-right: 0;
+    border-top: 1px solid #b8ddc5;
+  }
+
+  .specialisation-service:last-child svg {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .specialisation-service:last-child span,
+  .specialisation-service:last-child small {
+    width: 100%;
+
+    display: block;
+
+    text-align: center;
   }
 
   /* =====================================================
@@ -1267,7 +1309,10 @@
     font-size: 17px;
   }
 
-  /* Why */
+  /* =====================================================
+     WHY
+  ===================================================== */
+
   .why-item-content h3 {
     font-size: 18px !important;
   }
@@ -1277,7 +1322,10 @@
     line-height: 1.5 !important;
   }
 
-  /* Form */
+  /* =====================================================
+     FORM
+  ===================================================== */
+
   .form-field input,
   .form-field select {
     height: 42px;
@@ -1353,6 +1401,35 @@
 
   .specialisation-service small {
     font-size: 15px !important;
+  }
+
+  /* =====================================================
+     ADOPTIONS — KEEP CENTERED
+  ===================================================== */
+
+  .specialisation-service:last-child {
+    grid-column: 1 / -1;
+
+    width: 100%;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    border-right: 0;
+  }
+
+  .specialisation-service:last-child span,
+  .specialisation-service:last-child small {
+    width: 100%;
+
+    text-align: center;
+  }
+
+  .specialisation-service:last-child svg {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .why-item-content h3 {
@@ -1434,6 +1511,37 @@
 
   .specialisation-service small {
     font-size: 15px !important;
+  }
+
+  /* =====================================================
+     ADOPTIONS — FINAL MOBILE CENTER
+  ===================================================== */
+
+  .specialisation-service:last-child {
+    grid-column: 1 / -1;
+
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    border-right: 0;
+    border-top: 1px solid #b8ddc5;
+  }
+
+  .specialisation-service:last-child span,
+  .specialisation-service:last-child small {
+    width: 100%;
+
+    text-align: center;
+  }
+
+  .specialisation-service:last-child svg {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .why-item-content h3 {
